@@ -1,0 +1,7034 @@
+[
+  {
+    "id": "lesson-gên-1-1",
+    "titulo": "Gênesis 1:1",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "gên-1-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Gênesis 1:1",
+        "texto": "No princípio criou Deus os céus e a ______",
+        "lacuna": "terra",
+        "xp": 15
+      },
+      {
+        "id": "gên-1-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "No",
+          "princípio",
+          "criou",
+          "Deus",
+          "os",
+          "céus",
+          "e",
+          "a",
+          "terra"
+        ],
+        "embaralhado": [
+          "céus",
+          "princípio",
+          "Deus",
+          "a",
+          "e",
+          "No",
+          "criou",
+          "os",
+          "terra"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-gên-1-27",
+    "titulo": "Gênesis 1:27",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "gên-1-27-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Gênesis 1:27",
+        "texto": "E ______ Deus o homem à sua imagem à imagem de Deus o ______",
+        "lacuna": "criou",
+        "xp": 15
+      },
+      {
+        "id": "gên-1-27-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "E",
+          "criou",
+          "Deus",
+          "o",
+          "homem",
+          "à",
+          "sua",
+          "imagem",
+          "à",
+          "imagem",
+          "de",
+          "Deus",
+          "o",
+          "criou"
+        ],
+        "embaralhado": [
+          "criou",
+          "E",
+          "imagem",
+          "de",
+          "Deus",
+          "sua",
+          "criou",
+          "à",
+          "o",
+          "homem",
+          "à",
+          "o",
+          "imagem",
+          "Deus"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-gên-12-1",
+    "titulo": "Gênesis 12:1",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "gên-12-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Gênesis 12:1",
+        "texto": "Sai-te da tua terra da tua parentela e da casa de teu pai para a terra que eu te ______",
+        "lacuna": "mostrarei",
+        "xp": 20
+      },
+      {
+        "id": "gên-12-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Sai-te",
+          "da",
+          "tua",
+          "terra",
+          "da",
+          "tua",
+          "parentela",
+          "e",
+          "da",
+          "casa",
+          "de",
+          "teu",
+          "pai",
+          "para",
+          "a",
+          "terra",
+          "que",
+          "eu",
+          "te",
+          "mostrarei"
+        ],
+        "embaralhado": [
+          "casa",
+          "da",
+          "tua",
+          "da",
+          "e",
+          "Sai-te",
+          "terra",
+          "mostrarei",
+          "da",
+          "de",
+          "que",
+          "tua",
+          "te",
+          "pai",
+          "a",
+          "eu",
+          "teu",
+          "terra",
+          "para",
+          "parentela"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-êxo-3-14",
+    "titulo": "Êxodo 3:14",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "êxo-3-14-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Êxodo 3:14",
+        "texto": "Disse Deus a Moisés Eu ______ o que ______",
+        "lacuna": "Sou",
+        "xp": 15
+      },
+      {
+        "id": "êxo-3-14-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Disse",
+          "Deus",
+          "a",
+          "Moisés",
+          "Eu",
+          "Sou",
+          "o",
+          "que",
+          "Sou"
+        ],
+        "embaralhado": [
+          "Eu",
+          "Sou",
+          "o",
+          "Deus",
+          "a",
+          "Moisés",
+          "Disse",
+          "que",
+          "Sou"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-êxo-14-14",
+    "titulo": "Êxodo 14:14",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "êxo-14-14-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Êxodo 14:14",
+        "texto": "O Senhor pelejará por vós e vós vos ______",
+        "lacuna": "calareis",
+        "xp": 15
+      },
+      {
+        "id": "êxo-14-14-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "O",
+          "Senhor",
+          "pelejará",
+          "por",
+          "vós",
+          "e",
+          "vós",
+          "vos",
+          "calareis"
+        ],
+        "embaralhado": [
+          "vos",
+          "vós",
+          "O",
+          "Senhor",
+          "pelejará",
+          "calareis",
+          "e",
+          "por",
+          "vós"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-êxo-20-3",
+    "titulo": "Êxodo 20:3",
+    "dificuldade_geral": "Fácil",
+    "questoes": [
+      {
+        "id": "êxo-20-3-q1",
+        "tipo": "completar",
+        "dificuldade": "Fácil",
+        "pergunta": "Complete o versículo de Êxodo 20:3",
+        "texto": "Não terás outros deuses diante de ______",
+        "lacuna": "mim",
+        "xp": 10
+      },
+      {
+        "id": "êxo-20-3-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Fácil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Não",
+          "terás",
+          "outros",
+          "deuses",
+          "diante",
+          "de",
+          "mim"
+        ],
+        "embaralhado": [
+          "de",
+          "Não",
+          "diante",
+          "terás",
+          "deuses",
+          "mim",
+          "outros"
+        ],
+        "xp": 15
+      }
+    ]
+  },
+  {
+    "id": "lesson-lev-19-2",
+    "titulo": "Levítico 19:2",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "lev-19-2-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Levítico 19:2",
+        "texto": "Santos sereis porque eu o Senhor vosso Deus sou ______",
+        "lacuna": "santo",
+        "xp": 15
+      },
+      {
+        "id": "lev-19-2-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Santos",
+          "sereis",
+          "porque",
+          "eu",
+          "o",
+          "Senhor",
+          "vosso",
+          "Deus",
+          "sou",
+          "santo"
+        ],
+        "embaralhado": [
+          "Deus",
+          "porque",
+          "Santos",
+          "vosso",
+          "eu",
+          "Senhor",
+          "o",
+          "santo",
+          "sereis",
+          "sou"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-núm-6-24",
+    "titulo": "Números 6:24",
+    "dificuldade_geral": "Fácil",
+    "questoes": [
+      {
+        "id": "núm-6-24-q1",
+        "tipo": "completar",
+        "dificuldade": "Fácil",
+        "pergunta": "Complete o versículo de Números 6:24",
+        "texto": "O Senhor te abençoe e te ______",
+        "lacuna": "guarde",
+        "xp": 10
+      },
+      {
+        "id": "núm-6-24-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Fácil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "O",
+          "Senhor",
+          "te",
+          "abençoe",
+          "e",
+          "te",
+          "guarde"
+        ],
+        "embaralhado": [
+          "e",
+          "O",
+          "te",
+          "abençoe",
+          "guarde",
+          "Senhor",
+          "te"
+        ],
+        "xp": 15
+      }
+    ]
+  },
+  {
+    "id": "lesson-deu-6-5",
+    "titulo": "Deuteronômio 6:5",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "deu-6-5-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Deuteronômio 6:5",
+        "texto": "Amarás pois o Senhor teu Deus de todo o teu coração e de toda a tua ______",
+        "lacuna": "alma",
+        "xp": 20
+      },
+      {
+        "id": "deu-6-5-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Amarás",
+          "pois",
+          "o",
+          "Senhor",
+          "teu",
+          "Deus",
+          "de",
+          "todo",
+          "o",
+          "teu",
+          "coração",
+          "e",
+          "de",
+          "toda",
+          "a",
+          "tua",
+          "alma"
+        ],
+        "embaralhado": [
+          "o",
+          "tua",
+          "e",
+          "de",
+          "alma",
+          "o",
+          "toda",
+          "todo",
+          "coração",
+          "teu",
+          "de",
+          "teu",
+          "pois",
+          "Deus",
+          "Senhor",
+          "a",
+          "Amarás"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-deu-31-6",
+    "titulo": "Deuteronômio 31:6",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "deu-31-6-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Deuteronômio 31:6",
+        "texto": "Esforçai-vos e tende bom ânimo não temais nem vos espanteis diante ______",
+        "lacuna": "deles",
+        "xp": 15
+      },
+      {
+        "id": "deu-31-6-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Esforçai-vos",
+          "e",
+          "tende",
+          "bom",
+          "ânimo",
+          "não",
+          "temais",
+          "nem",
+          "vos",
+          "espanteis",
+          "diante",
+          "deles"
+        ],
+        "embaralhado": [
+          "não",
+          "espanteis",
+          "temais",
+          "nem",
+          "bom",
+          "vos",
+          "deles",
+          "e",
+          "diante",
+          "ânimo",
+          "tende",
+          "Esforçai-vos"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-jos-1-9",
+    "titulo": "Josué 1:9",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "jos-1-9-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Josué 1:9",
+        "texto": "Não to mandei eu esforça-te e tem bom ânimo não temas nem te ______",
+        "lacuna": "espantes",
+        "xp": 15
+      },
+      {
+        "id": "jos-1-9-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Não",
+          "to",
+          "mandei",
+          "eu",
+          "esforça-te",
+          "e",
+          "tem",
+          "bom",
+          "ânimo",
+          "não",
+          "temas",
+          "nem",
+          "te",
+          "espantes"
+        ],
+        "embaralhado": [
+          "e",
+          "bom",
+          "espantes",
+          "esforça-te",
+          "nem",
+          "não",
+          "eu",
+          "to",
+          "ânimo",
+          "te",
+          "temas",
+          "mandei",
+          "Não",
+          "tem"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-jos-24-15",
+    "titulo": "Josué 24:15",
+    "dificuldade_geral": "Fácil",
+    "questoes": [
+      {
+        "id": "jos-24-15-q1",
+        "tipo": "completar",
+        "dificuldade": "Fácil",
+        "pergunta": "Complete o versículo de Josué 24:15",
+        "texto": "Eu e a minha casa serviremos ao ______",
+        "lacuna": "Senhor",
+        "xp": 10
+      },
+      {
+        "id": "jos-24-15-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Fácil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Eu",
+          "e",
+          "a",
+          "minha",
+          "casa",
+          "serviremos",
+          "ao",
+          "Senhor"
+        ],
+        "embaralhado": [
+          "serviremos",
+          "e",
+          "ao",
+          "casa",
+          "Senhor",
+          "minha",
+          "Eu",
+          "a"
+        ],
+        "xp": 15
+      }
+    ]
+  },
+  {
+    "id": "lesson-1 s-16-7",
+    "titulo": "1 Samuel 16:7",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "1 s-16-7-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de 1 Samuel 16:7",
+        "texto": "O homem vê o que está diante dos olhos porém o Senhor olha para o ______",
+        "lacuna": "coração",
+        "xp": 20
+      },
+      {
+        "id": "1 s-16-7-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "O",
+          "homem",
+          "vê",
+          "o",
+          "que",
+          "está",
+          "diante",
+          "dos",
+          "olhos",
+          "porém",
+          "o",
+          "Senhor",
+          "olha",
+          "para",
+          "o",
+          "coração"
+        ],
+        "embaralhado": [
+          "porém",
+          "diante",
+          "olhos",
+          "Senhor",
+          "olha",
+          "que",
+          "O",
+          "o",
+          "coração",
+          "o",
+          "o",
+          "está",
+          "homem",
+          "vê",
+          "para",
+          "dos"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-nee-8-10",
+    "titulo": "Neemias 8:10",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "nee-8-10-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Neemias 8:10",
+        "texto": "Não vos entristeçais porque a alegria do Senhor é a vossa ______",
+        "lacuna": "força",
+        "xp": 15
+      },
+      {
+        "id": "nee-8-10-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Não",
+          "vos",
+          "entristeçais",
+          "porque",
+          "a",
+          "alegria",
+          "do",
+          "Senhor",
+          "é",
+          "a",
+          "vossa",
+          "força"
+        ],
+        "embaralhado": [
+          "a",
+          "Não",
+          "alegria",
+          "vossa",
+          "a",
+          "do",
+          "vos",
+          "força",
+          "é",
+          "porque",
+          "Senhor",
+          "entristeçais"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-jó-19-25",
+    "titulo": "Jó 19:25",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "jó-19-25-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Jó 19:25",
+        "texto": "Porque eu sei que o meu Redentor vive e que por fim se levantará sobre a ______",
+        "lacuna": "terra",
+        "xp": 20
+      },
+      {
+        "id": "jó-19-25-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Porque",
+          "eu",
+          "sei",
+          "que",
+          "o",
+          "meu",
+          "Redentor",
+          "vive",
+          "e",
+          "que",
+          "por",
+          "fim",
+          "se",
+          "levantará",
+          "sobre",
+          "a",
+          "terra"
+        ],
+        "embaralhado": [
+          "Porque",
+          "por",
+          "o",
+          "e",
+          "a",
+          "meu",
+          "vive",
+          "sobre",
+          "terra",
+          "fim",
+          "sei",
+          "eu",
+          "levantará",
+          "se",
+          "Redentor",
+          "que",
+          "que"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-1-1",
+    "titulo": "Salmos 1:1",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-1-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 1:1",
+        "texto": "Bem-aventurado o homem que não anda segundo o conselho dos ______",
+        "lacuna": "ímpios",
+        "xp": 15
+      },
+      {
+        "id": "sal-1-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Bem-aventurado",
+          "o",
+          "homem",
+          "que",
+          "não",
+          "anda",
+          "segundo",
+          "o",
+          "conselho",
+          "dos",
+          "ímpios"
+        ],
+        "embaralhado": [
+          "o",
+          "segundo",
+          "ímpios",
+          "homem",
+          "conselho",
+          "anda",
+          "não",
+          "que",
+          "dos",
+          "Bem-aventurado",
+          "o"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-19-1",
+    "titulo": "Salmos 19:1",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "sal-19-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Salmos 19:1",
+        "texto": "Os céus declaram a glória de Deus e o firmamento anuncia a obra das suas ______",
+        "lacuna": "mãos",
+        "xp": 20
+      },
+      {
+        "id": "sal-19-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Os",
+          "céus",
+          "declaram",
+          "a",
+          "glória",
+          "de",
+          "Deus",
+          "e",
+          "o",
+          "firmamento",
+          "anuncia",
+          "a",
+          "obra",
+          "das",
+          "suas",
+          "mãos"
+        ],
+        "embaralhado": [
+          "a",
+          "anuncia",
+          "glória",
+          "das",
+          "e",
+          "Deus",
+          "mãos",
+          "suas",
+          "de",
+          "Os",
+          "o",
+          "declaram",
+          "céus",
+          "obra",
+          "firmamento",
+          "a"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-23-1",
+    "titulo": "Salmos 23:1",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-23-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 23:1",
+        "texto": "O Senhor é o meu pastor nada me ______",
+        "lacuna": "faltará",
+        "xp": 15
+      },
+      {
+        "id": "sal-23-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "O",
+          "Senhor",
+          "é",
+          "o",
+          "meu",
+          "pastor",
+          "nada",
+          "me",
+          "faltará"
+        ],
+        "embaralhado": [
+          "o",
+          "Senhor",
+          "é",
+          "O",
+          "pastor",
+          "meu",
+          "me",
+          "nada",
+          "faltará"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-23-4",
+    "titulo": "Salmos 23:4",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-23-4-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 23:4",
+        "texto": "Ainda que eu andasse pelo vale da sombra da morte não temeria mal ______",
+        "lacuna": "algum",
+        "xp": 15
+      },
+      {
+        "id": "sal-23-4-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Ainda",
+          "que",
+          "eu",
+          "andasse",
+          "pelo",
+          "vale",
+          "da",
+          "sombra",
+          "da",
+          "morte",
+          "não",
+          "temeria",
+          "mal",
+          "algum"
+        ],
+        "embaralhado": [
+          "eu",
+          "da",
+          "Ainda",
+          "mal",
+          "não",
+          "algum",
+          "pelo",
+          "morte",
+          "sombra",
+          "temeria",
+          "que",
+          "da",
+          "vale",
+          "andasse"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-27-1",
+    "titulo": "Salmos 27:1",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-27-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 27:1",
+        "texto": "O Senhor é a minha luz e a minha salvação a quem ______",
+        "lacuna": "temerei",
+        "xp": 15
+      },
+      {
+        "id": "sal-27-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "O",
+          "Senhor",
+          "é",
+          "a",
+          "minha",
+          "luz",
+          "e",
+          "a",
+          "minha",
+          "salvação",
+          "a",
+          "quem",
+          "temerei"
+        ],
+        "embaralhado": [
+          "quem",
+          "minha",
+          "minha",
+          "O",
+          "luz",
+          "a",
+          "e",
+          "temerei",
+          "a",
+          "a",
+          "Senhor",
+          "é",
+          "salvação"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-34-7",
+    "titulo": "Salmos 34:7",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-34-7-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 34:7",
+        "texto": "O anjo do Senhor acampa-se ao redor dos que o temem e os ______",
+        "lacuna": "livra",
+        "xp": 15
+      },
+      {
+        "id": "sal-34-7-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "O",
+          "anjo",
+          "do",
+          "Senhor",
+          "acampa-se",
+          "ao",
+          "redor",
+          "dos",
+          "que",
+          "o",
+          "temem",
+          "e",
+          "os",
+          "livra"
+        ],
+        "embaralhado": [
+          "anjo",
+          "dos",
+          "temem",
+          "ao",
+          "acampa-se",
+          "o",
+          "do",
+          "Senhor",
+          "que",
+          "e",
+          "livra",
+          "redor",
+          "os",
+          "O"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-37-4",
+    "titulo": "Salmos 37:4",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-37-4-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 37:4",
+        "texto": "Deleita-te também no Senhor e ele te concederá os desejos do teu ______",
+        "lacuna": "coração",
+        "xp": 15
+      },
+      {
+        "id": "sal-37-4-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Deleita-te",
+          "também",
+          "no",
+          "Senhor",
+          "e",
+          "ele",
+          "te",
+          "concederá",
+          "os",
+          "desejos",
+          "do",
+          "teu",
+          "coração"
+        ],
+        "embaralhado": [
+          "ele",
+          "no",
+          "teu",
+          "desejos",
+          "e",
+          "do",
+          "coração",
+          "também",
+          "Deleita-te",
+          "concederá",
+          "Senhor",
+          "os",
+          "te"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-37-5",
+    "titulo": "Salmos 37:5",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-37-5-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 37:5",
+        "texto": "Entrega o teu caminho ao Senhor confia nele e ele tudo ______",
+        "lacuna": "fará",
+        "xp": 15
+      },
+      {
+        "id": "sal-37-5-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Entrega",
+          "o",
+          "teu",
+          "caminho",
+          "ao",
+          "Senhor",
+          "confia",
+          "nele",
+          "e",
+          "ele",
+          "tudo",
+          "fará"
+        ],
+        "embaralhado": [
+          "Senhor",
+          "teu",
+          "Entrega",
+          "fará",
+          "ele",
+          "confia",
+          "nele",
+          "tudo",
+          "caminho",
+          "ao",
+          "e",
+          "o"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-42-1",
+    "titulo": "Salmos 42:1",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "sal-42-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Salmos 42:1",
+        "texto": "Como o cervo brama pelas correntes das águas assim suspira a minha alma por ti ó ______",
+        "lacuna": "Deus",
+        "xp": 20
+      },
+      {
+        "id": "sal-42-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Como",
+          "o",
+          "cervo",
+          "brama",
+          "pelas",
+          "correntes",
+          "das",
+          "águas",
+          "assim",
+          "suspira",
+          "a",
+          "minha",
+          "alma",
+          "por",
+          "ti",
+          "ó",
+          "Deus"
+        ],
+        "embaralhado": [
+          "minha",
+          "Deus",
+          "ti",
+          "correntes",
+          "pelas",
+          "o",
+          "ó",
+          "cervo",
+          "brama",
+          "das",
+          "a",
+          "assim",
+          "suspira",
+          "alma",
+          "por",
+          "águas",
+          "Como"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-46-1",
+    "titulo": "Salmos 46:1",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-46-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 46:1",
+        "texto": "Deus é o nosso refúgio e fortaleza socorro bem presente na ______",
+        "lacuna": "angústia",
+        "xp": 15
+      },
+      {
+        "id": "sal-46-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Deus",
+          "é",
+          "o",
+          "nosso",
+          "refúgio",
+          "e",
+          "fortaleza",
+          "socorro",
+          "bem",
+          "presente",
+          "na",
+          "angústia"
+        ],
+        "embaralhado": [
+          "o",
+          "é",
+          "na",
+          "bem",
+          "nosso",
+          "angústia",
+          "fortaleza",
+          "Deus",
+          "socorro",
+          "refúgio",
+          "e",
+          "presente"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-46-10",
+    "titulo": "Salmos 46:10",
+    "dificuldade_geral": "Fácil",
+    "questoes": [
+      {
+        "id": "sal-46-10-q1",
+        "tipo": "completar",
+        "dificuldade": "Fácil",
+        "pergunta": "Complete o versículo de Salmos 46:10",
+        "texto": "Aquietai-vos e sabei que eu sou ______",
+        "lacuna": "Deus",
+        "xp": 10
+      },
+      {
+        "id": "sal-46-10-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Fácil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Aquietai-vos",
+          "e",
+          "sabei",
+          "que",
+          "eu",
+          "sou",
+          "Deus"
+        ],
+        "embaralhado": [
+          "sabei",
+          "sou",
+          "eu",
+          "Aquietai-vos",
+          "que",
+          "Deus",
+          "e"
+        ],
+        "xp": 15
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-51-10",
+    "titulo": "Salmos 51:10",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-51-10-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 51:10",
+        "texto": "Cria em mim ó Deus um coração puro e renova em mim um espírito ______",
+        "lacuna": "reto",
+        "xp": 15
+      },
+      {
+        "id": "sal-51-10-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Cria",
+          "em",
+          "mim",
+          "ó",
+          "Deus",
+          "um",
+          "coração",
+          "puro",
+          "e",
+          "renova",
+          "em",
+          "mim",
+          "um",
+          "espírito",
+          "reto"
+        ],
+        "embaralhado": [
+          "mim",
+          "em",
+          "mim",
+          "um",
+          "e",
+          "ó",
+          "puro",
+          "renova",
+          "Deus",
+          "um",
+          "coração",
+          "reto",
+          "espírito",
+          "em",
+          "Cria"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-91-1",
+    "titulo": "Salmos 91:1",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-91-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 91:1",
+        "texto": "Aquele que habita no esconderijo do Altíssimo à sombra do Onipotente ______",
+        "lacuna": "descansará",
+        "xp": 15
+      },
+      {
+        "id": "sal-91-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Aquele",
+          "que",
+          "habita",
+          "no",
+          "esconderijo",
+          "do",
+          "Altíssimo",
+          "à",
+          "sombra",
+          "do",
+          "Onipotente",
+          "descansará"
+        ],
+        "embaralhado": [
+          "que",
+          "Aquele",
+          "Altíssimo",
+          "à",
+          "no",
+          "descansará",
+          "esconderijo",
+          "sombra",
+          "habita",
+          "do",
+          "do",
+          "Onipotente"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-91-11",
+    "titulo": "Salmos 91:11",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "sal-91-11-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Salmos 91:11",
+        "texto": "Porque aos seus anjos dará ordem a teu respeito para te guardarem em todos os teus ______",
+        "lacuna": "caminhos",
+        "xp": 20
+      },
+      {
+        "id": "sal-91-11-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Porque",
+          "aos",
+          "seus",
+          "anjos",
+          "dará",
+          "ordem",
+          "a",
+          "teu",
+          "respeito",
+          "para",
+          "te",
+          "guardarem",
+          "em",
+          "todos",
+          "os",
+          "teus",
+          "caminhos"
+        ],
+        "embaralhado": [
+          "dará",
+          "aos",
+          "teu",
+          "seus",
+          "te",
+          "anjos",
+          "respeito",
+          "guardarem",
+          "todos",
+          "em",
+          "os",
+          "Porque",
+          "a",
+          "ordem",
+          "caminhos",
+          "para",
+          "teus"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-100-4",
+    "titulo": "Salmos 100:4",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-100-4-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 100:4",
+        "texto": "Entrai pelas portas dele com gratidão e em seus átrios com ______",
+        "lacuna": "louvor",
+        "xp": 15
+      },
+      {
+        "id": "sal-100-4-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Entrai",
+          "pelas",
+          "portas",
+          "dele",
+          "com",
+          "gratidão",
+          "e",
+          "em",
+          "seus",
+          "átrios",
+          "com",
+          "louvor"
+        ],
+        "embaralhado": [
+          "dele",
+          "e",
+          "Entrai",
+          "portas",
+          "seus",
+          "com",
+          "em",
+          "pelas",
+          "gratidão",
+          "louvor",
+          "átrios",
+          "com"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-103-1",
+    "titulo": "Salmos 103:1",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "sal-103-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Salmos 103:1",
+        "texto": "Bendize ó minha alma ao Senhor e tudo o que há em mim bendiga o seu santo ______",
+        "lacuna": "nome",
+        "xp": 20
+      },
+      {
+        "id": "sal-103-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Bendize",
+          "ó",
+          "minha",
+          "alma",
+          "ao",
+          "Senhor",
+          "e",
+          "tudo",
+          "o",
+          "que",
+          "há",
+          "em",
+          "mim",
+          "bendiga",
+          "o",
+          "seu",
+          "santo",
+          "nome"
+        ],
+        "embaralhado": [
+          "e",
+          "santo",
+          "bendiga",
+          "o",
+          "ao",
+          "tudo",
+          "há",
+          "Senhor",
+          "que",
+          "o",
+          "ó",
+          "mim",
+          "em",
+          "nome",
+          "alma",
+          "seu",
+          "minha",
+          "Bendize"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-119-11",
+    "titulo": "Salmos 119:11",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-119-11-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 119:11",
+        "texto": "Escondi a tua palavra no meu coração para não pecar contra ______",
+        "lacuna": "ti",
+        "xp": 15
+      },
+      {
+        "id": "sal-119-11-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Escondi",
+          "a",
+          "tua",
+          "palavra",
+          "no",
+          "meu",
+          "coração",
+          "para",
+          "não",
+          "pecar",
+          "contra",
+          "ti"
+        ],
+        "embaralhado": [
+          "para",
+          "pecar",
+          "coração",
+          "no",
+          "palavra",
+          "ti",
+          "contra",
+          "a",
+          "meu",
+          "Escondi",
+          "tua",
+          "não"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-119-105",
+    "titulo": "Salmos 119:105",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-119-105-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 119:105",
+        "texto": "Lâmpada para os meus pés é tua palavra e luz para o meu ______",
+        "lacuna": "caminho",
+        "xp": 15
+      },
+      {
+        "id": "sal-119-105-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Lâmpada",
+          "para",
+          "os",
+          "meus",
+          "pés",
+          "é",
+          "tua",
+          "palavra",
+          "e",
+          "luz",
+          "para",
+          "o",
+          "meu",
+          "caminho"
+        ],
+        "embaralhado": [
+          "para",
+          "o",
+          "e",
+          "pés",
+          "tua",
+          "caminho",
+          "os",
+          "Lâmpada",
+          "palavra",
+          "luz",
+          "é",
+          "meu",
+          "para",
+          "meus"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-121-1",
+    "titulo": "Salmos 121:1",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-121-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 121:1",
+        "texto": "Levantarei os meus olhos para os montes de onde vem o meu ______",
+        "lacuna": "socorro",
+        "xp": 15
+      },
+      {
+        "id": "sal-121-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Levantarei",
+          "os",
+          "meus",
+          "olhos",
+          "para",
+          "os",
+          "montes",
+          "de",
+          "onde",
+          "vem",
+          "o",
+          "meu",
+          "socorro"
+        ],
+        "embaralhado": [
+          "os",
+          "onde",
+          "socorro",
+          "de",
+          "meu",
+          "para",
+          "montes",
+          "os",
+          "vem",
+          "meus",
+          "Levantarei",
+          "o",
+          "olhos"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-121-2",
+    "titulo": "Salmos 121:2",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-121-2-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 121:2",
+        "texto": "O meu socorro vem do Senhor que fez o céu e a ______",
+        "lacuna": "terra",
+        "xp": 15
+      },
+      {
+        "id": "sal-121-2-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "O",
+          "meu",
+          "socorro",
+          "vem",
+          "do",
+          "Senhor",
+          "que",
+          "fez",
+          "o",
+          "céu",
+          "e",
+          "a",
+          "terra"
+        ],
+        "embaralhado": [
+          "vem",
+          "que",
+          "socorro",
+          "meu",
+          "a",
+          "terra",
+          "fez",
+          "céu",
+          "do",
+          "e",
+          "o",
+          "Senhor",
+          "O"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-125-1",
+    "titulo": "Salmos 125:1",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-125-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 125:1",
+        "texto": "Os que confiam no Senhor serão como o monte de Sião que não se ______",
+        "lacuna": "abala",
+        "xp": 15
+      },
+      {
+        "id": "sal-125-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Os",
+          "que",
+          "confiam",
+          "no",
+          "Senhor",
+          "serão",
+          "como",
+          "o",
+          "monte",
+          "de",
+          "Sião",
+          "que",
+          "não",
+          "se",
+          "abala"
+        ],
+        "embaralhado": [
+          "Os",
+          "que",
+          "monte",
+          "se",
+          "o",
+          "Sião",
+          "que",
+          "abala",
+          "como",
+          "Senhor",
+          "de",
+          "no",
+          "não",
+          "confiam",
+          "serão"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-126-5",
+    "titulo": "Salmos 126:5",
+    "dificuldade_geral": "Fácil",
+    "questoes": [
+      {
+        "id": "sal-126-5-q1",
+        "tipo": "completar",
+        "dificuldade": "Fácil",
+        "pergunta": "Complete o versículo de Salmos 126:5",
+        "texto": "Os que semeiam em lágrimas segarão com ______",
+        "lacuna": "alegria",
+        "xp": 10
+      },
+      {
+        "id": "sal-126-5-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Fácil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Os",
+          "que",
+          "semeiam",
+          "em",
+          "lágrimas",
+          "segarão",
+          "com",
+          "alegria"
+        ],
+        "embaralhado": [
+          "segarão",
+          "lágrimas",
+          "que",
+          "com",
+          "em",
+          "alegria",
+          "Os",
+          "semeiam"
+        ],
+        "xp": 15
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-133-1",
+    "titulo": "Salmos 133:1",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-133-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 133:1",
+        "texto": "Oh quão bom e quão suave é que os irmãos vivam em ______",
+        "lacuna": "união",
+        "xp": 15
+      },
+      {
+        "id": "sal-133-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Oh",
+          "quão",
+          "bom",
+          "e",
+          "quão",
+          "suave",
+          "é",
+          "que",
+          "os",
+          "irmãos",
+          "vivam",
+          "em",
+          "união"
+        ],
+        "embaralhado": [
+          "que",
+          "Oh",
+          "irmãos",
+          "os",
+          "é",
+          "quão",
+          "suave",
+          "e",
+          "bom",
+          "quão",
+          "vivam",
+          "união",
+          "em"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-sal-139-14",
+    "titulo": "Salmos 139:14",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "sal-139-14-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Salmos 139:14",
+        "texto": "Eu te louvarei porque de um modo terrível e tão maravilhoso fui ______",
+        "lacuna": "formado",
+        "xp": 15
+      },
+      {
+        "id": "sal-139-14-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Eu",
+          "te",
+          "louvarei",
+          "porque",
+          "de",
+          "um",
+          "modo",
+          "terrível",
+          "e",
+          "tão",
+          "maravilhoso",
+          "fui",
+          "formado"
+        ],
+        "embaralhado": [
+          "de",
+          "modo",
+          "te",
+          "formado",
+          "porque",
+          "e",
+          "um",
+          "Eu",
+          "fui",
+          "maravilhoso",
+          "tão",
+          "louvarei",
+          "terrível"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-pro-1-7",
+    "titulo": "Provérbios 1:7",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "pro-1-7-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Provérbios 1:7",
+        "texto": "O temor do Senhor é o princípio do ______",
+        "lacuna": "conhecimento",
+        "xp": 15
+      },
+      {
+        "id": "pro-1-7-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "O",
+          "temor",
+          "do",
+          "Senhor",
+          "é",
+          "o",
+          "princípio",
+          "do",
+          "conhecimento"
+        ],
+        "embaralhado": [
+          "Senhor",
+          "o",
+          "é",
+          "O",
+          "conhecimento",
+          "princípio",
+          "do",
+          "temor",
+          "do"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-pro-3-5",
+    "titulo": "Provérbios 3:5",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "pro-3-5-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Provérbios 3:5",
+        "texto": "Confia no Senhor de todo o teu coração e não te estribes no teu próprio ______",
+        "lacuna": "entendimento",
+        "xp": 20
+      },
+      {
+        "id": "pro-3-5-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Confia",
+          "no",
+          "Senhor",
+          "de",
+          "todo",
+          "o",
+          "teu",
+          "coração",
+          "e",
+          "não",
+          "te",
+          "estribes",
+          "no",
+          "teu",
+          "próprio",
+          "entendimento"
+        ],
+        "embaralhado": [
+          "estribes",
+          "de",
+          "todo",
+          "teu",
+          "no",
+          "no",
+          "e",
+          "o",
+          "teu",
+          "Senhor",
+          "te",
+          "Confia",
+          "coração",
+          "entendimento",
+          "próprio",
+          "não"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-pro-3-6",
+    "titulo": "Provérbios 3:6",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "pro-3-6-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Provérbios 3:6",
+        "texto": "Reconhece-o em todos os teus caminhos e ele endireitará as tuas ______",
+        "lacuna": "veredas",
+        "xp": 15
+      },
+      {
+        "id": "pro-3-6-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Reconhece-o",
+          "em",
+          "todos",
+          "os",
+          "teus",
+          "caminhos",
+          "e",
+          "ele",
+          "endireitará",
+          "as",
+          "tuas",
+          "veredas"
+        ],
+        "embaralhado": [
+          "caminhos",
+          "veredas",
+          "Reconhece-o",
+          "endireitará",
+          "em",
+          "os",
+          "tuas",
+          "ele",
+          "teus",
+          "todos",
+          "e",
+          "as"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-pro-4-23",
+    "titulo": "Provérbios 4:23",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "pro-4-23-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Provérbios 4:23",
+        "texto": "Sobre tudo o que se deve guardar guarda o teu coração porque dele procedem as fontes da ______",
+        "lacuna": "vida",
+        "xp": 20
+      },
+      {
+        "id": "pro-4-23-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Sobre",
+          "tudo",
+          "o",
+          "que",
+          "se",
+          "deve",
+          "guardar",
+          "guarda",
+          "o",
+          "teu",
+          "coração",
+          "porque",
+          "dele",
+          "procedem",
+          "as",
+          "fontes",
+          "da",
+          "vida"
+        ],
+        "embaralhado": [
+          "coração",
+          "da",
+          "vida",
+          "porque",
+          "Sobre",
+          "dele",
+          "guarda",
+          "guardar",
+          "o",
+          "deve",
+          "o",
+          "fontes",
+          "teu",
+          "as",
+          "que",
+          "tudo",
+          "procedem",
+          "se"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-pro-15-1",
+    "titulo": "Provérbios 15:1",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "pro-15-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Provérbios 15:1",
+        "texto": "A resposta branda desvia o furor mas a palavra dura suscita a ______",
+        "lacuna": "ira",
+        "xp": 15
+      },
+      {
+        "id": "pro-15-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "A",
+          "resposta",
+          "branda",
+          "desvia",
+          "o",
+          "furor",
+          "mas",
+          "a",
+          "palavra",
+          "dura",
+          "suscita",
+          "a",
+          "ira"
+        ],
+        "embaralhado": [
+          "furor",
+          "o",
+          "ira",
+          "dura",
+          "desvia",
+          "a",
+          "palavra",
+          "resposta",
+          "a",
+          "mas",
+          "suscita",
+          "branda",
+          "A"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-pro-16-3",
+    "titulo": "Provérbios 16:3",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "pro-16-3-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Provérbios 16:3",
+        "texto": "Confia ao Senhor as tuas obras e teus pensamentos serão ______",
+        "lacuna": "estabelecidos",
+        "xp": 15
+      },
+      {
+        "id": "pro-16-3-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Confia",
+          "ao",
+          "Senhor",
+          "as",
+          "tuas",
+          "obras",
+          "e",
+          "teus",
+          "pensamentos",
+          "serão",
+          "estabelecidos"
+        ],
+        "embaralhado": [
+          "teus",
+          "as",
+          "ao",
+          "estabelecidos",
+          "obras",
+          "serão",
+          "pensamentos",
+          "Senhor",
+          "e",
+          "Confia",
+          "tuas"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-pro-16-9",
+    "titulo": "Provérbios 16:9",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "pro-16-9-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Provérbios 16:9",
+        "texto": "O coração do homem traça o seu caminho mas o Senhor lhe dirige os ______",
+        "lacuna": "passos",
+        "xp": 15
+      },
+      {
+        "id": "pro-16-9-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "O",
+          "coração",
+          "do",
+          "homem",
+          "traça",
+          "o",
+          "seu",
+          "caminho",
+          "mas",
+          "o",
+          "Senhor",
+          "lhe",
+          "dirige",
+          "os",
+          "passos"
+        ],
+        "embaralhado": [
+          "o",
+          "os",
+          "passos",
+          "seu",
+          "homem",
+          "traça",
+          "dirige",
+          "Senhor",
+          "coração",
+          "o",
+          "mas",
+          "caminho",
+          "do",
+          "O",
+          "lhe"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-pro-18-10",
+    "titulo": "Provérbios 18:10",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "pro-18-10-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Provérbios 18:10",
+        "texto": "Torre forte é o nome do Senhor a ela correrá o justo e estará em alto ______",
+        "lacuna": "refúgio",
+        "xp": 20
+      },
+      {
+        "id": "pro-18-10-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Torre",
+          "forte",
+          "é",
+          "o",
+          "nome",
+          "do",
+          "Senhor",
+          "a",
+          "ela",
+          "correrá",
+          "o",
+          "justo",
+          "e",
+          "estará",
+          "em",
+          "alto",
+          "refúgio"
+        ],
+        "embaralhado": [
+          "justo",
+          "correrá",
+          "refúgio",
+          "o",
+          "e",
+          "ela",
+          "o",
+          "Torre",
+          "estará",
+          "a",
+          "alto",
+          "nome",
+          "Senhor",
+          "em",
+          "do",
+          "forte",
+          "é"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-ecl-3-1",
+    "titulo": "Eclesiastes 3:1",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "ecl-3-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Eclesiastes 3:1",
+        "texto": "Tudo tem o seu tempo determinado e há tempo para todo o propósito debaixo do ______",
+        "lacuna": "céu",
+        "xp": 20
+      },
+      {
+        "id": "ecl-3-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Tudo",
+          "tem",
+          "o",
+          "seu",
+          "tempo",
+          "determinado",
+          "e",
+          "há",
+          "tempo",
+          "para",
+          "todo",
+          "o",
+          "propósito",
+          "debaixo",
+          "do",
+          "céu"
+        ],
+        "embaralhado": [
+          "tempo",
+          "tempo",
+          "céu",
+          "para",
+          "tem",
+          "determinado",
+          "do",
+          "Tudo",
+          "propósito",
+          "todo",
+          "seu",
+          "debaixo",
+          "e",
+          "o",
+          "há",
+          "o"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-cân-8-7",
+    "titulo": "Cânticos 8:7",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "cân-8-7-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Cânticos 8:7",
+        "texto": "As muitas águas não poderiam apagar esse amor nem os rios ______",
+        "lacuna": "afogá-lo",
+        "xp": 15
+      },
+      {
+        "id": "cân-8-7-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "As",
+          "muitas",
+          "águas",
+          "não",
+          "poderiam",
+          "apagar",
+          "esse",
+          "amor",
+          "nem",
+          "os",
+          "rios",
+          "afogá-lo"
+        ],
+        "embaralhado": [
+          "muitas",
+          "não",
+          "poderiam",
+          "esse",
+          "afogá-lo",
+          "As",
+          "rios",
+          "águas",
+          "os",
+          "apagar",
+          "amor",
+          "nem"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-isa-6-8",
+    "titulo": "Isaías 6:8",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "isa-6-8-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Isaías 6:8",
+        "texto": "Depois disto ouvi a voz do Senhor que dizia A quem enviarei e quem há de ir por nós então disse eu Eis-me aqui envia-me a ______",
+        "lacuna": "mim",
+        "xp": 20
+      },
+      {
+        "id": "isa-6-8-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Depois",
+          "disto",
+          "ouvi",
+          "a",
+          "voz",
+          "do",
+          "Senhor",
+          "que",
+          "dizia",
+          "A",
+          "quem",
+          "enviarei",
+          "e",
+          "quem",
+          "há",
+          "de",
+          "ir",
+          "por",
+          "nós",
+          "então",
+          "disse",
+          "eu",
+          "Eis-me",
+          "aqui",
+          "envia-me",
+          "a",
+          "mim"
+        ],
+        "embaralhado": [
+          "a",
+          "que",
+          "então",
+          "eu",
+          "voz",
+          "quem",
+          "a",
+          "dizia",
+          "Depois",
+          "há",
+          "quem",
+          "envia-me",
+          "A",
+          "de",
+          "Eis-me",
+          "do",
+          "disse",
+          "aqui",
+          "por",
+          "disto",
+          "ir",
+          "e",
+          "Senhor",
+          "nós",
+          "enviarei",
+          "ouvi",
+          "mim"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-isa-9-6",
+    "titulo": "Isaías 9:6",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "isa-9-6-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Isaías 9:6",
+        "texto": "Porque um menino nos nasceu um filho se nos deu e o principado está sobre os seus ______",
+        "lacuna": "ombros",
+        "xp": 20
+      },
+      {
+        "id": "isa-9-6-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Porque",
+          "um",
+          "menino",
+          "nos",
+          "nasceu",
+          "um",
+          "filho",
+          "se",
+          "nos",
+          "deu",
+          "e",
+          "o",
+          "principado",
+          "está",
+          "sobre",
+          "os",
+          "seus",
+          "ombros"
+        ],
+        "embaralhado": [
+          "Porque",
+          "e",
+          "filho",
+          "deu",
+          "seus",
+          "está",
+          "principado",
+          "menino",
+          "um",
+          "nasceu",
+          "nos",
+          "ombros",
+          "os",
+          "um",
+          "sobre",
+          "nos",
+          "o",
+          "se"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-isa-26-3",
+    "titulo": "Isaías 26:3",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "isa-26-3-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Isaías 26:3",
+        "texto": "Tu conservarás em paz aquele cuja mente está firme em ______ porque ele confia em ______",
+        "lacuna": "ti",
+        "xp": 20
+      },
+      {
+        "id": "isa-26-3-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Tu",
+          "conservarás",
+          "em",
+          "paz",
+          "aquele",
+          "cuja",
+          "mente",
+          "está",
+          "firme",
+          "em",
+          "ti",
+          "porque",
+          "ele",
+          "confia",
+          "em",
+          "ti"
+        ],
+        "embaralhado": [
+          "ele",
+          "cuja",
+          "aquele",
+          "firme",
+          "está",
+          "paz",
+          "mente",
+          "porque",
+          "conservarás",
+          "em",
+          "confia",
+          "ti",
+          "Tu",
+          "em",
+          "em",
+          "ti"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-isa-40-31",
+    "titulo": "Isaías 40:31",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "isa-40-31-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Isaías 40:31",
+        "texto": "Mas os que esperam no Senhor renovarão as forças subirão com asas como ______",
+        "lacuna": "águias",
+        "xp": 15
+      },
+      {
+        "id": "isa-40-31-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Mas",
+          "os",
+          "que",
+          "esperam",
+          "no",
+          "Senhor",
+          "renovarão",
+          "as",
+          "forças",
+          "subirão",
+          "com",
+          "asas",
+          "como",
+          "águias"
+        ],
+        "embaralhado": [
+          "que",
+          "os",
+          "como",
+          "subirão",
+          "Senhor",
+          "asas",
+          "forças",
+          "com",
+          "esperam",
+          "águias",
+          "no",
+          "Mas",
+          "as",
+          "renovarão"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-isa-41-10",
+    "titulo": "Isaías 41:10",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "isa-41-10-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Isaías 41:10",
+        "texto": "Não temas porque eu sou contigo não te assombres porque eu sou o teu ______",
+        "lacuna": "Deus",
+        "xp": 15
+      },
+      {
+        "id": "isa-41-10-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Não",
+          "temas",
+          "porque",
+          "eu",
+          "sou",
+          "contigo",
+          "não",
+          "te",
+          "assombres",
+          "porque",
+          "eu",
+          "sou",
+          "o",
+          "teu",
+          "Deus"
+        ],
+        "embaralhado": [
+          "teu",
+          "o",
+          "porque",
+          "assombres",
+          "porque",
+          "eu",
+          "te",
+          "eu",
+          "Deus",
+          "Não",
+          "sou",
+          "contigo",
+          "não",
+          "temas",
+          "sou"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-isa-43-1",
+    "titulo": "Isaías 43:1",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "isa-43-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Isaías 43:1",
+        "texto": "Não temas porque eu te remi chamei-te pelo teu nome tu és ______",
+        "lacuna": "meu",
+        "xp": 15
+      },
+      {
+        "id": "isa-43-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Não",
+          "temas",
+          "porque",
+          "eu",
+          "te",
+          "remi",
+          "chamei-te",
+          "pelo",
+          "teu",
+          "nome",
+          "tu",
+          "és",
+          "meu"
+        ],
+        "embaralhado": [
+          "chamei-te",
+          "te",
+          "meu",
+          "remi",
+          "tu",
+          "porque",
+          "eu",
+          "nome",
+          "Não",
+          "és",
+          "temas",
+          "teu",
+          "pelo"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-isa-43-13",
+    "titulo": "Isaías 43:13",
+    "dificuldade_geral": "Fácil",
+    "questoes": [
+      {
+        "id": "isa-43-13-q1",
+        "tipo": "completar",
+        "dificuldade": "Fácil",
+        "pergunta": "Complete o versículo de Isaías 43:13",
+        "texto": "Operando eu quem o ______",
+        "lacuna": "impedirá",
+        "xp": 10
+      },
+      {
+        "id": "isa-43-13-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Fácil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Operando",
+          "eu",
+          "quem",
+          "o",
+          "impedirá"
+        ],
+        "embaralhado": [
+          "Operando",
+          "impedirá",
+          "quem",
+          "o",
+          "eu"
+        ],
+        "xp": 15
+      }
+    ]
+  },
+  {
+    "id": "lesson-isa-53-5",
+    "titulo": "Isaías 53:5",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "isa-53-5-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Isaías 53:5",
+        "texto": "Mas ele foi ferido por causa das nossas transgressões e moído por causa das nossas ______",
+        "lacuna": "iniquidades",
+        "xp": 20
+      },
+      {
+        "id": "isa-53-5-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Mas",
+          "ele",
+          "foi",
+          "ferido",
+          "por",
+          "causa",
+          "das",
+          "nossas",
+          "transgressões",
+          "e",
+          "moído",
+          "por",
+          "causa",
+          "das",
+          "nossas",
+          "iniquidades"
+        ],
+        "embaralhado": [
+          "nossas",
+          "ele",
+          "das",
+          "e",
+          "causa",
+          "causa",
+          "iniquidades",
+          "foi",
+          "das",
+          "transgressões",
+          "ferido",
+          "por",
+          "por",
+          "Mas",
+          "nossas",
+          "moído"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-isa-54-17",
+    "titulo": "Isaías 54:17",
+    "dificuldade_geral": "Fácil",
+    "questoes": [
+      {
+        "id": "isa-54-17-q1",
+        "tipo": "completar",
+        "dificuldade": "Fácil",
+        "pergunta": "Complete o versículo de Isaías 54:17",
+        "texto": "Toda a ferramenta preparada contra ti não ______",
+        "lacuna": "prosperará",
+        "xp": 10
+      },
+      {
+        "id": "isa-54-17-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Fácil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Toda",
+          "a",
+          "ferramenta",
+          "preparada",
+          "contra",
+          "ti",
+          "não",
+          "prosperará"
+        ],
+        "embaralhado": [
+          "a",
+          "ti",
+          "prosperará",
+          "contra",
+          "preparada",
+          "Toda",
+          "ferramenta",
+          "não"
+        ],
+        "xp": 15
+      }
+    ]
+  },
+  {
+    "id": "lesson-isa-55-6",
+    "titulo": "Isaías 55:6",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "isa-55-6-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Isaías 55:6",
+        "texto": "Buscai ao Senhor enquanto se pode achar invocai-o enquanto está ______",
+        "lacuna": "perto",
+        "xp": 15
+      },
+      {
+        "id": "isa-55-6-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Buscai",
+          "ao",
+          "Senhor",
+          "enquanto",
+          "se",
+          "pode",
+          "achar",
+          "invocai-o",
+          "enquanto",
+          "está",
+          "perto"
+        ],
+        "embaralhado": [
+          "invocai-o",
+          "está",
+          "se",
+          "enquanto",
+          "Senhor",
+          "achar",
+          "enquanto",
+          "perto",
+          "pode",
+          "Buscai",
+          "ao"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-jer-29-11",
+    "titulo": "Jeremias 29:11",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "jer-29-11-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Jeremias 29:11",
+        "texto": "Porque eu bem sei os pensamentos que tenho a vosso respeito diz o Senhor pensamentos de paz e não de ______",
+        "lacuna": "mal",
+        "xp": 20
+      },
+      {
+        "id": "jer-29-11-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Porque",
+          "eu",
+          "bem",
+          "sei",
+          "os",
+          "pensamentos",
+          "que",
+          "tenho",
+          "a",
+          "vosso",
+          "respeito",
+          "diz",
+          "o",
+          "Senhor",
+          "pensamentos",
+          "de",
+          "paz",
+          "e",
+          "não",
+          "de",
+          "mal"
+        ],
+        "embaralhado": [
+          "pensamentos",
+          "de",
+          "mal",
+          "tenho",
+          "a",
+          "que",
+          "vosso",
+          "diz",
+          "paz",
+          "Senhor",
+          "eu",
+          "sei",
+          "de",
+          "o",
+          "respeito",
+          "Porque",
+          "e",
+          "os",
+          "pensamentos",
+          "não",
+          "bem"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-jer-33-3",
+    "titulo": "Jeremias 33:3",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "jer-33-3-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Jeremias 33:3",
+        "texto": "Clama a mim e responder-te-ei e anunciar-te-ei coisas grandes e firmes que não ______",
+        "lacuna": "sabes",
+        "xp": 15
+      },
+      {
+        "id": "jer-33-3-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Clama",
+          "a",
+          "mim",
+          "e",
+          "responder-te-ei",
+          "e",
+          "anunciar-te-ei",
+          "coisas",
+          "grandes",
+          "e",
+          "firmes",
+          "que",
+          "não",
+          "sabes"
+        ],
+        "embaralhado": [
+          "e",
+          "que",
+          "mim",
+          "e",
+          "não",
+          "coisas",
+          "grandes",
+          "firmes",
+          "responder-te-ei",
+          "sabes",
+          "Clama",
+          "e",
+          "anunciar-te-ei",
+          "a"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-lam-3-22",
+    "titulo": "Lamentações 3:22",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "lam-3-22-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Lamentações 3:22",
+        "texto": "As misericórdias do Senhor são a causa de não sermos consumidos porque as suas misericórdias não têm ______",
+        "lacuna": "fim",
+        "xp": 20
+      },
+      {
+        "id": "lam-3-22-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "As",
+          "misericórdias",
+          "do",
+          "Senhor",
+          "são",
+          "a",
+          "causa",
+          "de",
+          "não",
+          "sermos",
+          "consumidos",
+          "porque",
+          "as",
+          "suas",
+          "misericórdias",
+          "não",
+          "têm",
+          "fim"
+        ],
+        "embaralhado": [
+          "não",
+          "de",
+          "fim",
+          "sermos",
+          "do",
+          "As",
+          "misericórdias",
+          "Senhor",
+          "não",
+          "têm",
+          "são",
+          "a",
+          "as",
+          "consumidos",
+          "suas",
+          "causa",
+          "misericórdias",
+          "porque"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-lam-3-23",
+    "titulo": "Lamentações 3:23",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "lam-3-23-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Lamentações 3:23",
+        "texto": "Novas são cada manhã grande é a tua ______",
+        "lacuna": "fidelidade",
+        "xp": 15
+      },
+      {
+        "id": "lam-3-23-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Novas",
+          "são",
+          "cada",
+          "manhã",
+          "grande",
+          "é",
+          "a",
+          "tua",
+          "fidelidade"
+        ],
+        "embaralhado": [
+          "grande",
+          "fidelidade",
+          "a",
+          "Novas",
+          "são",
+          "tua",
+          "é",
+          "cada",
+          "manhã"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-hab-3-17",
+    "titulo": "Habacuque 3:17",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "hab-3-17-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Habacuque 3:17",
+        "texto": "Porque ainda que a figueira não floresça nem haja fruto na vide todavia eu me alegrarei no ______",
+        "lacuna": "Senhor",
+        "xp": 20
+      },
+      {
+        "id": "hab-3-17-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Porque",
+          "ainda",
+          "que",
+          "a",
+          "figueira",
+          "não",
+          "floresça",
+          "nem",
+          "haja",
+          "fruto",
+          "na",
+          "vide",
+          "todavia",
+          "eu",
+          "me",
+          "alegrarei",
+          "no",
+          "Senhor"
+        ],
+        "embaralhado": [
+          "a",
+          "alegrarei",
+          "ainda",
+          "Porque",
+          "haja",
+          "fruto",
+          "Senhor",
+          "me",
+          "não",
+          "na",
+          "eu",
+          "figueira",
+          "nem",
+          "que",
+          "todavia",
+          "vide",
+          "no",
+          "floresça"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-mat-5-14",
+    "titulo": "Mateus 5:14",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "mat-5-14-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Mateus 5:14",
+        "texto": "Vós sois a luz do mundo não se pode esconder uma cidade edificada sobre um ______",
+        "lacuna": "monte",
+        "xp": 20
+      },
+      {
+        "id": "mat-5-14-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Vós",
+          "sois",
+          "a",
+          "luz",
+          "do",
+          "mundo",
+          "não",
+          "se",
+          "pode",
+          "esconder",
+          "uma",
+          "cidade",
+          "edificada",
+          "sobre",
+          "um",
+          "monte"
+        ],
+        "embaralhado": [
+          "um",
+          "esconder",
+          "sois",
+          "a",
+          "se",
+          "mundo",
+          "do",
+          "pode",
+          "cidade",
+          "sobre",
+          "edificada",
+          "luz",
+          "monte",
+          "uma",
+          "não",
+          "Vós"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-mat-6-33",
+    "titulo": "Mateus 6:33",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "mat-6-33-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Mateus 6:33",
+        "texto": "Mas buscai primeiro o reino de Deus e a sua justiça e todas estas coisas vos serão ______",
+        "lacuna": "acrescentadas",
+        "xp": 20
+      },
+      {
+        "id": "mat-6-33-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Mas",
+          "buscai",
+          "primeiro",
+          "o",
+          "reino",
+          "de",
+          "Deus",
+          "e",
+          "a",
+          "sua",
+          "justiça",
+          "e",
+          "todas",
+          "estas",
+          "coisas",
+          "vos",
+          "serão",
+          "acrescentadas"
+        ],
+        "embaralhado": [
+          "estas",
+          "de",
+          "a",
+          "justiça",
+          "sua",
+          "acrescentadas",
+          "e",
+          "o",
+          "Mas",
+          "e",
+          "coisas",
+          "todas",
+          "Deus",
+          "primeiro",
+          "serão",
+          "vos",
+          "reino",
+          "buscai"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-mat-7-7",
+    "titulo": "Mateus 7:7",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "mat-7-7-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Mateus 7:7",
+        "texto": "Pedi e dar-se-vos-á buscai e encontrareis batei e ______",
+        "lacuna": "abrir-se-vos-á",
+        "xp": 15
+      },
+      {
+        "id": "mat-7-7-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Pedi",
+          "e",
+          "dar-se-vos-á",
+          "buscai",
+          "e",
+          "encontrareis",
+          "batei",
+          "e",
+          "abrir-se-vos-á"
+        ],
+        "embaralhado": [
+          "batei",
+          "e",
+          "abrir-se-vos-á",
+          "e",
+          "buscai",
+          "Pedi",
+          "encontrareis",
+          "dar-se-vos-á",
+          "e"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-mat-11-28",
+    "titulo": "Mateus 11:28",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "mat-11-28-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Mateus 11:28",
+        "texto": "Vinde a mim todos os que estais cansados e oprimidos e eu vos ______",
+        "lacuna": "aliviarei",
+        "xp": 15
+      },
+      {
+        "id": "mat-11-28-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Vinde",
+          "a",
+          "mim",
+          "todos",
+          "os",
+          "que",
+          "estais",
+          "cansados",
+          "e",
+          "oprimidos",
+          "e",
+          "eu",
+          "vos",
+          "aliviarei"
+        ],
+        "embaralhado": [
+          "Vinde",
+          "e",
+          "eu",
+          "estais",
+          "os",
+          "todos",
+          "oprimidos",
+          "e",
+          "que",
+          "a",
+          "mim",
+          "cansados",
+          "aliviarei",
+          "vos"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-mat-28-19",
+    "titulo": "Mateus 28:19",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "mat-28-19-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Mateus 28:19",
+        "texto": "Portanto ide ensinai todas as nações batizando-as em nome do Pai e do Filho e do Espírito ______",
+        "lacuna": "Santo",
+        "xp": 20
+      },
+      {
+        "id": "mat-28-19-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Portanto",
+          "ide",
+          "ensinai",
+          "todas",
+          "as",
+          "nações",
+          "batizando-as",
+          "em",
+          "nome",
+          "do",
+          "Pai",
+          "e",
+          "do",
+          "Filho",
+          "e",
+          "do",
+          "Espírito",
+          "Santo"
+        ],
+        "embaralhado": [
+          "nações",
+          "Espírito",
+          "Pai",
+          "em",
+          "as",
+          "todas",
+          "nome",
+          "Filho",
+          "do",
+          "ensinai",
+          "do",
+          "do",
+          "e",
+          "batizando-as",
+          "Portanto",
+          "ide",
+          "e",
+          "Santo"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-mat-28-20",
+    "titulo": "Mateus 28:20",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "mat-28-20-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Mateus 28:20",
+        "texto": "E eis que eu estou convosco todos os dias até à consumação do ______",
+        "lacuna": "século",
+        "xp": 15
+      },
+      {
+        "id": "mat-28-20-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "E",
+          "eis",
+          "que",
+          "eu",
+          "estou",
+          "convosco",
+          "todos",
+          "os",
+          "dias",
+          "até",
+          "à",
+          "consumação",
+          "do",
+          "século"
+        ],
+        "embaralhado": [
+          "que",
+          "E",
+          "estou",
+          "século",
+          "eis",
+          "dias",
+          "convosco",
+          "do",
+          "todos",
+          "consumação",
+          "os",
+          "à",
+          "até",
+          "eu"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-mar-9-23",
+    "titulo": "Marcos 9:23",
+    "dificuldade_geral": "Fácil",
+    "questoes": [
+      {
+        "id": "mar-9-23-q1",
+        "tipo": "completar",
+        "dificuldade": "Fácil",
+        "pergunta": "Complete o versículo de Marcos 9:23",
+        "texto": "Tudo é possível ao que ______",
+        "lacuna": "crê",
+        "xp": 10
+      },
+      {
+        "id": "mar-9-23-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Fácil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Tudo",
+          "é",
+          "possível",
+          "ao",
+          "que",
+          "crê"
+        ],
+        "embaralhado": [
+          "Tudo",
+          "ao",
+          "é",
+          "possível",
+          "crê",
+          "que"
+        ],
+        "xp": 15
+      }
+    ]
+  },
+  {
+    "id": "lesson-luc-1-37",
+    "titulo": "Lucas 1:37",
+    "dificuldade_geral": "Fácil",
+    "questoes": [
+      {
+        "id": "luc-1-37-q1",
+        "tipo": "completar",
+        "dificuldade": "Fácil",
+        "pergunta": "Complete o versículo de Lucas 1:37",
+        "texto": "Porque para Deus nada é ______",
+        "lacuna": "impossível",
+        "xp": 10
+      },
+      {
+        "id": "luc-1-37-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Fácil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Porque",
+          "para",
+          "Deus",
+          "nada",
+          "é",
+          "impossível"
+        ],
+        "embaralhado": [
+          "Deus",
+          "para",
+          "Porque",
+          "nada",
+          "impossível",
+          "é"
+        ],
+        "xp": 15
+      }
+    ]
+  },
+  {
+    "id": "lesson-joã-1-1",
+    "titulo": "João 1:1",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "joã-1-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de João 1:1",
+        "texto": "No princípio era o Verbo e o Verbo estava com ______ e o Verbo era ______",
+        "lacuna": "Deus",
+        "xp": 20
+      },
+      {
+        "id": "joã-1-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "No",
+          "princípio",
+          "era",
+          "o",
+          "Verbo",
+          "e",
+          "o",
+          "Verbo",
+          "estava",
+          "com",
+          "Deus",
+          "e",
+          "o",
+          "Verbo",
+          "era",
+          "Deus"
+        ],
+        "embaralhado": [
+          "era",
+          "e",
+          "princípio",
+          "o",
+          "e",
+          "com",
+          "Deus",
+          "o",
+          "Verbo",
+          "era",
+          "estava",
+          "o",
+          "Verbo",
+          "Verbo",
+          "No",
+          "Deus"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-joã-1-12",
+    "titulo": "João 1:12",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "joã-1-12-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de João 1:12",
+        "texto": "Mas a todos quantos o receberam deu-lhes o poder de serem feitos filhos de ______",
+        "lacuna": "Deus",
+        "xp": 15
+      },
+      {
+        "id": "joã-1-12-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Mas",
+          "a",
+          "todos",
+          "quantos",
+          "o",
+          "receberam",
+          "deu-lhes",
+          "o",
+          "poder",
+          "de",
+          "serem",
+          "feitos",
+          "filhos",
+          "de",
+          "Deus"
+        ],
+        "embaralhado": [
+          "deu-lhes",
+          "Deus",
+          "filhos",
+          "quantos",
+          "o",
+          "de",
+          "receberam",
+          "de",
+          "serem",
+          "a",
+          "o",
+          "feitos",
+          "Mas",
+          "todos",
+          "poder"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-joã-3-16",
+    "titulo": "João 3:16",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "joã-3-16-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de João 3:16",
+        "texto": "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito para que todo aquele que nele crê não pereça mas tenha a vida ______",
+        "lacuna": "eterna",
+        "xp": 20
+      },
+      {
+        "id": "joã-3-16-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Porque",
+          "Deus",
+          "amou",
+          "o",
+          "mundo",
+          "de",
+          "tal",
+          "maneira",
+          "que",
+          "deu",
+          "o",
+          "seu",
+          "Filho",
+          "unigênito",
+          "para",
+          "que",
+          "todo",
+          "aquele",
+          "que",
+          "nele",
+          "crê",
+          "não",
+          "pereça",
+          "mas",
+          "tenha",
+          "a",
+          "vida",
+          "eterna"
+        ],
+        "embaralhado": [
+          "Porque",
+          "crê",
+          "eterna",
+          "Filho",
+          "a",
+          "tenha",
+          "seu",
+          "tal",
+          "aquele",
+          "pereça",
+          "o",
+          "unigênito",
+          "vida",
+          "mas",
+          "mundo",
+          "maneira",
+          "para",
+          "o",
+          "amou",
+          "nele",
+          "deu",
+          "todo",
+          "de",
+          "não",
+          "que",
+          "que",
+          "que",
+          "Deus"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-joã-4-24",
+    "titulo": "João 4:24",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "joã-4-24-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de João 4:24",
+        "texto": "Deus é Espírito e importa que os que o adoram o adorem em espírito e em ______",
+        "lacuna": "verdade",
+        "xp": 20
+      },
+      {
+        "id": "joã-4-24-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Deus",
+          "é",
+          "Espírito",
+          "e",
+          "importa",
+          "que",
+          "os",
+          "que",
+          "o",
+          "adoram",
+          "o",
+          "adorem",
+          "em",
+          "espírito",
+          "e",
+          "em",
+          "verdade"
+        ],
+        "embaralhado": [
+          "adorem",
+          "e",
+          "que",
+          "o",
+          "em",
+          "importa",
+          "Espírito",
+          "Deus",
+          "é",
+          "e",
+          "o",
+          "em",
+          "verdade",
+          "que",
+          "os",
+          "adoram",
+          "espírito"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-joã-8-32",
+    "titulo": "João 8:32",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "joã-8-32-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de João 8:32",
+        "texto": "E conhecereis a verdade e a verdade vos ______",
+        "lacuna": "libertará",
+        "xp": 15
+      },
+      {
+        "id": "joã-8-32-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "E",
+          "conhecereis",
+          "a",
+          "verdade",
+          "e",
+          "a",
+          "verdade",
+          "vos",
+          "libertará"
+        ],
+        "embaralhado": [
+          "verdade",
+          "a",
+          "conhecereis",
+          "verdade",
+          "a",
+          "e",
+          "E",
+          "libertará",
+          "vos"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-joã-10-10",
+    "titulo": "João 10:10",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "joã-10-10-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de João 10:10",
+        "texto": "O ladrão não vem senão a roubar a matar e a destruir eu vim para que tenham vida e a tenham com ______",
+        "lacuna": "abundância",
+        "xp": 20
+      },
+      {
+        "id": "joã-10-10-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "O",
+          "ladrão",
+          "não",
+          "vem",
+          "senão",
+          "a",
+          "roubar",
+          "a",
+          "matar",
+          "e",
+          "a",
+          "destruir",
+          "eu",
+          "vim",
+          "para",
+          "que",
+          "tenham",
+          "vida",
+          "e",
+          "a",
+          "tenham",
+          "com",
+          "abundância"
+        ],
+        "embaralhado": [
+          "matar",
+          "a",
+          "a",
+          "destruir",
+          "com",
+          "tenham",
+          "para",
+          "O",
+          "vem",
+          "e",
+          "abundância",
+          "vida",
+          "a",
+          "tenham",
+          "vim",
+          "eu",
+          "não",
+          "a",
+          "e",
+          "roubar",
+          "que",
+          "ladrão",
+          "senão"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-joã-11-25",
+    "titulo": "João 11:25",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "joã-11-25-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de João 11:25",
+        "texto": "Disse-lhe Jesus Eu sou a ressurreição e a vida quem crê em mim ainda que esteja morto ______",
+        "lacuna": "viverá",
+        "xp": 20
+      },
+      {
+        "id": "joã-11-25-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Disse-lhe",
+          "Jesus",
+          "Eu",
+          "sou",
+          "a",
+          "ressurreição",
+          "e",
+          "a",
+          "vida",
+          "quem",
+          "crê",
+          "em",
+          "mim",
+          "ainda",
+          "que",
+          "esteja",
+          "morto",
+          "viverá"
+        ],
+        "embaralhado": [
+          "que",
+          "quem",
+          "viverá",
+          "Disse-lhe",
+          "ressurreição",
+          "ainda",
+          "crê",
+          "morto",
+          "esteja",
+          "e",
+          "Eu",
+          "Jesus",
+          "a",
+          "sou",
+          "mim",
+          "a",
+          "em",
+          "vida"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-joã-14-6",
+    "titulo": "João 14:6",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "joã-14-6-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de João 14:6",
+        "texto": "Disse-lhe Jesus Eu sou o caminho e a verdade e a vida ninguém vem ao Pai senão por ______",
+        "lacuna": "mim",
+        "xp": 20
+      },
+      {
+        "id": "joã-14-6-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Disse-lhe",
+          "Jesus",
+          "Eu",
+          "sou",
+          "o",
+          "caminho",
+          "e",
+          "a",
+          "verdade",
+          "e",
+          "a",
+          "vida",
+          "ninguém",
+          "vem",
+          "ao",
+          "Pai",
+          "senão",
+          "por",
+          "mim"
+        ],
+        "embaralhado": [
+          "e",
+          "e",
+          "verdade",
+          "vem",
+          "ao",
+          "por",
+          "vida",
+          "a",
+          "caminho",
+          "Eu",
+          "ninguém",
+          "Pai",
+          "senão",
+          "sou",
+          "a",
+          "mim",
+          "Disse-lhe",
+          "o",
+          "Jesus"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-joã-14-27",
+    "titulo": "João 14:27",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "joã-14-27-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de João 14:27",
+        "texto": "Deixo-vos a paz a minha paz vos dou não vo-la dou como o mundo a ______",
+        "lacuna": "dá",
+        "xp": 20
+      },
+      {
+        "id": "joã-14-27-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Deixo-vos",
+          "a",
+          "paz",
+          "a",
+          "minha",
+          "paz",
+          "vos",
+          "dou",
+          "não",
+          "vo-la",
+          "dou",
+          "como",
+          "o",
+          "mundo",
+          "a",
+          "dá"
+        ],
+        "embaralhado": [
+          "a",
+          "mundo",
+          "minha",
+          "a",
+          "paz",
+          "Deixo-vos",
+          "vo-la",
+          "não",
+          "dá",
+          "vos",
+          "o",
+          "dou",
+          "como",
+          "paz",
+          "a",
+          "dou"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-joã-15-5",
+    "titulo": "João 15:5",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "joã-15-5-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de João 15:5",
+        "texto": "Eu sou a videira vós as varas quem está em mim e eu nele esse dá muito fruto porque sem mim nada podeis ______",
+        "lacuna": "fazer",
+        "xp": 20
+      },
+      {
+        "id": "joã-15-5-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Eu",
+          "sou",
+          "a",
+          "videira",
+          "vós",
+          "as",
+          "varas",
+          "quem",
+          "está",
+          "em",
+          "mim",
+          "e",
+          "eu",
+          "nele",
+          "esse",
+          "dá",
+          "muito",
+          "fruto",
+          "porque",
+          "sem",
+          "mim",
+          "nada",
+          "podeis",
+          "fazer"
+        ],
+        "embaralhado": [
+          "está",
+          "eu",
+          "varas",
+          "muito",
+          "sem",
+          "a",
+          "sou",
+          "dá",
+          "mim",
+          "podeis",
+          "nada",
+          "fruto",
+          "esse",
+          "fazer",
+          "videira",
+          "e",
+          "porque",
+          "nele",
+          "em",
+          "mim",
+          "Eu",
+          "vós",
+          "as",
+          "quem"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-joã-16-33",
+    "titulo": "João 16:33",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "joã-16-33-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de João 16:33",
+        "texto": "No ______ tereis aflições mas tende bom ânimo eu venci o ______",
+        "lacuna": "mundo",
+        "xp": 15
+      },
+      {
+        "id": "joã-16-33-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "No",
+          "mundo",
+          "tereis",
+          "aflições",
+          "mas",
+          "tende",
+          "bom",
+          "ânimo",
+          "eu",
+          "venci",
+          "o",
+          "mundo"
+        ],
+        "embaralhado": [
+          "venci",
+          "mundo",
+          "tende",
+          "aflições",
+          "ânimo",
+          "mas",
+          "No",
+          "o",
+          "eu",
+          "tereis",
+          "bom",
+          "mundo"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-ato-1-8",
+    "titulo": "Atos 1:8",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "ato-1-8-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Atos 1:8",
+        "texto": "Mas recebereis a virtude do Espírito Santo que há de vir sobre vós e ser-me-eis ______",
+        "lacuna": "testemunhas",
+        "xp": 20
+      },
+      {
+        "id": "ato-1-8-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Mas",
+          "recebereis",
+          "a",
+          "virtude",
+          "do",
+          "Espírito",
+          "Santo",
+          "que",
+          "há",
+          "de",
+          "vir",
+          "sobre",
+          "vós",
+          "e",
+          "ser-me-eis",
+          "testemunhas"
+        ],
+        "embaralhado": [
+          "vós",
+          "há",
+          "Espírito",
+          "virtude",
+          "Santo",
+          "testemunhas",
+          "recebereis",
+          "Mas",
+          "de",
+          "do",
+          "a",
+          "sobre",
+          "e",
+          "vir",
+          "ser-me-eis",
+          "que"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-ato-4-12",
+    "titulo": "Atos 4:12",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "ato-4-12-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Atos 4:12",
+        "texto": "E em nenhum outro há salvação porque também debaixo do céu nenhum outro nome há dado entre os homens pelo qual devamos ser ______",
+        "lacuna": "salvos",
+        "xp": 20
+      },
+      {
+        "id": "ato-4-12-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "E",
+          "em",
+          "nenhum",
+          "outro",
+          "há",
+          "salvação",
+          "porque",
+          "também",
+          "debaixo",
+          "do",
+          "céu",
+          "nenhum",
+          "outro",
+          "nome",
+          "há",
+          "dado",
+          "entre",
+          "os",
+          "homens",
+          "pelo",
+          "qual",
+          "devamos",
+          "ser",
+          "salvos"
+        ],
+        "embaralhado": [
+          "em",
+          "devamos",
+          "nome",
+          "porque",
+          "qual",
+          "ser",
+          "entre",
+          "nenhum",
+          "pelo",
+          "salvação",
+          "outro",
+          "há",
+          "salvos",
+          "também",
+          "os",
+          "E",
+          "homens",
+          "dado",
+          "há",
+          "debaixo",
+          "do",
+          "céu",
+          "nenhum",
+          "outro"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-ato-16-31",
+    "titulo": "Atos 16:31",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "ato-16-31-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Atos 16:31",
+        "texto": "Crê no Senhor Jesus Cristo e serás salvo tu e a tua ______",
+        "lacuna": "casa",
+        "xp": 15
+      },
+      {
+        "id": "ato-16-31-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Crê",
+          "no",
+          "Senhor",
+          "Jesus",
+          "Cristo",
+          "e",
+          "serás",
+          "salvo",
+          "tu",
+          "e",
+          "a",
+          "tua",
+          "casa"
+        ],
+        "embaralhado": [
+          "Crê",
+          "Jesus",
+          "tu",
+          "Cristo",
+          "e",
+          "no",
+          "e",
+          "salvo",
+          "tua",
+          "Senhor",
+          "a",
+          "serás",
+          "casa"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-rom-1-16",
+    "titulo": "Romanos 1:16",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "rom-1-16-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Romanos 1:16",
+        "texto": "Porque não me envergonho do evangelho de Cristo pois é o poder de Deus para salvação de todo aquele que ______",
+        "lacuna": "crê",
+        "xp": 20
+      },
+      {
+        "id": "rom-1-16-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Porque",
+          "não",
+          "me",
+          "envergonho",
+          "do",
+          "evangelho",
+          "de",
+          "Cristo",
+          "pois",
+          "é",
+          "o",
+          "poder",
+          "de",
+          "Deus",
+          "para",
+          "salvação",
+          "de",
+          "todo",
+          "aquele",
+          "que",
+          "crê"
+        ],
+        "embaralhado": [
+          "de",
+          "que",
+          "salvação",
+          "é",
+          "me",
+          "o",
+          "crê",
+          "todo",
+          "aquele",
+          "pois",
+          "Deus",
+          "Porque",
+          "não",
+          "evangelho",
+          "de",
+          "de",
+          "para",
+          "Cristo",
+          "poder",
+          "envergonho",
+          "do"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-rom-3-23",
+    "titulo": "Romanos 3:23",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "rom-3-23-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Romanos 3:23",
+        "texto": "Porque todos pecaram e destituídos estão da glória de ______",
+        "lacuna": "Deus",
+        "xp": 15
+      },
+      {
+        "id": "rom-3-23-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Porque",
+          "todos",
+          "pecaram",
+          "e",
+          "destituídos",
+          "estão",
+          "da",
+          "glória",
+          "de",
+          "Deus"
+        ],
+        "embaralhado": [
+          "destituídos",
+          "glória",
+          "Porque",
+          "de",
+          "pecaram",
+          "todos",
+          "Deus",
+          "estão",
+          "e",
+          "da"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-rom-5-8",
+    "titulo": "Romanos 5:8",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "rom-5-8-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Romanos 5:8",
+        "texto": "Mas Deus prova o seu amor para conosco em que Cristo morreu por nós sendo nós ainda ______",
+        "lacuna": "pecadores",
+        "xp": 20
+      },
+      {
+        "id": "rom-5-8-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Mas",
+          "Deus",
+          "prova",
+          "o",
+          "seu",
+          "amor",
+          "para",
+          "conosco",
+          "em",
+          "que",
+          "Cristo",
+          "morreu",
+          "por",
+          "nós",
+          "sendo",
+          "nós",
+          "ainda",
+          "pecadores"
+        ],
+        "embaralhado": [
+          "Mas",
+          "em",
+          "Deus",
+          "Cristo",
+          "nós",
+          "prova",
+          "seu",
+          "nós",
+          "pecadores",
+          "conosco",
+          "para",
+          "sendo",
+          "amor",
+          "que",
+          "morreu",
+          "por",
+          "o",
+          "ainda"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-rom-6-23",
+    "titulo": "Romanos 6:23",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "rom-6-23-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Romanos 6:23",
+        "texto": "Porque o salário do pecado é a morte mas o dom gratuito de Deus é a vida eterna em Cristo Jesus nosso ______",
+        "lacuna": "Senhor",
+        "xp": 20
+      },
+      {
+        "id": "rom-6-23-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Porque",
+          "o",
+          "salário",
+          "do",
+          "pecado",
+          "é",
+          "a",
+          "morte",
+          "mas",
+          "o",
+          "dom",
+          "gratuito",
+          "de",
+          "Deus",
+          "é",
+          "a",
+          "vida",
+          "eterna",
+          "em",
+          "Cristo",
+          "Jesus",
+          "nosso",
+          "Senhor"
+        ],
+        "embaralhado": [
+          "o",
+          "é",
+          "a",
+          "vida",
+          "pecado",
+          "Porque",
+          "Cristo",
+          "do",
+          "Senhor",
+          "gratuito",
+          "Jesus",
+          "salário",
+          "mas",
+          "dom",
+          "Deus",
+          "a",
+          "o",
+          "em",
+          "é",
+          "de",
+          "eterna",
+          "nosso",
+          "morte"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-rom-8-1",
+    "titulo": "Romanos 8:1",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "rom-8-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Romanos 8:1",
+        "texto": "Portanto agora nenhuma condenação há para os que estão em Cristo ______",
+        "lacuna": "Jesus",
+        "xp": 15
+      },
+      {
+        "id": "rom-8-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Portanto",
+          "agora",
+          "nenhuma",
+          "condenação",
+          "há",
+          "para",
+          "os",
+          "que",
+          "estão",
+          "em",
+          "Cristo",
+          "Jesus"
+        ],
+        "embaralhado": [
+          "há",
+          "condenação",
+          "para",
+          "em",
+          "Jesus",
+          "nenhuma",
+          "que",
+          "os",
+          "Portanto",
+          "Cristo",
+          "estão",
+          "agora"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-rom-8-28",
+    "titulo": "Romanos 8:28",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "rom-8-28-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Romanos 8:28",
+        "texto": "E sabemos que todas as coisas cooperam para o bem daqueles que amam a ______",
+        "lacuna": "Deus",
+        "xp": 15
+      },
+      {
+        "id": "rom-8-28-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "E",
+          "sabemos",
+          "que",
+          "todas",
+          "as",
+          "coisas",
+          "cooperam",
+          "para",
+          "o",
+          "bem",
+          "daqueles",
+          "que",
+          "amam",
+          "a",
+          "Deus"
+        ],
+        "embaralhado": [
+          "que",
+          "Deus",
+          "que",
+          "coisas",
+          "todas",
+          "E",
+          "amam",
+          "o",
+          "a",
+          "cooperam",
+          "daqueles",
+          "para",
+          "bem",
+          "sabemos",
+          "as"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-rom-8-31",
+    "titulo": "Romanos 8:31",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "rom-8-31-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Romanos 8:31",
+        "texto": "Que diremos pois a estas coisas se Deus é por ______ quem será contra ______",
+        "lacuna": "nós",
+        "xp": 15
+      },
+      {
+        "id": "rom-8-31-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Que",
+          "diremos",
+          "pois",
+          "a",
+          "estas",
+          "coisas",
+          "se",
+          "Deus",
+          "é",
+          "por",
+          "nós",
+          "quem",
+          "será",
+          "contra",
+          "nós"
+        ],
+        "embaralhado": [
+          "quem",
+          "contra",
+          "a",
+          "diremos",
+          "se",
+          "pois",
+          "por",
+          "coisas",
+          "é",
+          "Deus",
+          "será",
+          "nós",
+          "estas",
+          "Que",
+          "nós"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-rom-8-37",
+    "titulo": "Romanos 8:37",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "rom-8-37-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Romanos 8:37",
+        "texto": "Mas em todas estas coisas somos mais do que vencedores por aquele que nos ______",
+        "lacuna": "amou",
+        "xp": 15
+      },
+      {
+        "id": "rom-8-37-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Mas",
+          "em",
+          "todas",
+          "estas",
+          "coisas",
+          "somos",
+          "mais",
+          "do",
+          "que",
+          "vencedores",
+          "por",
+          "aquele",
+          "que",
+          "nos",
+          "amou"
+        ],
+        "embaralhado": [
+          "nos",
+          "que",
+          "mais",
+          "todas",
+          "em",
+          "do",
+          "estas",
+          "somos",
+          "Mas",
+          "coisas",
+          "por",
+          "que",
+          "vencedores",
+          "aquele",
+          "amou"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-rom-10-17",
+    "titulo": "Romanos 10:17",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "rom-10-17-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Romanos 10:17",
+        "texto": "De sorte que a fé é pelo ouvir e o ouvir pela palavra de ______",
+        "lacuna": "Deus",
+        "xp": 15
+      },
+      {
+        "id": "rom-10-17-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "De",
+          "sorte",
+          "que",
+          "a",
+          "fé",
+          "é",
+          "pelo",
+          "ouvir",
+          "e",
+          "o",
+          "ouvir",
+          "pela",
+          "palavra",
+          "de",
+          "Deus"
+        ],
+        "embaralhado": [
+          "e",
+          "pelo",
+          "é",
+          "palavra",
+          "sorte",
+          "a",
+          "De",
+          "o",
+          "de",
+          "ouvir",
+          "fé",
+          "ouvir",
+          "que",
+          "Deus",
+          "pela"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-rom-12-2",
+    "titulo": "Romanos 12:2",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "rom-12-2-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Romanos 12:2",
+        "texto": "E não vos conformeis com este mundo mas transformai-vos pela renovação do vosso ______",
+        "lacuna": "entendimento",
+        "xp": 15
+      },
+      {
+        "id": "rom-12-2-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "E",
+          "não",
+          "vos",
+          "conformeis",
+          "com",
+          "este",
+          "mundo",
+          "mas",
+          "transformai-vos",
+          "pela",
+          "renovação",
+          "do",
+          "vosso",
+          "entendimento"
+        ],
+        "embaralhado": [
+          "entendimento",
+          "conformeis",
+          "com",
+          "não",
+          "E",
+          "pela",
+          "renovação",
+          "do",
+          "vosso",
+          "este",
+          "mas",
+          "transformai-vos",
+          "vos",
+          "mundo"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-1 c-10-13",
+    "titulo": "1 Coríntios 10:13",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "1 c-10-13-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de 1 Coríntios 10:13",
+        "texto": "Fiel é Deus que não vos deixará tentar acima do que ______",
+        "lacuna": "podeis",
+        "xp": 15
+      },
+      {
+        "id": "1 c-10-13-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Fiel",
+          "é",
+          "Deus",
+          "que",
+          "não",
+          "vos",
+          "deixará",
+          "tentar",
+          "acima",
+          "do",
+          "que",
+          "podeis"
+        ],
+        "embaralhado": [
+          "é",
+          "podeis",
+          "tentar",
+          "não",
+          "Deus",
+          "que",
+          "vos",
+          "do",
+          "deixará",
+          "acima",
+          "que",
+          "Fiel"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-1 c-13-4",
+    "titulo": "1 Coríntios 13:4",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "1 c-13-4-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de 1 Coríntios 13:4",
+        "texto": "O amor é sofredor é benigno o amor não é invejoso o amor não trata com leviandade não se ______",
+        "lacuna": "ensoberbece",
+        "xp": 20
+      },
+      {
+        "id": "1 c-13-4-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "O",
+          "amor",
+          "é",
+          "sofredor",
+          "é",
+          "benigno",
+          "o",
+          "amor",
+          "não",
+          "é",
+          "invejoso",
+          "o",
+          "amor",
+          "não",
+          "trata",
+          "com",
+          "leviandade",
+          "não",
+          "se",
+          "ensoberbece"
+        ],
+        "embaralhado": [
+          "é",
+          "trata",
+          "amor",
+          "ensoberbece",
+          "o",
+          "com",
+          "invejoso",
+          "sofredor",
+          "amor",
+          "o",
+          "não",
+          "é",
+          "amor",
+          "não",
+          "O",
+          "se",
+          "é",
+          "leviandade",
+          "não",
+          "benigno"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-1 c-13-13",
+    "titulo": "1 Coríntios 13:13",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "1 c-13-13-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de 1 Coríntios 13:13",
+        "texto": "Agora pois permanecem a fé a esperança e o ______ estes três mas o maior destes é o ______",
+        "lacuna": "amor",
+        "xp": 20
+      },
+      {
+        "id": "1 c-13-13-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Agora",
+          "pois",
+          "permanecem",
+          "a",
+          "fé",
+          "a",
+          "esperança",
+          "e",
+          "o",
+          "amor",
+          "estes",
+          "três",
+          "mas",
+          "o",
+          "maior",
+          "destes",
+          "é",
+          "o",
+          "amor"
+        ],
+        "embaralhado": [
+          "Agora",
+          "pois",
+          "maior",
+          "o",
+          "estes",
+          "três",
+          "e",
+          "amor",
+          "esperança",
+          "permanecem",
+          "o",
+          "o",
+          "fé",
+          "a",
+          "mas",
+          "destes",
+          "amor",
+          "a",
+          "é"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-1 c-15-58",
+    "titulo": "1 Coríntios 15:58",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "1 c-15-58-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de 1 Coríntios 15:58",
+        "texto": "Sede firmes e constantes sempre abundantes na obra do ______",
+        "lacuna": "Senhor",
+        "xp": 15
+      },
+      {
+        "id": "1 c-15-58-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Sede",
+          "firmes",
+          "e",
+          "constantes",
+          "sempre",
+          "abundantes",
+          "na",
+          "obra",
+          "do",
+          "Senhor"
+        ],
+        "embaralhado": [
+          "na",
+          "Sede",
+          "abundantes",
+          "obra",
+          "firmes",
+          "e",
+          "sempre",
+          "do",
+          "Senhor",
+          "constantes"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-2 c-5-17",
+    "titulo": "2 Coríntios 5:17",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "2 c-5-17-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de 2 Coríntios 5:17",
+        "texto": "Assim que se alguém está em Cristo nova criatura é as coisas velhas já passaram eis que tudo se fez ______",
+        "lacuna": "novo",
+        "xp": 20
+      },
+      {
+        "id": "2 c-5-17-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Assim",
+          "que",
+          "se",
+          "alguém",
+          "está",
+          "em",
+          "Cristo",
+          "nova",
+          "criatura",
+          "é",
+          "as",
+          "coisas",
+          "velhas",
+          "já",
+          "passaram",
+          "eis",
+          "que",
+          "tudo",
+          "se",
+          "fez",
+          "novo"
+        ],
+        "embaralhado": [
+          "as",
+          "Assim",
+          "novo",
+          "que",
+          "coisas",
+          "fez",
+          "se",
+          "nova",
+          "velhas",
+          "já",
+          "tudo",
+          "alguém",
+          "é",
+          "em",
+          "criatura",
+          "passaram",
+          "que",
+          "se",
+          "está",
+          "eis",
+          "Cristo"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-2 c-12-9",
+    "titulo": "2 Coríntios 12:9",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "2 c-12-9-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de 2 Coríntios 12:9",
+        "texto": "A minha graça te basta porque o meu poder se aperfeiçoa na ______",
+        "lacuna": "fraqueza",
+        "xp": 15
+      },
+      {
+        "id": "2 c-12-9-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "A",
+          "minha",
+          "graça",
+          "te",
+          "basta",
+          "porque",
+          "o",
+          "meu",
+          "poder",
+          "se",
+          "aperfeiçoa",
+          "na",
+          "fraqueza"
+        ],
+        "embaralhado": [
+          "graça",
+          "o",
+          "A",
+          "fraqueza",
+          "aperfeiçoa",
+          "minha",
+          "meu",
+          "na",
+          "basta",
+          "se",
+          "poder",
+          "te",
+          "porque"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-gál-2-20",
+    "titulo": "Gálatas 2:20",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "gál-2-20-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Gálatas 2:20",
+        "texto": "Já estou crucificado com Cristo e vivo não mais eu mas Cristo vive em ______",
+        "lacuna": "mim",
+        "xp": 15
+      },
+      {
+        "id": "gál-2-20-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Já",
+          "estou",
+          "crucificado",
+          "com",
+          "Cristo",
+          "e",
+          "vivo",
+          "não",
+          "mais",
+          "eu",
+          "mas",
+          "Cristo",
+          "vive",
+          "em",
+          "mim"
+        ],
+        "embaralhado": [
+          "mas",
+          "Já",
+          "estou",
+          "mais",
+          "com",
+          "não",
+          "e",
+          "eu",
+          "Cristo",
+          "vivo",
+          "em",
+          "vive",
+          "Cristo",
+          "crucificado",
+          "mim"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-gál-5-22",
+    "titulo": "Gálatas 5:22",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "gál-5-22-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Gálatas 5:22",
+        "texto": "Mas o fruto do Espírito é amor gozo paz longanimidade benignidade bondade ______",
+        "lacuna": "fé",
+        "xp": 15
+      },
+      {
+        "id": "gál-5-22-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Mas",
+          "o",
+          "fruto",
+          "do",
+          "Espírito",
+          "é",
+          "amor",
+          "gozo",
+          "paz",
+          "longanimidade",
+          "benignidade",
+          "bondade",
+          "fé"
+        ],
+        "embaralhado": [
+          "bondade",
+          "gozo",
+          "fruto",
+          "longanimidade",
+          "fé",
+          "do",
+          "benignidade",
+          "paz",
+          "Mas",
+          "é",
+          "amor",
+          "Espírito",
+          "o"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-efé-2-8",
+    "titulo": "Efésios 2:8",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "efé-2-8-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Efésios 2:8",
+        "texto": "Porque pela graça sois salvos por meio da fé e isto não vem de vós é dom de ______",
+        "lacuna": "Deus",
+        "xp": 20
+      },
+      {
+        "id": "efé-2-8-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Porque",
+          "pela",
+          "graça",
+          "sois",
+          "salvos",
+          "por",
+          "meio",
+          "da",
+          "fé",
+          "e",
+          "isto",
+          "não",
+          "vem",
+          "de",
+          "vós",
+          "é",
+          "dom",
+          "de",
+          "Deus"
+        ],
+        "embaralhado": [
+          "vem",
+          "meio",
+          "salvos",
+          "fé",
+          "é",
+          "vós",
+          "de",
+          "da",
+          "de",
+          "Deus",
+          "graça",
+          "pela",
+          "sois",
+          "e",
+          "dom",
+          "não",
+          "isto",
+          "Porque",
+          "por"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-efé-6-10",
+    "titulo": "Efésios 6:10",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "efé-6-10-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Efésios 6:10",
+        "texto": "No demais irmãos meus fortalecei-vos no Senhor e na força do seu ______",
+        "lacuna": "poder",
+        "xp": 15
+      },
+      {
+        "id": "efé-6-10-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "No",
+          "demais",
+          "irmãos",
+          "meus",
+          "fortalecei-vos",
+          "no",
+          "Senhor",
+          "e",
+          "na",
+          "força",
+          "do",
+          "seu",
+          "poder"
+        ],
+        "embaralhado": [
+          "no",
+          "poder",
+          "meus",
+          "No",
+          "e",
+          "fortalecei-vos",
+          "do",
+          "seu",
+          "força",
+          "demais",
+          "irmãos",
+          "na",
+          "Senhor"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-fil-1-21",
+    "titulo": "Filipenses 1:21",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "fil-1-21-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Filipenses 1:21",
+        "texto": "Porque para mim o viver é Cristo e o morrer é ______",
+        "lacuna": "ganho",
+        "xp": 15
+      },
+      {
+        "id": "fil-1-21-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Porque",
+          "para",
+          "mim",
+          "o",
+          "viver",
+          "é",
+          "Cristo",
+          "e",
+          "o",
+          "morrer",
+          "é",
+          "ganho"
+        ],
+        "embaralhado": [
+          "o",
+          "e",
+          "o",
+          "Cristo",
+          "morrer",
+          "mim",
+          "para",
+          "ganho",
+          "é",
+          "Porque",
+          "é",
+          "viver"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-fil-4-4",
+    "titulo": "Filipenses 4:4",
+    "dificuldade_geral": "Fácil",
+    "questoes": [
+      {
+        "id": "fil-4-4-q1",
+        "tipo": "completar",
+        "dificuldade": "Fácil",
+        "pergunta": "Complete o versículo de Filipenses 4:4",
+        "texto": "Regozijai-vos sempre no Senhor outra vez digo ______",
+        "lacuna": "regozijai-vos",
+        "xp": 10
+      },
+      {
+        "id": "fil-4-4-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Fácil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Regozijai-vos",
+          "sempre",
+          "no",
+          "Senhor",
+          "outra",
+          "vez",
+          "digo",
+          "regozijai-vos"
+        ],
+        "embaralhado": [
+          "Regozijai-vos",
+          "sempre",
+          "digo",
+          "no",
+          "regozijai-vos",
+          "vez",
+          "Senhor",
+          "outra"
+        ],
+        "xp": 15
+      }
+    ]
+  },
+  {
+    "id": "lesson-fil-4-7",
+    "titulo": "Filipenses 4:7",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "fil-4-7-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Filipenses 4:7",
+        "texto": "E a paz de Deus que excede todo o entendimento guardará os vossos corações e os vossos sentimentos em Cristo ______",
+        "lacuna": "Jesus",
+        "xp": 20
+      },
+      {
+        "id": "fil-4-7-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "E",
+          "a",
+          "paz",
+          "de",
+          "Deus",
+          "que",
+          "excede",
+          "todo",
+          "o",
+          "entendimento",
+          "guardará",
+          "os",
+          "vossos",
+          "corações",
+          "e",
+          "os",
+          "vossos",
+          "sentimentos",
+          "em",
+          "Cristo",
+          "Jesus"
+        ],
+        "embaralhado": [
+          "paz",
+          "Deus",
+          "os",
+          "de",
+          "entendimento",
+          "e",
+          "em",
+          "vossos",
+          "que",
+          "sentimentos",
+          "excede",
+          "todo",
+          "vossos",
+          "corações",
+          "os",
+          "o",
+          "Cristo",
+          "Jesus",
+          "E",
+          "a",
+          "guardará"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-fil-4-13",
+    "titulo": "Filipenses 4:13",
+    "dificuldade_geral": "Fácil",
+    "questoes": [
+      {
+        "id": "fil-4-13-q1",
+        "tipo": "completar",
+        "dificuldade": "Fácil",
+        "pergunta": "Complete o versículo de Filipenses 4:13",
+        "texto": "Posso todas as coisas naquele que me ______",
+        "lacuna": "fortalece",
+        "xp": 10
+      },
+      {
+        "id": "fil-4-13-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Fácil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Posso",
+          "todas",
+          "as",
+          "coisas",
+          "naquele",
+          "que",
+          "me",
+          "fortalece"
+        ],
+        "embaralhado": [
+          "me",
+          "Posso",
+          "fortalece",
+          "coisas",
+          "naquele",
+          "que",
+          "as",
+          "todas"
+        ],
+        "xp": 15
+      }
+    ]
+  },
+  {
+    "id": "lesson-col-3-23",
+    "titulo": "Colossenses 3:23",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "col-3-23-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Colossenses 3:23",
+        "texto": "E tudo quanto fizerdes fazei-o de todo o coração como ao Senhor e não aos ______",
+        "lacuna": "homens",
+        "xp": 20
+      },
+      {
+        "id": "col-3-23-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "E",
+          "tudo",
+          "quanto",
+          "fizerdes",
+          "fazei-o",
+          "de",
+          "todo",
+          "o",
+          "coração",
+          "como",
+          "ao",
+          "Senhor",
+          "e",
+          "não",
+          "aos",
+          "homens"
+        ],
+        "embaralhado": [
+          "fazei-o",
+          "homens",
+          "E",
+          "quanto",
+          "não",
+          "o",
+          "ao",
+          "fizerdes",
+          "coração",
+          "como",
+          "tudo",
+          "de",
+          "todo",
+          "Senhor",
+          "e",
+          "aos"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-1 t-5-17",
+    "titulo": "1 Tessalonicenses 5:17",
+    "dificuldade_geral": "Fácil",
+    "questoes": [
+      {
+        "id": "1 t-5-17-q1",
+        "tipo": "completar",
+        "dificuldade": "Fácil",
+        "pergunta": "Complete o versículo de 1 Tessalonicenses 5:17",
+        "texto": "Orai sem ______",
+        "lacuna": "cessar",
+        "xp": 10
+      },
+      {
+        "id": "1 t-5-17-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Fácil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Orai",
+          "sem",
+          "cessar"
+        ],
+        "embaralhado": [
+          "Orai",
+          "cessar",
+          "sem"
+        ],
+        "xp": 15
+      }
+    ]
+  },
+  {
+    "id": "lesson-2 t-1-7",
+    "titulo": "2 Timóteo 1:7",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "2 t-1-7-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de 2 Timóteo 1:7",
+        "texto": "Porque Deus não nos deu o espírito de temor mas de fortaleza e de amor e de ______",
+        "lacuna": "moderação",
+        "xp": 20
+      },
+      {
+        "id": "2 t-1-7-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Porque",
+          "Deus",
+          "não",
+          "nos",
+          "deu",
+          "o",
+          "espírito",
+          "de",
+          "temor",
+          "mas",
+          "de",
+          "fortaleza",
+          "e",
+          "de",
+          "amor",
+          "e",
+          "de",
+          "moderação"
+        ],
+        "embaralhado": [
+          "e",
+          "amor",
+          "moderação",
+          "Porque",
+          "espírito",
+          "e",
+          "não",
+          "nos",
+          "de",
+          "o",
+          "de",
+          "deu",
+          "de",
+          "temor",
+          "mas",
+          "Deus",
+          "fortaleza",
+          "de"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-2 t-4-7",
+    "titulo": "2 Timóteo 4:7",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "2 t-4-7-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de 2 Timóteo 4:7",
+        "texto": "Combati o bom combate acabei a carreira guardei a ______",
+        "lacuna": "fé",
+        "xp": 15
+      },
+      {
+        "id": "2 t-4-7-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Combati",
+          "o",
+          "bom",
+          "combate",
+          "acabei",
+          "a",
+          "carreira",
+          "guardei",
+          "a",
+          "fé"
+        ],
+        "embaralhado": [
+          "bom",
+          "combate",
+          "a",
+          "carreira",
+          "o",
+          "guardei",
+          "Combati",
+          "acabei",
+          "a",
+          "fé"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-heb-4-12",
+    "titulo": "Hebreus 4:12",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "heb-4-12-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Hebreus 4:12",
+        "texto": "Porque a palavra de Deus é viva e eficaz e mais penetrante do que espada alguma de dois ______",
+        "lacuna": "gumes",
+        "xp": 20
+      },
+      {
+        "id": "heb-4-12-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Porque",
+          "a",
+          "palavra",
+          "de",
+          "Deus",
+          "é",
+          "viva",
+          "e",
+          "eficaz",
+          "e",
+          "mais",
+          "penetrante",
+          "do",
+          "que",
+          "espada",
+          "alguma",
+          "de",
+          "dois",
+          "gumes"
+        ],
+        "embaralhado": [
+          "Porque",
+          "eficaz",
+          "e",
+          "Deus",
+          "é",
+          "de",
+          "a",
+          "palavra",
+          "gumes",
+          "e",
+          "mais",
+          "de",
+          "viva",
+          "do",
+          "espada",
+          "que",
+          "penetrante",
+          "alguma",
+          "dois"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-heb-11-1",
+    "titulo": "Hebreus 11:1",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "heb-11-1-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Hebreus 11:1",
+        "texto": "Ora a fé é o firme fundamento das coisas que se esperam e a prova das coisas que se não ______",
+        "lacuna": "veem",
+        "xp": 20
+      },
+      {
+        "id": "heb-11-1-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Ora",
+          "a",
+          "fé",
+          "é",
+          "o",
+          "firme",
+          "fundamento",
+          "das",
+          "coisas",
+          "que",
+          "se",
+          "esperam",
+          "e",
+          "a",
+          "prova",
+          "das",
+          "coisas",
+          "que",
+          "se",
+          "não",
+          "veem"
+        ],
+        "embaralhado": [
+          "firme",
+          "e",
+          "fundamento",
+          "a",
+          "coisas",
+          "veem",
+          "prova",
+          "é",
+          "coisas",
+          "que",
+          "fé",
+          "das",
+          "esperam",
+          "que",
+          "a",
+          "se",
+          "o",
+          "Ora",
+          "das",
+          "não",
+          "se"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-heb-12-2",
+    "titulo": "Hebreus 12:2",
+    "dificuldade_geral": "Fácil",
+    "questoes": [
+      {
+        "id": "heb-12-2-q1",
+        "tipo": "completar",
+        "dificuldade": "Fácil",
+        "pergunta": "Complete o versículo de Hebreus 12:2",
+        "texto": "Olhando para Jesus autor e consumador da ______",
+        "lacuna": "fé",
+        "xp": 10
+      },
+      {
+        "id": "heb-12-2-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Fácil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Olhando",
+          "para",
+          "Jesus",
+          "autor",
+          "e",
+          "consumador",
+          "da",
+          "fé"
+        ],
+        "embaralhado": [
+          "fé",
+          "da",
+          "consumador",
+          "para",
+          "Olhando",
+          "autor",
+          "Jesus",
+          "e"
+        ],
+        "xp": 15
+      }
+    ]
+  },
+  {
+    "id": "lesson-heb-13-8",
+    "titulo": "Hebreus 13:8",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "heb-13-8-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Hebreus 13:8",
+        "texto": "Jesus Cristo é o mesmo ontem e hoje e ______",
+        "lacuna": "eternamente",
+        "xp": 15
+      },
+      {
+        "id": "heb-13-8-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Jesus",
+          "Cristo",
+          "é",
+          "o",
+          "mesmo",
+          "ontem",
+          "e",
+          "hoje",
+          "e",
+          "eternamente"
+        ],
+        "embaralhado": [
+          "hoje",
+          "ontem",
+          "mesmo",
+          "Cristo",
+          "o",
+          "eternamente",
+          "e",
+          "é",
+          "e",
+          "Jesus"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-tia-1-5",
+    "titulo": "Tiago 1:5",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "tia-1-5-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Tiago 1:5",
+        "texto": "E se algum de vós tem falta de sabedoria peça-a a Deus que a todos dá ______",
+        "lacuna": "liberalmente",
+        "xp": 20
+      },
+      {
+        "id": "tia-1-5-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "E",
+          "se",
+          "algum",
+          "de",
+          "vós",
+          "tem",
+          "falta",
+          "de",
+          "sabedoria",
+          "peça-a",
+          "a",
+          "Deus",
+          "que",
+          "a",
+          "todos",
+          "dá",
+          "liberalmente"
+        ],
+        "embaralhado": [
+          "que",
+          "vós",
+          "falta",
+          "liberalmente",
+          "sabedoria",
+          "E",
+          "algum",
+          "Deus",
+          "a",
+          "dá",
+          "a",
+          "de",
+          "peça-a",
+          "todos",
+          "se",
+          "tem",
+          "de"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-tia-4-7",
+    "titulo": "Tiago 4:7",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "tia-4-7-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de Tiago 4:7",
+        "texto": "Sujeitai-vos pois a Deus resisti ao diabo e ele fugirá de ______",
+        "lacuna": "vós",
+        "xp": 15
+      },
+      {
+        "id": "tia-4-7-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Sujeitai-vos",
+          "pois",
+          "a",
+          "Deus",
+          "resisti",
+          "ao",
+          "diabo",
+          "e",
+          "ele",
+          "fugirá",
+          "de",
+          "vós"
+        ],
+        "embaralhado": [
+          "ao",
+          "a",
+          "resisti",
+          "e",
+          "pois",
+          "Deus",
+          "de",
+          "ele",
+          "diabo",
+          "Sujeitai-vos",
+          "fugirá",
+          "vós"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-1 p-5-7",
+    "titulo": "1 Pedro 5:7",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "1 p-5-7-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de 1 Pedro 5:7",
+        "texto": "Lançando sobre ele toda a vossa ansiedade porque ele tem cuidado de ______",
+        "lacuna": "vós",
+        "xp": 15
+      },
+      {
+        "id": "1 p-5-7-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Lançando",
+          "sobre",
+          "ele",
+          "toda",
+          "a",
+          "vossa",
+          "ansiedade",
+          "porque",
+          "ele",
+          "tem",
+          "cuidado",
+          "de",
+          "vós"
+        ],
+        "embaralhado": [
+          "ele",
+          "a",
+          "porque",
+          "sobre",
+          "vós",
+          "cuidado",
+          "ele",
+          "de",
+          "tem",
+          "ansiedade",
+          "toda",
+          "Lançando",
+          "vossa"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-1 j-1-9",
+    "titulo": "1 João 1:9",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "1 j-1-9-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de 1 João 1:9",
+        "texto": "Se confessarmos os nossos pecados ele é fiel e justo para nos perdoar os pecados e nos purificar de toda a ______",
+        "lacuna": "injustiça",
+        "xp": 20
+      },
+      {
+        "id": "1 j-1-9-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Se",
+          "confessarmos",
+          "os",
+          "nossos",
+          "pecados",
+          "ele",
+          "é",
+          "fiel",
+          "e",
+          "justo",
+          "para",
+          "nos",
+          "perdoar",
+          "os",
+          "pecados",
+          "e",
+          "nos",
+          "purificar",
+          "de",
+          "toda",
+          "a",
+          "injustiça"
+        ],
+        "embaralhado": [
+          "e",
+          "pecados",
+          "perdoar",
+          "Se",
+          "de",
+          "nossos",
+          "nos",
+          "nos",
+          "os",
+          "toda",
+          "a",
+          "os",
+          "para",
+          "injustiça",
+          "purificar",
+          "pecados",
+          "fiel",
+          "é",
+          "justo",
+          "ele",
+          "e",
+          "confessarmos"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-1 j-4-8",
+    "titulo": "1 João 4:8",
+    "dificuldade_geral": "Médio",
+    "questoes": [
+      {
+        "id": "1 j-4-8-q1",
+        "tipo": "completar",
+        "dificuldade": "Médio",
+        "pergunta": "Complete o versículo de 1 João 4:8",
+        "texto": "Aquele que não ama não conhece a Deus porque Deus é ______",
+        "lacuna": "amor",
+        "xp": 15
+      },
+      {
+        "id": "1 j-4-8-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Médio",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Aquele",
+          "que",
+          "não",
+          "ama",
+          "não",
+          "conhece",
+          "a",
+          "Deus",
+          "porque",
+          "Deus",
+          "é",
+          "amor"
+        ],
+        "embaralhado": [
+          "não",
+          "porque",
+          "conhece",
+          "amor",
+          "não",
+          "que",
+          "Deus",
+          "ama",
+          "Aquele",
+          "a",
+          "Deus",
+          "é"
+        ],
+        "xp": 20
+      }
+    ]
+  },
+  {
+    "id": "lesson-1 j-5-4",
+    "titulo": "1 João 5:4",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "1 j-5-4-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de 1 João 5:4",
+        "texto": "Porque todo o que é nascido de Deus vence o mundo e esta é a vitória que vence o mundo a nossa ______",
+        "lacuna": "fé",
+        "xp": 20
+      },
+      {
+        "id": "1 j-5-4-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Porque",
+          "todo",
+          "o",
+          "que",
+          "é",
+          "nascido",
+          "de",
+          "Deus",
+          "vence",
+          "o",
+          "mundo",
+          "e",
+          "esta",
+          "é",
+          "a",
+          "vitória",
+          "que",
+          "vence",
+          "o",
+          "mundo",
+          "a",
+          "nossa",
+          "fé"
+        ],
+        "embaralhado": [
+          "todo",
+          "é",
+          "é",
+          "esta",
+          "a",
+          "a",
+          "mundo",
+          "Deus",
+          "nossa",
+          "mundo",
+          "vence",
+          "fé",
+          "que",
+          "Porque",
+          "e",
+          "nascido",
+          "o",
+          "vitória",
+          "de",
+          "vence",
+          "o",
+          "que",
+          "o"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-apo-3-20",
+    "titulo": "Apocalipse 3:20",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "apo-3-20-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Apocalipse 3:20",
+        "texto": "Eis que estou à porta e bato se alguém ouvir a minha voz e abrir a porta entrarei em sua casa e com ele ______",
+        "lacuna": "cearei",
+        "xp": 20
+      },
+      {
+        "id": "apo-3-20-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Eis",
+          "que",
+          "estou",
+          "à",
+          "porta",
+          "e",
+          "bato",
+          "se",
+          "alguém",
+          "ouvir",
+          "a",
+          "minha",
+          "voz",
+          "e",
+          "abrir",
+          "a",
+          "porta",
+          "entrarei",
+          "em",
+          "sua",
+          "casa",
+          "e",
+          "com",
+          "ele",
+          "cearei"
+        ],
+        "embaralhado": [
+          "ouvir",
+          "abrir",
+          "que",
+          "alguém",
+          "e",
+          "porta",
+          "Eis",
+          "estou",
+          "em",
+          "e",
+          "ele",
+          "minha",
+          "casa",
+          "entrarei",
+          "com",
+          "bato",
+          "e",
+          "porta",
+          "à",
+          "se",
+          "cearei",
+          "voz",
+          "a",
+          "sua",
+          "a"
+        ],
+        "xp": 30
+      }
+    ]
+  },
+  {
+    "id": "lesson-apo-22-13",
+    "titulo": "Apocalipse 22:13",
+    "dificuldade_geral": "Difícil",
+    "questoes": [
+      {
+        "id": "apo-22-13-q1",
+        "tipo": "completar",
+        "dificuldade": "Difícil",
+        "pergunta": "Complete o versículo de Apocalipse 22:13",
+        "texto": "Eu sou o Alfa e o Ômega o princípio e o fim o primeiro e o ______",
+        "lacuna": "derradeiro",
+        "xp": 20
+      },
+      {
+        "id": "apo-22-13-q2",
+        "tipo": "ordenar",
+        "dificuldade": "Difícil",
+        "pergunta": "Coloque as palavras na ordem correta:",
+        "sequencia_correta": [
+          "Eu",
+          "sou",
+          "o",
+          "Alfa",
+          "e",
+          "o",
+          "Ômega",
+          "o",
+          "princípio",
+          "e",
+          "o",
+          "fim",
+          "o",
+          "primeiro",
+          "e",
+          "o",
+          "derradeiro"
+        ],
+        "embaralhado": [
+          "e",
+          "fim",
+          "o",
+          "princípio",
+          "o",
+          "derradeiro",
+          "primeiro",
+          "o",
+          "e",
+          "Alfa",
+          "sou",
+          "Ômega",
+          "o",
+          "o",
+          "Eu",
+          "e",
+          "o"
+        ],
+        "xp": 30
+      }
+    ]
+  }
+]
