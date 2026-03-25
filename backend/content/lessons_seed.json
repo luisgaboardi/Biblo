@@ -1,0 +1,122 @@
+[
+  {
+    "title": "A Criação",
+    "level": 1,
+    "books": [
+      "Gênesis",
+      "Salmos"
+    ],
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "text": "Quantos dias Deus levou para criar o mundo?",
+        "options": [
+          "5 dias",
+          "6 dias",
+          "7 dias",
+          "8 dias"
+        ],
+        "answer": "6 dias",
+        "explanation": "Gênesis 1 descreve a criação do mundo em seis dias, com Deus descansando no sétimo dia."
+      },
+      {
+        "type": "true_false",
+        "text": "Deus criou os animais antes do homem.",
+        "answer": true,
+        "explanation": "Gênesis 1:24-27 descreve a criação dos animais no sexto dia, antes da criação do homem."
+      },
+      {
+        "type": "multiple_choice",
+        "text": "O que Deus criou no primeiro dia?",
+        "options": [
+          "O Sol",
+          "A Luz",
+          "Os Animais",
+          "O Homem"
+        ],
+        "answer": "A Luz",
+        "explanation": "Gênesis 1:3 diz: 'E disse Deus: Haja luz; e houve luz.'"
+      },
+      {
+        "type": "order_sequence",
+        "text": "Coloque em ordem os elementos da criação:",
+        "sequence": [
+          "Firmamento",
+          "Luz",
+          "Astros",
+          "Vegetação"
+        ],
+        "answer": [
+          "Luz",
+          "Firmamento",
+          "Vegetação",
+          "Astros"
+        ]
+      },
+      {
+        "type": "true_false",
+        "text": "Deus criou o homem no sexto dia.",
+        "answer": true,
+        "explanation": "Gênesis 1:27 diz: 'E criou Deus o homem à sua imagem; à imagem de Deus o criou; homem e mulher os criou.'"
+      },
+      {
+        "type": "fill_in_the_blank",
+        "text": "No sétimo dia, Deus ________.",
+        "answer": "descansou",
+        "explanation": "Gênesis 2:2 diz: 'E havendo Deus terminado no sétimo dia a sua obra, que tinha feito, descansou nesse dia de toda a sua obra que tinha feito.'"
+      },
+      {
+        "type": "multiple_choice",
+        "text": "Qual é o tema central do Salmo 104?",
+        "options": [
+          "A majestade do homem na criação",
+          "A glória de Deus na criação",
+          "A providência de Deus na criação",
+          "A queda do homem"
+        ],
+        "answer": "A providência de Deus na criação",
+        "explanation": "O Salmo 104 descreve como Deus sustenta e cuida de toda a criação, mostrando Sua providência."
+      },
+      {
+        "type": "true_false",
+        "text": "O Salmo 8 destaca a importância do homem na criação.",
+        "answer": true,
+        "explanation": "O Salmo 8 fala sobre a posição especial do homem na criação, dizendo que ele foi feito um pouco menor do que os anjos e coroado de glória e honra."
+      },
+      {
+        "type": "fill_in_the_blank",
+        "text": "O Salmo 19 fala sobre a ________ de Deus na criação.",
+        "answer": "glória",
+        "explanation": "O Salmo 19 começa dizendo: 'Os céus proclamam a glória de Deus; o firmamento anuncia a obra das suas mãos.'"
+      },
+      {
+        "type": "multiple_choice",
+        "text": "Qual é a mensagem principal do Salmo 8?",
+        "options": [
+          "A majestade do homem na criação",
+          "A glória de Deus na criação",
+          "A providência de Deus na criação",
+          "A queda do homem"
+        ],
+        "answer": "A majestade do homem na criação",
+        "explanation": "O Salmo 8 destaca a posição especial do homem na criação, mostrando que ele foi feito um pouco menor do que os anjos e coroado de glória e honra."
+      },
+      {
+        "type": "order_sequence",
+        "text": "Coloque em ordem os eventos da criação conforme descritos no Salmo 104:",
+        "sequence": [
+          "Deus cria os céus e a terra",
+          "Deus sustenta a criação",
+          "Deus envia a chuva para a terra",
+          "Deus alimenta os animais"
+        ],
+        "answer": [
+          "Deus cria os céus e a terra",
+          "Deus sustenta a criação",
+          "Deus envia a chuva para a terra",
+          "Deus alimenta os animais"
+        ]
+      }
+    ]
+  }
+]

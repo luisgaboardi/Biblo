@@ -1,0 +1,39 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: biblo_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    container_name: biblo_api
+    volumes:
+      - ./backend:/app          # Mapeia a pasta backend inteira
+      - ./backend/content:/app/content  # Mantém o mapeamento do conteúdo
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - PYTHONPATH=/app/src     # Reforça o path para o Python achar os módulos
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    container_name: biblo_web
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
