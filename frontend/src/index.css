@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  /* Definindo as cores para o Tailwind v4 */
+  --color-biblo-green: #58cc02;
+  --color-biblo-green-dark: #46a302;
+  --color-biblo-blue: #1cb0f6;
+  --color-biblo-blue-dark: #1899d6;
+}
+
+@layer base {
+
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  /* Agora você pode usar as variáveis aqui também */
+  @apply bg-[#f7f7f7] font-sans antialiased text-[#4b4b4b] overflow-x-hidden;
+}
+
+/* Animação suave para entrada de telas */
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-popIn {
+  animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
