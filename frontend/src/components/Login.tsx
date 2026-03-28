@@ -37,7 +37,7 @@ export function Login({ onLoginSuccess, onSwitchToSignup }: LoginProps) {
                     <input
                         type="text"
                         placeholder="NOME DE USUÁRIO"
-                        className="w-full p-4 bg-gray-50 border-2 border-gray-200 rounded-2xl font-bold focus:border-bibloBlue outline-none transition-all"
+                        className="w-full p-4 bg-gray-50 border-2 border-gray-200 rounded-2xl font-bold focus:border-biblo-blue outline-none transition-all"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         required
@@ -45,7 +45,7 @@ export function Login({ onLoginSuccess, onSwitchToSignup }: LoginProps) {
                     <input
                         type="password"
                         placeholder="SENHA"
-                        className="w-full p-4 bg-gray-50 border-2 border-gray-200 rounded-2xl font-bold focus:border-bibloBlue outline-none transition-all"
+                        className="w-full p-4 bg-gray-50 border-2 border-gray-200 rounded-2xl font-bold focus:border-biblo-blue outline-none transition-all"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required

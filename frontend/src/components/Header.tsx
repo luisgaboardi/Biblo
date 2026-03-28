@@ -38,7 +38,7 @@ export function Header({ hearts, streak, xp, onLogout }: HeaderProps) {
                     {/* Botão Sair - No Mobile, podemos usar apenas um ícone ou estilo minimalista */}
                     <button
                         onClick={onLogout}
-                        className="ml-1 p-2 bg-gray-50 border-2 cursor-pointer border-gray-200 rounded-xl active:translate-y-0.5 active:border-b-2 transition-all"
+                        className="ml-1 hover:bg-gray-200 p-2 bg-gray-50 border-2 cursor-pointer border-gray-200 rounded-xl active:translate-y-0.5 active:border-b-2 transition-all"
                         aria-label="Sair"
                     >
                         <span className="text-xs text-gray-400">SAIR</span>

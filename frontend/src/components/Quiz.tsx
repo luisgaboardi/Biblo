@@ -72,7 +72,7 @@ export function Quiz({ lesson, onClose }: QuizProps) {
             <div className="w-full max-w-4xl mx-auto px-4 py-4 flex items-center gap-3">
                 <button
                     onClick={() => onClose(0, 0)}
-                    className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+                    className="p-2 text-gray-400 cursor-pointer hover:text-gray-600 transition-colors"
                 >
                     <span className="text-2xl font-bold">✕</span>
                 </button>
@@ -105,9 +105,9 @@ export function Quiz({ lesson, onClose }: QuizProps) {
                                     key={opt}
                                     disabled={isCorrect !== null}
                                     onClick={() => setSelectedOption(opt)}
-                                    className={`p-4 rounded-xl sm:rounded-2xl border-2 border-b-4 text-left font-bold text-base sm:text-lg transition-all active:translate-y-1 active:border-b-2
+                                    className={`p-4 rounded-xl cursor-pointer sm:rounded-2xl border-2 border-b-4 text-left font-bold text-base sm:text-lg transition-all active:translate-y-1 active:border-b-2
                                         ${selectedOption === opt
-                                            ? 'border-bibloBlue bg-blue-50 text-bibloBlue'
+                                            ? 'border-biblo-blue bg-blue-50 text-biblo-blue'
                                             : 'border-gray-200 text-gray-700 bg-white hover:bg-gray-50'}`}
                                 >
                                     {opt}
@@ -135,7 +135,7 @@ export function Quiz({ lesson, onClose }: QuizProps) {
                                         <button
                                             key={`sel-${idx}`}
                                             onClick={() => toggleOrder(word)}
-                                            className="bg-white border-2 border-b-4 border-gray-200 rounded-xl px-3 py-1.5 text-sm sm:text-base font-bold active:translate-y-1 active:border-b-2"
+                                            className="bg-white border-2 cursor-pointer border-b-4 border-gray-200 rounded-xl px-3 py-1.5 text-sm sm:text-base font-bold active:translate-y-1 active:border-b-2"
                                         >
                                             {word}
                                         </button>
@@ -149,7 +149,7 @@ export function Quiz({ lesson, onClose }: QuizProps) {
                                                 key={`opt-${idx}`}
                                                 disabled={isSelected || isCorrect !== null}
                                                 onClick={() => toggleOrder(word)}
-                                                className={`px-3 py-1.5 border-2 border-b-4 rounded-xl text-sm sm:text-base font-bold transition-all 
+                                                className={`px-3 py-1.5 border-2 border-b-4 cursor-pointer rounded-xl text-sm sm:text-base font-bold transition-all 
                                                     ${isSelected ? 'opacity-20 grayscale' : 'bg-white border-gray-200 active:translate-y-1 active:border-b-2'}`}
                                             >
                                                 {word}
@@ -200,8 +200,8 @@ export function Quiz({ lesson, onClose }: QuizProps) {
                         )}
                         className={`w-full sm:w-auto px-12 py-4 rounded-2xl font-black tracking-wider transition-all shadow-[0_4px_0_0] active:translate-y-1 active:shadow-none
                             ${isCorrect === null
-                                ? (!selectedOption ? 'bg-gray-200 text-gray-400 shadow-none' : 'bg-[#1899d6] text-white shadow-[#1279ab]')
-                                : (isCorrect ? 'bg-[#46a302] text-white shadow-[#3a8602]' : 'bg-[#ea2b2b] text-white shadow-[#b81d1d]')
+                                ? (!selectedOption ? 'bg-gray-200 text-gray-400 shadow-none' : 'bg-[#1899d6] cursor-pointer text-white shadow-[#1279ab]')
+                                : (isCorrect ? 'bg-[#46a302] cursor-pointer text-white shadow-[#3a8602]' : 'bg-[#ea2b2b] cursor-pointer text-white shadow-[#b81d1d]')
                             }`}
                     >
                         {isCorrect === null ? 'VERIFICAR' : 'CONTINUAR'}

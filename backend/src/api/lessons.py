@@ -46,16 +46,16 @@ def get_lesson(lesson_id: int, db: Session = Depends(session.get_db)):
 
 @router.post("/", response_model=LessonBase)
 def create_lesson(lesson_in: LessonCreate, db: Session = Depends(get_db)):
-    new_lesson = models.Lesson(
+    lesson = models.Lesson(
         title=lesson_in.title,
-        level=lesson_in.level,
         books=lesson_in.books,
-        content={"questions": lesson_in.questions} # Transforma a lista em objeto content
+        level=lesson_in.level,
+        questions=lesson_in.questions
     )
-    db.add(new_lesson)
+    db.add(lesson)
     db.commit()
-    db.refresh(new_lesson)
-    return new_lesson
+    db.refresh(lesson)
+    return lesson
 
 
 @router.delete("/{lesson_id}", status_code=204)
