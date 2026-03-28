@@ -99,8 +99,8 @@ export function Quiz({ lesson, onClose }: QuizProps) {
 
                     <div className="grid gap-2 sm:gap-3">
                         {/* Opções de Múltipla Escolha / True-False */}
-                        {(currentQuestion.type === 'multiple_choice' || currentQuestion.type === 'true_false') && (
-                            (currentQuestion.type === 'true_false' ? ['Verdadeiro', 'Falso'] : (currentQuestion.options || [])).map((opt) => (
+                        {(currentQuestion.type === 'multiple-choice' || currentQuestion.type === 'true-false') && (
+                            (currentQuestion.type === 'true-false' ? ['Verdadeiro', 'Falso'] : (currentQuestion.options || [])).map((opt) => (
                                 <button
                                     key={opt}
                                     disabled={isCorrect !== null}

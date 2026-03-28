@@ -46,11 +46,13 @@ def get_lesson(lesson_id: int, db: Session = Depends(session.get_db)):
 
 @router.post("/", response_model=LessonBase)
 def create_lesson(lesson_in: LessonCreate, db: Session = Depends(get_db)):
+
+    print("Received lesson data:", lesson_in)  # Debug: Verificar os dados recebidos
     lesson = models.Lesson(
         title=lesson_in.title,
         books=lesson_in.books,
         level=lesson_in.level,
-        questions=lesson_in.questions
+        content={"questions": lesson_in.questions}
     )
     db.add(lesson)
     db.commit()

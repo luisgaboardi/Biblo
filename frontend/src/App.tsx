@@ -7,6 +7,7 @@ import { ResultModal } from './components/ResultModal'
 import { Header } from './components/Header'
 import { LessonCard } from './components/LessonCard'
 import type { Lesson, QuizResultResponse } from './types'
+import { Admin } from './views/Admin'
 
 export default function App() {
   const [token, setToken] = useState<string | null>(localStorage.getItem('token'))
@@ -88,10 +89,12 @@ export default function App() {
     <div className="min-h-screen bg-[#f7f7f7] pb-20">
       <Header hearts={userStats.hearts} streak={userStats.streak} xp={userStats.xp} onLogout={handleLogout} />
 
+      <Admin />
+
       <main className="max-w-2xl mx-auto px-4 mt-8">
         <h2 className="text-xl font-black text-gray-500 uppercase tracking-widest mb-6 px-2">Suas Lições</h2>
         <div className="grid gap-4">
-          {lessons.map(l => <LessonCard key={l.id} lesson={l} onClick={setActiveLesson} />)}
+          {lessons.map(l => <LessonCard key={l.id} lesson={l} onClick={() => setActiveLesson(l)} />)}
           {lessons.length === 0 && <p className="text-center text-gray-400 font-bold mt-10">Nenhuma lição disponível.</p>}
         </div>
       </main>
