@@ -3,7 +3,7 @@ export interface Question {
     type: string;
     text: string;
     options?: string[];
-    answer: string;
+    answer: string | boolean | string[] | Record<string, string>;
     explanation?: string;
     sequence?: string[]; // Para perguntas de ordenação
     pairs?: Record<string, string>; // Para perguntas de associação

@@ -1,112 +1,116 @@
 import { useEffect, useState } from 'react'
-import axios from 'axios'
 import { Login } from './components/Login'
 import { Signup } from './components/Signup'
 import { Quiz } from './components/Quiz'
 import { ResultModal } from './components/ResultModal'
-import { Header } from './components/Header'
-import { LessonCard } from './components/LessonCard'
-import type { Lesson, QuizResultResponse } from './types'
-import { Admin } from './views/Admin'
+
+// Nossas Views Principais
+import { Home } from './views/Home'
+
+// Lógica Centralizada
+import { useAuth } from './hooks/useAuth'
+import { userService } from './services/userService'
+import type { Lesson } from './types'
 
 export default function App() {
-  const [token, setToken] = useState<string | null>(localStorage.getItem('token'))
+  // --- ESTADO GLOBAL DA SESSÃO ---
+  const { token, login, logout } = useAuth()
   const [authView, setAuthView] = useState<'login' | 'signup'>('login')
+
+  // --- ESTADO DE DADOS DA APP ---
   const [lessons, setLessons] = useState<Lesson[]>([])
-  const [activeLesson, setActiveLesson] = useState<Lesson | null>(null)
   const [userStats, setUserStats] = useState({ xp: 0, streak: 0, hearts: 5 })
   const [loading, setLoading] = useState(false)
-  const [showModal, setShowModal] = useState<{ xp: number; streak: number } | null>(null)
 
-  const apiConfig = { headers: { Authorization: `Bearer ${token}` } }
+  // --- ESTADO DE UI (Modais/Overlays) ---
+  const [activeLesson, setActiveLesson] = useState<Lesson | null>(null)
+  const [showResultModal, setShowResultModal] = useState<{ xp: number; streak: number } | null>(null)
 
+  // Carrega dados quando o token existe
   useEffect(() => {
-    if (token) fetchUserData();
+    if (token) {
+      fetchData()
+    }
   }, [token])
 
-  const fetchUserData = async () => {
+  const fetchData = async () => {
     setLoading(true)
     try {
-      const [lRes, uRes] = await Promise.all([
-        axios.get('http://localhost:8000/lessons', apiConfig),
-        axios.get('http://localhost:8000/users/me', apiConfig)
+      const [lessonsData, userData] = await Promise.all([
+        userService.getLessons(),
+        userService.getProfile()
       ])
-
-      setLessons(lRes.data)
-      setUserStats({ xp: uRes.data.xp, streak: uRes.data.streak, hearts: uRes.data.hearts })
-    } catch (err) { handleLogout() }
-    finally { setLoading(false) }
+      setLessons(lessonsData)
+      setUserStats({ xp: userData.xp, streak: userData.streak, hearts: userData.hearts })
+    } catch (err) {
+      console.error("Erro na App", err)
+      logout() // Desloga se a API falhar
+    } finally {
+      setLoading(false)
+    }
   }
 
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    setToken(null);
-  };
-
+  // Lógica de finalização do Quiz (Salva no Banco e abre Modal)
   const handleFinishQuiz = async (correct: number, total: number) => {
-    // 1. Se o usuário apenas fechou o Quiz no "X", apenas fecha.
     if (total === 0 || correct === 0) {
-      setActiveLesson(null);
-      return;
+      setActiveLesson(null)
+      return
     }
 
     try {
-      const { data } = await axios.post<QuizResultResponse>(
-        'http://localhost:8000/users/progress',
-        { correct_answers: correct, total_questions: total },
-        apiConfig
-      )
-
-      // 2. Primeiro atualizamos os status e PREPARAMOS o modal
+      const data = await userService.saveProgress(correct, total)
+      // Atualiza os dados locais com o retorno do servidor
       setUserStats(prev => ({ ...prev, xp: data.current_total_xp, streak: data.streak }))
-      setShowModal({ xp: data.xp_earned, streak: data.streak })
-
-      // 3. AGORA fechamos a lição para voltar para a Home onde o modal vai brilhar
-      setActiveLesson(null);
-
+      setShowResultModal({ xp: data.xp_earned, streak: data.streak })
+      setActiveLesson(null)
     } catch (err) {
-      console.error("Erro ao salvar progresso", err);
-      setActiveLesson(null);
+      console.error("Erro ao salvar progresso", err)
+      setActiveLesson(null)
     }
   }
 
-  // RENDERIZAÇÃO CONDICIONAL
-  if (!token) {
-    return authView === 'login'
-      ? <Login onLoginSuccess={t => setToken(t)} onSwitchToSignup={() => setAuthView('signup')} />
-      : <Signup onSignupSuccess={() => setAuthView('login')} onSwitchToLogin={() => setAuthView('login')} />
-  }
+  // --- ROTEADOR (Renderização Condicional de Views) ---
 
+  // 1. Loading Global
   if (loading) return (
-    <div className="min-h-screen flex items-center justify-center font-black text-biblo-green text-3xl animate-pulse">
-      BIBLO
+    <div className="min-h-screen flex items-center justify-center bg-white z-50 fixed inset-0">
+      <div className="text-center">
+        <div className="text-5xl font-black text-biblo-green animate-pulse tracking-tighter">BIBLO</div>
+        <div className="text-gray-400 font-bold mt-2 uppercase text-xs tracking-widest">Carregando jornada...</div>
+      </div>
     </div>
   )
 
-  if (activeLesson) return <Quiz lesson={activeLesson} onClose={handleFinishQuiz} />
+  // 2. Fluxo de Autenticação (Deslogado)
+  if (!token) {
+    return authView === 'login'
+      ? <Login onLoginSuccess={login} onSwitchToSignup={() => setAuthView('signup')} />
+      : <Signup onSignupSuccess={() => setAuthView('login')} onSwitchToLogin={() => setAuthView('login')} />
+  }
 
+  // 3. Fluxo do Quiz (Overlay sobre a Home)
+  if (activeLesson) {
+    return <Quiz lesson={activeLesson} onClose={handleFinishQuiz} />
+  }
+
+  // 4. Fluxo Principal (Logado - Home)
   return (
-    <div className="min-h-screen bg-[#f7f7f7] pb-20">
-      <Header hearts={userStats.hearts} streak={userStats.streak} xp={userStats.xp} onLogout={handleLogout} />
+    <>
+      <Home
+        userStats={userStats}
+        lessons={lessons}
+        onLogout={logout}
+        onSelectLesson={setActiveLesson} // Passa a função que abre o Quiz
+      />
 
-      <Admin />
-
-      <main className="max-w-2xl mx-auto px-4 mt-8">
-        <h2 className="text-xl font-black text-gray-500 uppercase tracking-widest mb-6 px-2">Suas Lições</h2>
-        <div className="grid gap-4">
-          {lessons.map(l => <LessonCard key={l.id} lesson={l} onClick={() => setActiveLesson(l)} />)}
-          {lessons.length === 0 && <p className="text-center text-gray-400 font-bold mt-10">Nenhuma lição disponível.</p>}
-        </div>
-      </main>
-
-      {/* Movido para o final do JSX para garantir que fique no topo da árvore de renderização */}
-      {showModal && (
+      {/* Modais Globais (ficam fora da Home para garantir Z-Index) */}
+      {showResultModal && (
         <ResultModal
-          xp={showModal.xp}
-          streak={showModal.streak}
-          onClose={() => setShowModal(null)}
+          xp={showResultModal.xp}
+          streak={showResultModal.streak}
+          onClose={() => setShowResultModal(null)}
         />
       )}
-    </div>
+    </>
   )
 }

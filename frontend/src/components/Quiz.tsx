@@ -12,45 +12,65 @@ export function Quiz({ lesson, onClose }: QuizProps) {
     const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
     const [correctCount, setCorrectCount] = useState(0);
 
-    const questions = lesson.content.questions || [];
+    // Garante que questions seja sempre um array para evitar erro de .length
+    const questions = lesson.content?.questions || [];
     const currentQuestion = questions[currentIndex];
 
     useEffect(() => {
         setSelectedOption(null);
         setIsCorrect(null);
+        window.scrollTo(0, 0);
     }, [currentIndex]);
 
-    // Cálculo da largura da barra (Garante que nunca seja NaN e comece em pelo menos 0%)
     const progressWidth = questions.length > 0
         ? Math.max((currentIndex / questions.length) * 100, 0)
         : 0;
 
     const handleCheck = () => {
+        if (!currentQuestion) return;
+
         let correct = false;
+        const userValue = selectedOption;
+        const dbAnswer = currentQuestion.answer;
+
+        // Lógica de verificação robusta
         if (currentQuestion.type === 'order_sequence') {
-            const userSelection = Array.isArray(selectedOption) ? selectedOption : [];
-            const correctAnswer = (currentQuestion.answer as unknown as string[]) || [];
-            if (userSelection.length === correctAnswer.length) {
-                correct = userSelection.every((val, index) => val?.trim() === correctAnswer[index]?.trim());
-            }
-        } else if (currentQuestion.type === 'true_false') {
-            const selectedValue = selectedOption === 'Verdadeiro' ? true : selectedOption === 'Falso' ? false : selectedOption;
-            correct = selectedValue === currentQuestion.answer;
-        } else {
-            const answer = String(selectedOption || "").trim().toLowerCase();
-            const expected = String(currentQuestion.answer || "").trim().toLowerCase();
-            correct = answer === expected;
+            const userArr = Array.isArray(userValue) ? userValue : [];
+            const correctArr = Array.isArray(dbAnswer) ? dbAnswer : [];
+            correct = userArr.length === correctArr.length &&
+                userArr.every((v, i) => String(v).trim() === String(correctArr[i]).trim());
+        }
+        else if (currentQuestion.type === 'true_false') {
+            // Converte strings "Verdadeiro"/"Falso" para boolean se necessário
+            const normalizedUser = userValue === 'Verdadeiro' || userValue === true;
+            correct = normalizedUser === dbAnswer;
+        }
+        else {
+            // Para múltipla escolha e preenchimento de lacuna
+            const cleanUser = String(userValue || "").trim().toLowerCase();
+            const cleanDb = String(dbAnswer || "").trim().toLowerCase();
+            correct = cleanUser === cleanDb;
         }
 
         if (correct) setCorrectCount(prev => prev + 1);
         setIsCorrect(correct);
+
+        // Scroll suave para a parte de baixo da tela, onde o feedback (#explanation) é mostrado
+        setTimeout(() => {
+            const explanationEl = document.getElementById('explanation');
+            if (explanationEl) {
+                explanationEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 300);
+        
     };
 
     const handleNext = () => {
         if (currentIndex + 1 < questions.length) {
             setCurrentIndex(prev => prev + 1);
         } else {
-            onClose(correctCount, questions.length);
+            // Retorna o resultado final para o App.tsx salvar no banco
+            onClose(correctCount + (isCorrect ? 1 : 0), questions.length);
         }
     };
 
@@ -64,144 +84,148 @@ export function Quiz({ lesson, onClose }: QuizProps) {
         }
     };
 
+    const formatAnswer = (ans: string | boolean | string[] | Record<string, string>) => {
+        if (typeof ans === 'boolean') {
+            return ans ? 'Verdadeiro' : 'Falso';
+        }
+        // Primeira letra maiúscula para respostas de texto
+        if (typeof ans === 'string') {
+            return ans.charAt(0).toUpperCase() + ans.slice(1);
+        }
+        // Para arrays de strings
+        if (Array.isArray(ans)) {
+            return ans.join(', ');
+        }
+        // Para objetos (associação)
+        if (typeof ans === 'object') {
+            return Object.entries(ans).map(([k, v]) => `${k} → ${v}`).join('; ');
+        }
+
+        return String(ans);
+
+    };
+
     if (!currentQuestion) return null;
 
     return (
-        <div className="fixed inset-0 bg-white flex flex-col animate-fadeIn select-none overflow-hidden">
-            {/* 1. HEADER COMPACTO (Apenas progresso no Quiz) */}
-            <div className="w-full max-w-4xl mx-auto px-4 py-4 flex items-center gap-3">
+        <div className="fixed inset-0 bg-white flex flex-col animate-fadeIn select-none z-50">
+            {/* HEADER */}
+            <header className="w-full max-w-4xl mx-auto px-4 py-4 flex items-center gap-3">
                 <button
                     onClick={() => onClose(0, 0)}
-                    className="p-2 text-gray-400 cursor-pointer hover:text-gray-600 transition-colors"
+                    className="p-2 text-gray-400 hover:text-gray-600 font-bold text-2xl"
                 >
-                    <span className="text-2xl font-bold">✕</span>
+                    ✕
                 </button>
-
-                <div className="flex-1 h-3 bg-gray-100 rounded-full overflow-hidden border border-gray-100">
+                <div className="flex-1 h-3 bg-gray-100 rounded-full overflow-hidden">
                     <div
-                        className="h-full bg-biblo-green transition-all duration-700 ease-out rounded-full"
+                        className="h-full bg-biblo-green transition-all duration-500"
                         style={{ width: `${progressWidth}%` }}
                     />
                 </div>
-
-                {/* Mostramos os corações aqui no Quiz, estilo Duolingo */}
-                <div className="flex items-center gap-1 font-black text-red-500 text-sm">
+                <div className="font-black text-red-500 text-sm flex items-center gap-1">
                     ❤️ 5
                 </div>
-            </div>
+            </header>
 
-            {/* 2. ÁREA DE CONTEÚDO SCROLLABLE */}
-            <main className="flex-1 overflow-y-auto px-4 py-2 sm:px-6">
-                <div className="max-w-2xl mx-auto pb-32"> {/* pb-32 para o conteúdo não ficar atrás do footer */}
-                    <h2 className="text-xl sm:text-2xl font-black text-gray-800 mb-6 leading-tight">
+            {/* CONTEÚDO */}
+            <main className="flex-1 overflow-y-auto px-6 py-4">
+                <div className="max-w-2xl mx-auto">
+                    <h2 className="text-2xl font-black text-gray-800 mb-8">
                         {currentQuestion.text}
                     </h2>
 
-                    <div className="grid gap-2 sm:gap-3">
-                        {/* Opções de Múltipla Escolha / True-False */}
-                        {(currentQuestion.type === 'multiple-choice' || currentQuestion.type === 'true-false') && (
-                            (currentQuestion.type === 'true-false' ? ['Verdadeiro', 'Falso'] : (currentQuestion.options || [])).map((opt) => (
+                    <div className="grid gap-3">
+                        {/* Múltipla Escolha e Verdadeiro/Falso */}
+                        {(['multiple_choice', 'true_false', 'multiple-choice'].includes(currentQuestion.type)) && (
+                            (currentQuestion.type === 'true_false' ? ['Verdadeiro', 'Falso'] : (currentQuestion.options || [])).map((opt: string) => (
                                 <button
                                     key={opt}
                                     disabled={isCorrect !== null}
                                     onClick={() => setSelectedOption(opt)}
-                                    className={`p-4 rounded-xl cursor-pointer sm:rounded-2xl border-2 border-b-4 text-left font-bold text-base sm:text-lg transition-all active:translate-y-1 active:border-b-2
+                                    className={`p-4 rounded-2xl border-2 border-b-4 text-left font-bold transition-all
                                         ${selectedOption === opt
                                             ? 'border-biblo-blue bg-blue-50 text-biblo-blue'
-                                            : 'border-gray-200 text-gray-700 bg-white hover:bg-gray-50'}`}
+                                            : 'border-gray-200 bg-white text-gray-700'}`}
                                 >
                                     {opt}
                                 </button>
                             ))
                         )}
 
-                        {/* Input de Texto - Melhoria para Mobile Keyboard */}
+                        {/* Input de Texto */}
                         {currentQuestion.type === 'fill_in_the_blank' && (
                             <input
                                 type="text"
-                                placeholder="Escreva aqui..."
+                                placeholder="Toque para digitar..."
                                 disabled={isCorrect !== null}
-                                className="w-full p-4 sm:p-6 border-2 border-b-4 rounded-2xl sm:rounded-3xl text-lg sm:text-xl font-bold focus:border-biblo-blue outline-none bg-gray-50"
-                                value={typeof selectedOption === 'string' ? selectedOption : ''}
+                                className="w-full p-5 border-2 border-b-4 rounded-2xl text-xl font-bold focus:border-biblo-blue outline-none bg-gray-50 uppercase"
+                                value={selectedOption || ''}
                                 onChange={e => setSelectedOption(e.target.value)}
                             />
                         )}
 
-                        {/* Sequence Order - Layout Flex-Wrap para Mobile */}
+                        {/* Ordenação */}
                         {currentQuestion.type === 'order_sequence' && (
-                            <div className="space-y-4">
-                                <div className="flex flex-wrap gap-2 min-h-[60px] p-3 justify-center border-b-2 border-dashed border-gray-200">
+                            <div className="space-y-6">
+                                <div className="flex flex-wrap gap-2 min-h-[80px] p-4 bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200">
                                     {Array.isArray(selectedOption) && selectedOption.map((word, idx) => (
-                                        <button
-                                            key={`sel-${idx}`}
-                                            onClick={() => toggleOrder(word)}
-                                            className="bg-white border-2 cursor-pointer border-b-4 border-gray-200 rounded-xl px-3 py-1.5 text-sm sm:text-base font-bold active:translate-y-1 active:border-b-2"
-                                        >
+                                        <button key={idx} onClick={() => toggleOrder(word)} className="bg-white border-2 border-b-4 p-2 rounded-xl font-bold shadow-sm">
                                             {word}
                                         </button>
                                     ))}
                                 </div>
                                 <div className="flex flex-wrap gap-2 justify-center">
-                                    {(currentQuestion.sequence || []).map((word: string, idx: number) => {
-                                        const isSelected = Array.isArray(selectedOption) && selectedOption.includes(word);
-                                        return (
-                                            <button
-                                                key={`opt-${idx}`}
-                                                disabled={isSelected || isCorrect !== null}
-                                                onClick={() => toggleOrder(word)}
-                                                className={`px-3 py-1.5 border-2 border-b-4 cursor-pointer rounded-xl text-sm sm:text-base font-bold transition-all 
-                                                    ${isSelected ? 'opacity-20 grayscale' : 'bg-white border-gray-200 active:translate-y-1 active:border-b-2'}`}
-                                            >
-                                                {word}
-                                            </button>
-                                        );
-                                    })}
+                                    {(currentQuestion.sequence || []).map((word: string, idx: number) => (
+                                        <button
+                                            key={idx}
+                                            disabled={isCorrect !== null || (Array.isArray(selectedOption) && selectedOption.includes(word))}
+                                            onClick={() => toggleOrder(word)}
+                                            className={`p-2 border-2 border-b-4 rounded-xl font-bold transition-all 
+                                                ${Array.isArray(selectedOption) && selectedOption.includes(word) ? 'opacity-20' : 'bg-white'}`}
+                                        >
+                                            {word}
+                                        </button>
+                                    ))}
                                 </div>
                             </div>
                         )}
                     </div>
+                </div>
 
+                <div className="max-w-2xl mx-auto" id='explanation'>
                     {isCorrect !== null && currentQuestion.explanation && (
-                        <div className='mt-6 p-4 bg-gray-50 rounded-2xl border-2 border-gray-100 italic text-gray-600 text-sm animate-fadeIn'>
-                            💡 {currentQuestion.explanation}
+                        <div className="mt-12 p-4 bg-gray-100 rounded-xl border-l-4 border-gray-300">
+                            <h3 className="font-bold text-lg mb-2">Explicação:</h3>
+                            <p className="text-gray-700">{currentQuestion.explanation}</p>
                         </div>
                     )}
                 </div>
             </main>
 
-            {/* 3. FOOTER FIXO (Sempre visível) */}
-            <footer className={`safe-area-bottom py-4 sm:py-8 px-4 sm:px-6 border-t-2 transition-all duration-300 
-                ${isCorrect === null ? 'bg-white' : isCorrect ? 'bg-[#d7ffb8]' : 'bg-[#ffdfe0]'}`}>
-                <div className="max-w-2xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-
-                    {/* Mensagem de Feedback - Escondida no mobile enquanto seleciona para ganhar espaço */}
+            {/* FOOTER ADAPTATIVO */}
+            <footer className={`p-6 border-t-2 transition-colors ${isCorrect === null ? 'bg-white' : isCorrect ? 'bg-green-100' : 'bg-red-100'}`}>
+                <div className="max-w-2xl mx-auto flex flex-col gap-4">
                     {isCorrect !== null && (
-                        <div className="flex items-center gap-3 w-full sm:w-auto animate-fadeIn">
-                            <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-white font-bold text-xl ${isCorrect ? 'bg-biblo-green' : 'bg-red-500'}`}>
+                        <div className="flex items-center gap-3 animate-bounce">
+                            <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white text-2xl font-bold ${isCorrect ? 'bg-biblo-green' : 'bg-red-500'}`}>
                                 {isCorrect ? '✓' : '✕'}
                             </div>
-                            <div className="flex-1">
-                                <h3 className={`font-black text-lg sm:text-xl leading-none ${isCorrect ? 'text-[#46a302]' : 'text-[#ea2b2b]'}`}>
-                                    {isCorrect ? 'Excelente!' : 'A resposta era:'}
-                                </h3>
-                                {!isCorrect && <p className="text-[#ea2b2b] font-bold text-xs sm:text-sm mt-1">
-                                    {Array.isArray(currentQuestion.answer) ? currentQuestion.answer.join(', ') : String(currentQuestion.answer)}
-                                </p>}
+                            <div>
+                                <p className={`font-black text-xl ${isCorrect ? 'text-green-700' : 'text-red-700'}`}>
+                                    {isCorrect ? 'Muito bem!' : 'Ops, a resposta era:'}
+                                </p>
+                                {!isCorrect && <p className="text-red-600 font-bold">{formatAnswer(currentQuestion.answer)}</p>}
                             </div>
                         </div>
                     )}
-
                     <button
                         onClick={isCorrect === null ? handleCheck : handleNext}
-                        disabled={isCorrect === null && (
-                            currentQuestion.type === 'order_sequence'
-                                ? (!Array.isArray(selectedOption) || selectedOption.length === 0)
-                                : !selectedOption
-                        )}
-                        className={`w-full sm:w-auto px-12 py-4 rounded-2xl font-black tracking-wider transition-all shadow-[0_4px_0_0] active:translate-y-1 active:shadow-none
+                        disabled={isCorrect === null && !selectedOption}
+                        className={`w-full py-4 rounded-2xl font-black text-lg transition-all shadow-[0_4px_0_0] active:translate-y-1 active:shadow-none
                             ${isCorrect === null
-                                ? (!selectedOption ? 'bg-gray-200 text-gray-400 shadow-none' : 'bg-[#1899d6] cursor-pointer text-white shadow-[#1279ab]')
-                                : (isCorrect ? 'bg-[#46a302] cursor-pointer text-white shadow-[#3a8602]' : 'bg-[#ea2b2b] cursor-pointer text-white shadow-[#b81d1d]')
+                                ? (selectedOption ? 'bg-biblo-blue text-white shadow-blue-700' : 'bg-gray-200 text-gray-400 shadow-none')
+                                : (isCorrect ? 'bg-biblo-green text-white shadow-green-700' : 'bg-red-500 text-white shadow-red-700')
                             }`}
                     >
                         {isCorrect === null ? 'VERIFICAR' : 'CONTINUAR'}
