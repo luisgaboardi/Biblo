@@ -5,7 +5,7 @@ class LessonBase(BaseModel):
     id: int
     title: str
     level: int
-    books: List[str]  # Mudança crucial aqui
+    book: str
     content: Dict[str, Any] # Onde reside o {"questions": [...]}
 
     model_config = ConfigDict(from_attributes=True)
@@ -14,5 +14,5 @@ class LessonBase(BaseModel):
 class LessonCreate(BaseModel):
     title: str
     level: int
-    books: List[str]
+    book: str
     questions: List[Dict[str, Any]] # O Admin envia as questões soltas

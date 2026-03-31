@@ -2,10 +2,7 @@
   {
     "title": "A Criação",
     "level": 1,
-    "books": [
-      "Gênesis",
-      "Salmos"
-    ],
+    "book": "Gênesis",
     "questions": [
       {
         "type": "multiple_choice",

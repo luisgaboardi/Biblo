@@ -24,7 +24,7 @@ def seed_db():
                     new_lesson = models.Lesson(
                         title=item["title"],
                         level=item["level"],
-                        books=item["books"], # Salva a lista ["Gênesis", "Salmos"]
+                        book=item["book"], # Salva o livro "Gênesis"
                         content={"questions": item["questions"]} # Empacota no formato esperado
                     )
                     db.add(new_lesson)

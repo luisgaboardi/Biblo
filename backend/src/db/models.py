@@ -13,8 +13,8 @@ class Lesson(Base):
     title: Mapped[str] = mapped_column(String, nullable=False)
     level: Mapped[int] = mapped_column(Integer, default=1)
     
-    # Armazena a lista de livros: ["Gênesis", "Salmos"]
-    books: Mapped[List[str]] = mapped_column(JSON, nullable=False)
+    # Armazena o livro: "Gênesis"
+    book: Mapped[str] = mapped_column(String, nullable=False)
     
     # Armazena o objeto de questões: {"questions": [...]}
     content: Mapped[Dict[str, Any]] = mapped_column(JSON, nullable=False)

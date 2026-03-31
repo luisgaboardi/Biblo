@@ -50,7 +50,7 @@ def create_lesson(lesson_in: LessonCreate, db: Session = Depends(get_db)):
     print("Received lesson data:", lesson_in)  # Debug: Verificar os dados recebidos
     lesson = models.Lesson(
         title=lesson_in.title,
-        books=lesson_in.books,
+        book=lesson_in.book,
         level=lesson_in.level,
         content={"questions": lesson_in.questions}
     )
@@ -77,7 +77,7 @@ def update_lesson(lesson_id: int, lesson_data: LessonCreate, db: Session = Depen
         raise HTTPException(status_code=404, detail="Lição não encontrada")
     
     lesson.title = lesson_data.title
-    lesson.books = lesson_data.books
+    lesson.book = lesson_data.book
     lesson.level = lesson_data.level
     lesson.questions = lesson_data.questions
     
