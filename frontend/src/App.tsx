@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Login } from './components/Login'
-import { Signup } from './components/Signup'
-import { Quiz } from './components/Quiz'
+import { Login } from './views/Login'
+import { Signup } from './views/Signup'
+import { Quiz } from './views/Quiz'
 
 // Nossas Views Principais
 import { Home } from './views/Home'
@@ -10,6 +10,7 @@ import { Home } from './views/Home'
 import { useAuth } from './hooks/useAuth'
 import { userService } from './services/userService'
 import type { Lesson } from './types'
+import { Admin } from './views/Admin'
 
 export default function App() {
   // --- ESTADO GLOBAL DA SESSÃO ---
@@ -18,7 +19,7 @@ export default function App() {
 
   // --- ESTADO DE DADOS DA APP ---
   const [lessons, setLessons] = useState<Lesson[]>([])
-  const [userStats, setUserStats] = useState({ xp: 0, streak: 0, hearts: 5 })
+  const [userStats, setUserStats] = useState({ xp: 0, streak: 0, hearts: 5, type: 'student' })
   const [loading, setLoading] = useState(false)
 
   // --- ESTADO DE UI (Modais/Overlays) ---
@@ -39,7 +40,7 @@ export default function App() {
         userService.getProfile()
       ])
       setLessons(lessonsData)
-      setUserStats({ xp: userData.xp, streak: userData.streak, hearts: userData.hearts })
+      setUserStats({ xp: userData.xp, streak: userData.streak, hearts: userData.hearts, type: userData.type })
     } catch (err) {
       console.error("Erro na App", err)
       logout() // Desloga se a API falhar
@@ -89,7 +90,12 @@ export default function App() {
     return <Quiz lesson={activeLesson} onClose={handleFinishQuiz} />
   }
 
-  // 4. Fluxo Principal (Logado - Home)
+  // 4. Fluxo de Administração (Logado - Admin)
+  if (userStats.type === 'teacher') {
+    return <Admin />
+  }
+
+  // 5. Fluxo Principal (Logado - Home)
   return (
     <Home
       userStats={userStats}

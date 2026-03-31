@@ -41,7 +41,6 @@ export function Home({ userStats, lessons, onLogout, onSelectLesson }: HomeProps
                             <p className="text-gray-400 font-bold mt-6 text-lg">
                                 Nenhuma lição disponível no momento.
                             </p>
-                            <p className="text-gray-400 text-sm">Verifique o painel Admin.</p>
                         </div>
                     )}
                 </div>
