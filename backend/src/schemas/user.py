@@ -5,11 +5,12 @@ class UserCreate(BaseModel):
     username: str
     email: EmailStr
     password: str
-
+    
 class UserResponse(BaseModel):
     id: int
     username: str
     email: str
+    type: str  # "student" ou "teacher"
     xp: int
     streak: int
     hearts: int

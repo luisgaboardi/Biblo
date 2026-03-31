@@ -23,7 +23,9 @@ def signup(user_data: UserCreate, db: Session = Depends(get_db)):
     new_user = User(
         username=user_data.username,
         email=user_data.email,
-        hashed_password=hash_password(user_data.password)
+        hashed_password=hash_password(user_data.password),
+        # Se username = admin, então é teacher, senão student
+        type=user_data.username == "admin" and "teacher" or "student"
     )
     db.add(new_user)
     db.commit()
