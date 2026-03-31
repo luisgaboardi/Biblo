@@ -45,6 +45,7 @@ export function Home({ userStats, lessons, onLogout, onSelectLesson }: HomeProps
                         </div>
                     )}
                 </div>
+
             </main>
         </div>
     )

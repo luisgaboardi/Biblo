@@ -62,7 +62,7 @@ export function Quiz({ lesson, onClose }: QuizProps) {
                 explanationEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }, 300);
-        
+
     };
 
     const handleNext = () => {
@@ -105,6 +105,22 @@ export function Quiz({ lesson, onClose }: QuizProps) {
 
     };
 
+    // Dentro do componente Quiz, antes do return:
+    const isButtonDisabled = () => {
+        if (isCorrect !== null) return false; // Se já respondeu, o botão "Continuar" nunca está disabled
+        if (!selectedOption) return true;     // Se não selecionou nada, está disabled
+
+        if (currentQuestion.type === 'order_sequence') {
+            const userSelection = Array.isArray(selectedOption) ? selectedOption : [];
+            const originalSequence = currentQuestion.sequence || [];
+            // Só habilita se o usuário selecionou TODAS as palavras disponíveis
+            return userSelection.length !== originalSequence.length;
+        }
+
+        // Para outros tipos, basta ter algo selecionado/digitado
+        return !selectedOption;
+    };
+
     if (!currentQuestion) return null;
 
     return (
@@ -113,7 +129,7 @@ export function Quiz({ lesson, onClose }: QuizProps) {
             <header className="w-full max-w-4xl mx-auto px-4 py-4 flex items-center gap-3">
                 <button
                     onClick={() => onClose(0, 0)}
-                    className="p-2 text-gray-400 hover:text-gray-600 font-bold text-2xl"
+                    className="p-2 text-gray-400 cursor-pointer hover:text-gray-600 font-bold text-2xl"
                 >
                     ✕
                 </button>
@@ -137,21 +153,36 @@ export function Quiz({ lesson, onClose }: QuizProps) {
 
                     <div className="grid gap-3">
                         {/* Múltipla Escolha e Verdadeiro/Falso */}
-                        {(['multiple_choice', 'true_false', 'multiple-choice'].includes(currentQuestion.type)) && (
-                            (currentQuestion.type === 'true_false' ? ['Verdadeiro', 'Falso'] : (currentQuestion.options || [])).map((opt: string) => (
-                                <button
-                                    key={opt}
-                                    disabled={isCorrect !== null}
-                                    onClick={() => setSelectedOption(opt)}
-                                    className={`p-4 rounded-2xl border-2 border-b-4 text-left font-bold transition-all
-                                        ${selectedOption === opt
-                                            ? 'border-biblo-blue bg-blue-50 text-biblo-blue'
-                                            : 'border-gray-200 bg-white text-gray-700'}`}
-                                >
-                                    {opt}
-                                </button>
-                            ))
+                        {(['multiple_choice', 'true_false'].includes(currentQuestion.type)) && (
+                            (currentQuestion.type === 'true_false' ? ['Verdadeiro', 'Falso'] : (currentQuestion.options || [])).map((opt: string) => {
+
+                                let buttonStyles = 'border-gray-200 bg-white text-gray-700';
+
+                                const isSelected = selectedOption === opt;
+
+                                if (isCorrect !== null) {
+                                    if (isSelected) {
+                                        buttonStyles = isCorrect
+                                            ? 'border-biblo-green bg-green-50 text-biblo-green'
+                                            : 'border-red-500 bg-red-50 text-red-500';
+                                    }
+                                } else if (isSelected) {
+                                    buttonStyles = 'border-biblo-blue bg-blue-50 text-biblo-blue';
+                                }
+
+                                return (
+                                    <button
+                                        key={opt}
+                                        disabled={isCorrect !== null}
+                                        onClick={() => setSelectedOption(opt)}
+                                        className={`p-4 rounded-2xl cursor-pointer border-2 border-b-4 text-left font-bold transition-all ${buttonStyles}`}
+                                    >
+                                        {opt}
+                                    </button>
+                                );
+                            })
                         )}
+
 
                         {/* Input de Texto */}
                         {currentQuestion.type === 'fill_in_the_blank' && (
@@ -162,6 +193,11 @@ export function Quiz({ lesson, onClose }: QuizProps) {
                                 className="w-full p-5 border-2 border-b-4 rounded-2xl text-xl font-bold focus:border-biblo-blue outline-none bg-gray-50 uppercase"
                                 value={selectedOption || ''}
                                 onChange={e => setSelectedOption(e.target.value)}
+                                onKeyDown={e => {
+                                    if (e.key === 'Enter' && selectedOption) {
+                                        handleCheck();
+                                    }
+                                }}
                             />
                         )}
 
@@ -170,7 +206,7 @@ export function Quiz({ lesson, onClose }: QuizProps) {
                             <div className="space-y-6">
                                 <div className="flex flex-wrap gap-2 min-h-[80px] p-4 bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200">
                                     {Array.isArray(selectedOption) && selectedOption.map((word, idx) => (
-                                        <button key={idx} onClick={() => toggleOrder(word)} className="bg-white border-2 border-b-4 p-2 rounded-xl font-bold shadow-sm">
+                                        <button key={idx} onClick={() => toggleOrder(word)} className="bg-white border-2 border-b-4 cursor-pointer p-2 rounded-xl font-bold shadow-sm">
                                             {word}
                                         </button>
                                     ))}
@@ -182,7 +218,7 @@ export function Quiz({ lesson, onClose }: QuizProps) {
                                             disabled={isCorrect !== null || (Array.isArray(selectedOption) && selectedOption.includes(word))}
                                             onClick={() => toggleOrder(word)}
                                             className={`p-2 border-2 border-b-4 rounded-xl font-bold transition-all 
-                                                ${Array.isArray(selectedOption) && selectedOption.includes(word) ? 'opacity-20' : 'bg-white'}`}
+                                                ${Array.isArray(selectedOption) && selectedOption.includes(word) ? 'opacity-20 cursor-default' : 'bg-white cursor-pointer'}`}
                                         >
                                             {word}
                                         </button>
@@ -193,9 +229,10 @@ export function Quiz({ lesson, onClose }: QuizProps) {
                     </div>
                 </div>
 
+                {/* EXPLICAÇÃO */}
                 <div className="max-w-2xl mx-auto" id='explanation'>
                     {isCorrect !== null && currentQuestion.explanation && (
-                        <div className="mt-12 p-4 bg-gray-100 rounded-xl border-l-4 border-gray-300">
+                        <div className="mt-12 p-4 bg-gray-100 rounded-xl border-l-4 border-gray-300 animate-fadeIn">
                             <h3 className="font-bold text-lg mb-2">Explicação:</h3>
                             <p className="text-gray-700">{currentQuestion.explanation}</p>
                         </div>
@@ -221,11 +258,15 @@ export function Quiz({ lesson, onClose }: QuizProps) {
                     )}
                     <button
                         onClick={isCorrect === null ? handleCheck : handleNext}
-                        disabled={isCorrect === null && !selectedOption}
+                        disabled={isButtonDisabled()}
                         className={`w-full py-4 rounded-2xl font-black text-lg transition-all shadow-[0_4px_0_0] active:translate-y-1 active:shadow-none
-                            ${isCorrect === null
-                                ? (selectedOption ? 'bg-biblo-blue text-white shadow-blue-700' : 'bg-gray-200 text-gray-400 shadow-none')
-                                : (isCorrect ? 'bg-biblo-green text-white shadow-green-700' : 'bg-red-500 text-white shadow-red-700')
+        ${isCorrect === null
+                                ? (isButtonDisabled()
+                                    ? 'bg-gray-200 text-gray-400 shadow-none cursor-not-allowed'
+                                    : 'bg-biblo-blue text-white shadow-blue-700 cursor-pointer')
+                                : (isCorrect
+                                    ? 'bg-biblo-green text-white shadow-green-700 cursor-pointer'
+                                    : 'bg-red-500 text-white shadow-red-700 cursor-pointer')
                             }`}
                     >
                         {isCorrect === null ? 'VERIFICAR' : 'CONTINUAR'}

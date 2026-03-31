@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { Login } from './components/Login'
 import { Signup } from './components/Signup'
 import { Quiz } from './components/Quiz'
-import { ResultModal } from './components/ResultModal'
 
 // Nossas Views Principais
 import { Home } from './views/Home'
@@ -24,7 +23,6 @@ export default function App() {
 
   // --- ESTADO DE UI (Modais/Overlays) ---
   const [activeLesson, setActiveLesson] = useState<Lesson | null>(null)
-  const [showResultModal, setShowResultModal] = useState<{ xp: number; streak: number } | null>(null)
 
   // Carrega dados quando o token existe
   useEffect(() => {
@@ -59,9 +57,7 @@ export default function App() {
 
     try {
       const data = await userService.saveProgress(correct, total)
-      // Atualiza os dados locais com o retorno do servidor
       setUserStats(prev => ({ ...prev, xp: data.current_total_xp, streak: data.streak }))
-      setShowResultModal({ xp: data.xp_earned, streak: data.streak })
       setActiveLesson(null)
     } catch (err) {
       console.error("Erro ao salvar progresso", err)
@@ -95,22 +91,11 @@ export default function App() {
 
   // 4. Fluxo Principal (Logado - Home)
   return (
-    <>
-      <Home
-        userStats={userStats}
-        lessons={lessons}
-        onLogout={logout}
-        onSelectLesson={setActiveLesson} // Passa a função que abre o Quiz
-      />
-
-      {/* Modais Globais (ficam fora da Home para garantir Z-Index) */}
-      {showResultModal && (
-        <ResultModal
-          xp={showResultModal.xp}
-          streak={showResultModal.streak}
-          onClose={() => setShowResultModal(null)}
-        />
-      )}
-    </>
+    <Home
+      userStats={userStats}
+      lessons={lessons}
+      onLogout={logout}
+      onSelectLesson={setActiveLesson} // Passa a função que abre o Quiz
+    />
   )
 }

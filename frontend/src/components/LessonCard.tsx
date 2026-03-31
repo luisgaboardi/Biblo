@@ -15,7 +15,7 @@ export function LessonCard({ lesson, onClick }: LessonCardProps) {
             <div className="flex-1 min-w-0">
                 <div className='flex justify-between items-center mb-1'>
                     <p className="text-[10px] sm:text-xs font-black text-biblo-blue uppercase truncate">
-                        {lesson.books.join(', ')}
+                        {lesson.book}
                     </p>
                     {/* Dificuldade visível apenas se houver espaço ou em versão compacta */}
                     <span className="text-[10px] font-bold text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">

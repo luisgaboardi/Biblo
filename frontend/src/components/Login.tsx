@@ -104,7 +104,7 @@ export function Login({ onLoginSuccess, onSwitchToSignup }: LoginProps) {
                     <button
                         type="submit"
                         disabled={isLoading}
-                        className="w-full py-4 bg-biblo-blue text-white font-black rounded-2xl shadow-[0_4px_0_0_#1899d6] hover:brightness-110 active:translate-y-1 active:shadow-none transition-all disabled:bg-gray-300 disabled:shadow-none disabled:translate-y-0"
+                        className="w-full py-4 bg-biblo-blue cursor-pointer text-white font-black rounded-2xl shadow-[0_4px_0_0_#1899d6] hover:brightness-110 active:translate-y-1 active:shadow-none transition-all disabled:bg-gray-300 disabled:shadow-none disabled:translate-y-0"
                     >
                         {isLoading ? 'CARREGANDO...' : 'ENTRAR'}
                     </button>
@@ -116,7 +116,7 @@ export function Login({ onLoginSuccess, onSwitchToSignup }: LoginProps) {
                         e.preventDefault();
                         onSwitchToSignup();
                     }}
-                    className="w-full text-gray-400 font-black text-sm hover:text-gray-600 transition-colors uppercase"
+                    className="w-full cursor-pointer text-gray-400 font-black text-sm hover:text-gray-600 transition-colors uppercase"
                 >
                     Não tem conta? Cadastre-se
                 </button>

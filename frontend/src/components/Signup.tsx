@@ -103,7 +103,7 @@ export function Signup({ onSignupSuccess, onSwitchToLogin }: SignupProps) {
           <button
             type="submit"
             disabled={isLoading || isSuccess}
-            className={`w-full py-4 text-white font-black rounded-2xl transition-all shadow-[0_4px_0_0] active:translate-y-1 active:shadow-none
+            className={`w-full py-4 cursor-pointer text-white font-black rounded-2xl transition-all shadow-[0_4px_0_0] active:translate-y-1 active:shadow-none
               ${isLoading || isSuccess ? 'bg-gray-300 shadow-none' : 'bg-biblo-green shadow-[#46a302] hover:brightness-110'}`}
           >
             {isLoading ? 'CRIANDO...' : 'CRIAR CONTA'}
@@ -113,7 +113,7 @@ export function Signup({ onSignupSuccess, onSwitchToLogin }: SignupProps) {
         <button
           type="button"
           onClick={onSwitchToLogin}
-          className="w-full text-gray-400 font-black text-sm hover:text-gray-600 transition-colors uppercase"
+          className="w-full text-gray-400 cursor-pointer font-black text-sm hover:text-gray-600 transition-colors uppercase"
         >
           Já tem conta? Faça login
         </button>
