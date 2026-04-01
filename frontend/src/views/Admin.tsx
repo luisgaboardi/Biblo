@@ -48,6 +48,8 @@ export function Admin() {
     const [showDeleteModal, setShowDeleteModal] = useState(false);
     const [idToDelete, setIdToDelete] = useState<number | null>(null);
 
+    const [errorMessage, setErrorMessage] = useState('');
+
     // Função que abre o modal
     const confirmDelete = (id: number) => {
         setIdToDelete(id);
@@ -114,11 +116,54 @@ export function Admin() {
     };
 
     const handleSave = async () => {
-        if (isLoading || !title) return;
+        // Função auxiliar para disparar o modal de erro com mensagem
+        const triggerError = (msg: string) => {
+            setErrorMessage(msg);
+            setStatus('error');
+            setTimeout(() => {
+                setStatus('idle');
+                setErrorMessage('');
+            }, 3000);
+        };
+
+        // --- VALIDAÇÕES DA LIÇÃO ---
+        if (!title.trim()) return triggerError("Dê um título para a lição antes de publicar.");
+        if (questions.length === 0) return triggerError("Adicione pelo menos uma questão.");
+
+        // --- VALIDAÇÕES DAS QUESTÕES ---
+        for (let i = 0; i < questions.length; i++) {
+            const q = questions[i];
+            const qNum = i + 1;
+
+            if (!q.text.trim()) return triggerError(`O enunciado da Questão ${qNum} está vazio.`);
+
+            if (q.type === 'multiple_choice') {
+                if (q.options.some(opt => !opt.trim())) return triggerError(`Preencha todas as opções da Questão ${qNum}.`);
+                if (!q.answer) return triggerError(`Selecione a resposta correta da Questão ${qNum}.`);
+            }
+
+            else if (q.type === 'true_false') {
+                if (!q.answer) return triggerError(`Selecione se a Questão ${qNum} é Verdadeira ou Falsa.`);
+            }
+
+            else if (q.type === 'order_sequence') {
+                if (q.options.length < 2) return triggerError(`A questão de ordenação (${qNum}) precisa de pelo menos 2 itens.`);
+            }
+
+            else if (q.type === 'fill_in_the_blank') {
+                if (!q.answer.trim()) return triggerError(`Digite a resposta da lacuna na Questão ${qNum}.`);
+                if (!q.text.includes('__')) return triggerError(`Insira traços (____) no enunciado da Questão ${qNum}.`);
+            }
+
+            if (!q.explanation?.trim()) return triggerError(`A Questão ${qNum} precisa de uma explicação bíblica.`);
+        }
+
+        // --- ENVIO PARA API ---
+        if (isLoading) return;
         setIsLoading(true);
-        const payload = { title, book, level, questions };
 
         try {
+            const payload = { title, book, level, questions };
             if (editingId) {
                 await api.put(`/lessons/${editingId}`, payload);
             } else {
@@ -129,9 +174,9 @@ export function Admin() {
                 setStatus('idle');
                 resetForm();
             }, 2000);
-        } catch (err) {
-            setStatus('error');
-            setTimeout(() => setStatus('idle'), 3000);
+        } catch (err: any) {
+            // Erro vindo do Servidor (ex: 500 ou 401)
+            triggerError(err.response?.data?.detail || "Erro ao conectar com o servidor.");
         } finally {
             setIsLoading(false);
         }
@@ -144,6 +189,9 @@ export function Admin() {
         setQuestions(prevQs => {
             const newQs = [...prevQs];
             if (field === 'type') {
+                newQs[idx].text = '';
+                newQs[idx].answer = '';
+                newQs[idx].explanation = '';
                 if (val === 'fill_in_the_blank') {
                     newQs[idx].options = []; // Não usa opções
                     newQs[idx].answer = '';  // String vazia para a lacuna
@@ -172,18 +220,25 @@ export function Admin() {
 
     return (
         <div className="min-h-screen bg-[#f7f7f7] pb-20">
-            {/* MODAL DE STATUS (Mesmo do Signup) */}
+            {/* MODAL DE STATUS */}
             {status !== 'idle' && (
                 <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 backdrop-blur-sm animate-fadeIn">
-                    <div className="bg-white p-8 rounded-3xl shadow-2xl animate-modal text-center border-2 border-gray-100">
+                    <div className="bg-white p-8 rounded-3xl shadow-2xl animate-modal text-center border-2 border-gray-100 max-w-sm w-full mx-4">
                         <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${status === 'success' ? 'bg-biblo-green' : 'bg-red-500'}`}>
                             <span className="text-white text-3xl font-bold">{status === 'success' ? '✓' : '✕'}</span>
                         </div>
-                        <h2 className="text-xl font-black uppercase">{status === 'success' ? 'Sucesso!' : 'Erro!'}</h2>
+                        <h2 className="text-xl font-black uppercase text-gray-800">
+                            {status === 'success' ? 'Sucesso!' : 'Atenção!'}
+                        </h2>
+                        {/* Exibe a mensagem específica de erro ou validação */}
+                        {status === 'error' && (
+                            <p className="mt-2 text-gray-500 font-bold text-sm leading-relaxed">
+                                {errorMessage || 'Ocorreu um erro inesperado.'}
+                            </p>
+                        )}
                     </div>
                 </div>
             )}
-
             {/* MODAL DE CONFIRMAÇÃO DE EXCLUSÃO */}
             {showDeleteModal && (
                 <div className="fixed inset-0 z-[110] flex items-center justify-center bg-black/50 backdrop-blur-md animate-fadeIn p-6">
@@ -227,13 +282,13 @@ export function Admin() {
                         <div className="flex gap-2">
                             <button
                                 onClick={() => setView('list')}
-                                className={`px-4 py-2 rounded-xl font-bold text-sm transition-all ${view === 'list' ? 'bg-biblo-blue text-white shadow-[0_3px_0_0_#1a73e8]' : 'text-gray-400'}`}
+                                className={`px-4 py-2 rounded-xl cursor-pointer font-bold text-sm transition-all ${view === 'list' ? 'bg-biblo-blue text-white shadow-[0_3px_0_0_#1a73e8]' : 'text-gray-400'}`}
                             >
                                 LISTA
                             </button>
                             <button
                                 onClick={() => { resetForm(); setView('editor'); }}
-                                className={`px-4 py-2 rounded-xl font-bold text-sm transition-all ${view === 'editor' && !editingId ? 'bg-biblo-blue text-white shadow-[0_3px_0_0_#1a73e8]' : 'text-gray-400'}`}
+                                className={`px-4 py-2 rounded-xl cursor-pointer font-bold text-sm transition-all ${view === 'editor' && !editingId ? 'bg-biblo-blue text-white shadow-[0_3px_0_0_#1a73e8]' : 'text-gray-400'}`}
                             >
                                 + NOVA
                             </button>
