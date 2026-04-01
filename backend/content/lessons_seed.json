@@ -19,7 +19,7 @@
       {
         "type": "true_false",
         "text": "Deus criou os animais antes do homem.",
-        "answer": true,
+        "answer": "Verdadeiro",
         "explanation": "Gênesis 1:24-27 descreve a criação dos animais no sexto dia, antes da criação do homem."
       },
       {
@@ -37,23 +37,23 @@
       {
         "type": "order_sequence",
         "text": "Coloque em ordem os elementos da criação:",
-        "sequence": [
+        "options": [
           "Firmamento",
+          "Vegetação",
           "Luz",
-          "Astros",
-          "Vegetação"
+          "Astros"
         ],
         "answer": [
           "Luz",
           "Firmamento",
-          "Vegetação",
-          "Astros"
+          "Astros",
+          "Vegetação"
         ]
       },
       {
         "type": "true_false",
         "text": "Deus criou o homem no sexto dia.",
-        "answer": true,
+        "answer": "Verdadeiro",
         "explanation": "Gênesis 1:27 diz: 'E criou Deus o homem à sua imagem; à imagem de Deus o criou; homem e mulher os criou.'"
       },
       {
@@ -77,7 +77,7 @@
       {
         "type": "true_false",
         "text": "O Salmo 8 destaca a importância do homem na criação.",
-        "answer": true,
+        "answer": "Verdadeiro",
         "explanation": "O Salmo 8 fala sobre a posição especial do homem na criação, dizendo que ele foi feito um pouco menor do que os anjos e coroado de glória e honra."
       },
       {
@@ -101,11 +101,11 @@
       {
         "type": "order_sequence",
         "text": "Coloque em ordem os eventos da criação conforme descritos no Salmo 104:",
-        "sequence": [
-          "Deus cria os céus e a terra",
+        "options": [
           "Deus sustenta a criação",
-          "Deus envia a chuva para a terra",
-          "Deus alimenta os animais"
+          "Deus alimenta os animais",
+          "Deus cria os céus e a terra",
+          "Deus envia a chuva para a terra"
         ],
         "answer": [
           "Deus cria os céus e a terra",

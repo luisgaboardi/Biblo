@@ -13,7 +13,7 @@ export function Quiz({ lesson, onClose }: QuizProps) {
     const [correctCount, setCorrectCount] = useState(0);
 
     // Garante que questions seja sempre um array para evitar erro de .length
-    const questions = lesson.content?.questions || [];
+    const questions = lesson.questions || [];
     const currentQuestion = questions[currentIndex];
 
     useEffect(() => {
@@ -39,11 +39,9 @@ export function Quiz({ lesson, onClose }: QuizProps) {
             const correctArr = Array.isArray(dbAnswer) ? dbAnswer : [];
             correct = userArr.length === correctArr.length &&
                 userArr.every((v, i) => String(v).trim() === String(correctArr[i]).trim());
-        }
+        }   
         else if (currentQuestion.type === 'true_false') {
-            // Converte strings "Verdadeiro"/"Falso" para boolean se necessário
-            const normalizedUser = userValue === 'Verdadeiro' || userValue === true;
-            correct = normalizedUser === dbAnswer;
+            correct = userValue === dbAnswer;
         }
         else {
             // Para múltipla escolha e preenchimento de lacuna
@@ -112,7 +110,7 @@ export function Quiz({ lesson, onClose }: QuizProps) {
 
         if (currentQuestion.type === 'order_sequence') {
             const userSelection = Array.isArray(selectedOption) ? selectedOption : [];
-            const originalSequence = currentQuestion.sequence || [];
+            const originalSequence = currentQuestion.options || [];
             // Só habilita se o usuário selecionou TODAS as palavras disponíveis
             return userSelection.length !== originalSequence.length;
         }
@@ -212,7 +210,7 @@ export function Quiz({ lesson, onClose }: QuizProps) {
                                     ))}
                                 </div>
                                 <div className="flex flex-wrap gap-2 justify-center">
-                                    {(currentQuestion.sequence || []).map((word: string, idx: number) => (
+                                    {(currentQuestion.options || []).map((word: string, idx: number) => (
                                         <button
                                             key={idx}
                                             disabled={isCorrect !== null || (Array.isArray(selectedOption) && selectedOption.includes(word))}

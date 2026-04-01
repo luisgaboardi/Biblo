@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { api } from '../services/api';
 import { bibleBooks } from '../types';
+import { useAuth } from '../hooks/useAuth';
+import { OrderSequenceEditor } from '../components/OrderSequenceEditor';
 
-interface QuestionForm {
+export interface QuestionForm {
     text: string;
     type: 'multiple_choice' | 'true_false' | 'order_sequence' | 'fill_in_the_blank';
     options: string[];
-    sequence?: string[];
     answer: any;
     explanation?: string;
 }
@@ -16,15 +17,14 @@ interface Lesson {
     title: string;
     book: string;
     level: number;
-    content: {
-        questions: QuestionForm[];
-    };
+    questions: QuestionForm[];
 }
 
 export function Admin() {
     // Estados de Controle de Tela
     const [view, setView] = useState<'list' | 'editor'>('list');
     const [editingId, setEditingId] = useState<number | null>(null);
+    const { logout } = useAuth()
 
     // Estados da Lista e Filtros
     const [lessons, setLessons] = useState<Lesson[]>([]);
@@ -76,7 +76,7 @@ export function Admin() {
 
     const fetchLessons = async () => {
         try {
-            const res = await api.get('/lessons');
+            const res = await api.get('/lessons/no-shuffle');
             setLessons(res.data);
         } catch (err) {
             console.error("Erro ao carregar lições");
@@ -95,7 +95,7 @@ export function Admin() {
         setTitle(lesson.title);
         setBook(lesson.book);
         setLevel(lesson.level);
-        setQuestions(lesson.content?.questions);
+        setQuestions(lesson.questions);
         setView('editor');
     };
 
@@ -106,6 +106,11 @@ export function Admin() {
         setLevel(1);
         setQuestions([{ text: '', type: 'multiple_choice', options: ['', '', '', ''], answer: '', explanation: '' }]);
         setView('list');
+    };
+
+    const handleLogout = () => {
+        logout();
+        window.location.href = '/';
     };
 
     const handleSave = async () => {
@@ -136,9 +141,33 @@ export function Admin() {
     const addQuestion = () => setQuestions([...questions, { text: '', type: 'multiple_choice', options: ['', '', '', ''], answer: '', explanation: '' }]);
     const removeQuestion = (idx: number) => setQuestions(questions.filter((_, i) => i !== idx));
     const updateQuestion = (idx: number, field: keyof QuestionForm, val: any) => {
-        const newQs = [...questions];
-        newQs[idx] = { ...newQs[idx], [field]: val };
-        setQuestions(newQs);
+        setQuestions(prevQs => {
+            const newQs = [...prevQs];
+            if (field === 'type') {
+                if (val === 'fill_in_the_blank') {
+                    newQs[idx].options = []; // Não usa opções
+                    newQs[idx].answer = '';  // String vazia para a lacuna
+                }
+                else if (val === 'true_false') {
+                    newQs[idx].options = ['Verdadeiro', 'Falso'];
+                    newQs[idx].answer = '';
+                }
+                else if (val === 'multiple_choice') {
+                    newQs[idx].options = ['', '', '', ''];
+                    newQs[idx].answer = '';
+                }
+                else if (val === 'order_sequence') {
+                    newQs[idx].options = [];
+                    newQs[idx].answer = [];
+                }
+            }
+
+            newQs[idx] = {
+                ...newQs[idx],
+                [field]: val
+            };
+            return newQs;
+        });
     };
 
     return (
@@ -209,6 +238,14 @@ export function Admin() {
                                 + NOVA
                             </button>
                         </div>
+                        {/* Botão Sair - No Mobile, podemos usar apenas um ícone ou estilo minimalista */}
+                        <button
+                            onClick={handleLogout}
+                            className="ml-1 hover:bg-gray-200 p-2 bg-gray-50 border-2 cursor-pointer border-gray-200 rounded-xl active:translate-y-0.5 active:border-b-2 transition-all"
+                            aria-label="Sair"
+                        >
+                            <span className="text-xs text-gray-400">SAIR</span>
+                        </button>
                     </div>
                 </div>
             </header>
@@ -274,10 +311,10 @@ export function Admin() {
                                     className="md:col-span-1 p-4 bg-gray-50 border-2 border-gray-200 rounded-2xl font-bold focus:border-biblo-blue outline-none"
                                     value={title} onChange={e => setTitle(e.target.value)}
                                 />
-                                <select className="p-4 bg-gray-50 border-2 border-gray-200 rounded-2xl font-bold" value={book} onChange={e => setBook(e.target.value)}>
+                                <select className="p-4 bg-gray-50 cursor-pointer border-2 border-gray-200 rounded-2xl font-bold" value={book} onChange={e => setBook(e.target.value)}>
                                     {bibleBooks.map(b => <option key={b} value={b}>{b}</option>)}
                                 </select>
-                                <select className="p-4 bg-gray-50 border-2 border-gray-200 rounded-2xl font-bold" value={level} onChange={e => setLevel(parseInt(e.target.value))}>
+                                <select className="p-4 bg-gray-50 cursor-pointer border-2 border-gray-200 rounded-2xl font-bold" value={level} onChange={e => setLevel(parseInt(e.target.value))}>
                                     {[1, 2, 3].map(n => <option key={n} value={n}>Nível {n}</option>)}
                                 </select>
                             </div>
@@ -288,15 +325,16 @@ export function Admin() {
                             <div key={qIdx} className="bg-white p-6 rounded-3xl border-2 border-b-4 border-gray-200 space-y-4 relative">
                                 <div className="flex justify-between items-center">
                                     <span className="bg-biblo-blue text-white px-3 py-1 rounded-full font-black text-[12px]">QUESTÃO {qIdx + 1}</span>
-                                    <button onClick={() => removeQuestion(qIdx)} className="text-red-300 font-bold text-xs uppercase hover:text-red-500">Remover</button>
+                                    <button onClick={() => removeQuestion(qIdx)} className="text-red-500 cursor-pointer font-bold text-xs uppercase hover:text-red-700">Remover</button>
                                 </div>
                                 <select
-                                    className="w-full p-3 bg-gray-50 border-2 border-gray-100 rounded-xl font-bold text-gray-600"
+                                    className="w-full p-3 bg-gray-50 cursor-pointer border-2 border-gray-100 rounded-xl font-bold text-gray-600"
                                     value={q.type} onChange={e => updateQuestion(qIdx, 'type', e.target.value)}
                                 >
                                     <option value="multiple_choice">Múltipla Escolha</option>
                                     <option value="true_false">Verdadeiro ou Falso</option>
                                     <option value="order_sequence">Ordenação</option>
+                                    <option value="fill_in_the_blank">Preencha a Lacuna</option>
                                 </select>
                                 <textarea
                                     placeholder="Enunciado..."
@@ -313,6 +351,7 @@ export function Admin() {
                                                     type="radio"
                                                     name={`correct-${qIdx}`}
                                                     checked={q.answer === opt}
+                                                    className="form-radio text-biblo-blue cursor-pointer"
                                                     onChange={() => updateQuestion(qIdx, 'answer', opt)}
                                                 />
                                                 <span className="font-bold">{opt}</span>
@@ -330,11 +369,12 @@ export function Admin() {
                                                     type="radio"
                                                     name={`correct-${qIdx}`}
                                                     checked={q.answer === opt && opt !== ''}
+                                                    className="form-radio text-biblo-blue cursor-pointer"
                                                     onChange={() => updateQuestion(qIdx, 'answer', opt)}
                                                 />
                                                 <input
                                                     placeholder={`Opção ${oIdx + 1}`}
-                                                    className="flex-1 p-2 border-2 rounded-xl text-sm font-bold"
+                                                    className="flex-1 p-2 border-2 border-gray-200 rounded-xl text-sm font-bold"
                                                     value={opt}
                                                     onChange={e => {
                                                         const newOpts = [...q.options];
@@ -349,11 +389,34 @@ export function Admin() {
 
                                 {/* Ordenação */}
                                 {q.type === 'order_sequence' && (
-                                    <input
-                                        placeholder="Frase para ordenar (ex: No princípio era o Verbo)"
-                                        className="w-full p-3 border-2 border-dashed rounded-xl font-bold text-biblo-blue"
-                                        onChange={e => {}}
+                                    <OrderSequenceEditor
+                                        question={q}
+                                        index={qIdx}
+                                        updateQuestion={updateQuestion}
                                     />
+                                )}
+
+                                {/* Preencha a Lacuna */}
+                                {q.type === 'fill_in_the_blank' && (
+                                    <div className="space-y-4 animate-fadeIn">
+                                        <div className="bg-orange-50 border-2 border-orange-100 p-4 rounded-2xl">
+                                            <label className="block text-[10px] font-black text-orange-400 uppercase tracking-widest mb-2">
+                                                Dica de Criação
+                                            </label>
+                                            <p className="text-xs text-orange-600 font-medium">
+                                                Use traços (Ex: ______) no enunciado acima para indicar onde a lacuna deve aparecer para o aluno.
+                                            </p>
+                                        </div>
+
+                                        <div className="relative">
+                                            <input
+                                                placeholder="Resposta correta (Ex: descansou)"
+                                                className="w-full bg-white border-2 border-gray-200 uppercase placeholder:normal-case rounded-2xl font-bold text-biblo-blue outline-none focus:border-biblo-blue transition-all p-3"
+                                                value={q.answer}
+                                                onChange={e => updateQuestion(qIdx, 'answer', e.target.value)}
+                                            />
+                                        </div>
+                                    </div>
                                 )}
 
                                 {/* Explicação */}

@@ -13,7 +13,7 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/login")
 # Configurações (Mantenha isso em variáveis de ambiente em produção)
 SECRET_KEY = os.getenv("SECRET_KEY", "your_secret_key_here")  # Substitua por uma chave forte e secreta
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  # 24 horas
+ACCESS_TOKEN_EXPIRE_MINUTES = 30  # 30 minutos
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 

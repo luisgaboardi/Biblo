@@ -25,7 +25,7 @@ def seed_db():
                         title=item["title"],
                         level=item["level"],
                         book=item["book"], # Salva o livro "Gênesis"
-                        content={"questions": item["questions"]} # Empacota no formato esperado
+                        questions=item["questions"] # Empacota no formato esperado
                     )
                     db.add(new_lesson)
     

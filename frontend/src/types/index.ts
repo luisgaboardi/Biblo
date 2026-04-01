@@ -3,9 +3,8 @@ export interface Question {
     type: string;
     text: string;
     options?: string[];
-    answer: string | boolean | string[] | Record<string, string>;
+    answer: string | string[] | Record<string, string>;
     explanation?: string;
-    sequence?: string[]; // Para perguntas de ordenação
     pairs?: Record<string, string>; // Para perguntas de associação
 }
 
@@ -14,9 +13,7 @@ export interface Lesson {
     title: string;
     book: string;
     level: number;
-    content: {
-        questions: Question[];
-    };
+    questions: Question[];
 }
 
 export interface QuizResultResponse {

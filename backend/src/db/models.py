@@ -4,6 +4,7 @@ from datetime import datetime
 from typing import Any, Dict, List
 from src.db.base import Base
 from sqlalchemy import Column, Integer, String, DateTime
+from sqlalchemy.ext.mutable import MutableList
 
 
 class Lesson(Base):
@@ -16,9 +17,10 @@ class Lesson(Base):
     # Armazena o livro: "Gênesis"
     book: Mapped[str] = mapped_column(String, nullable=False)
     
-    # Armazena o objeto de questões: {"questions": [...]}
-    content: Mapped[Dict[str, Any]] = mapped_column(JSON, nullable=False)
-
+    questions: Mapped[List[Dict[str, Any]]] = mapped_column(
+        MutableList.as_mutable(JSON), 
+        nullable=False
+    )
 
 
 class User(Base):

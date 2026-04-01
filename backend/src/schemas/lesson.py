@@ -6,7 +6,7 @@ class LessonBase(BaseModel):
     title: str
     level: int
     book: str
-    content: Dict[str, Any] # Onde reside o {"questions": [...]}
+    questions: List[Dict[str, Any]] # Retornamos as questões soltas para o frontend
 
     model_config = ConfigDict(from_attributes=True)
 
