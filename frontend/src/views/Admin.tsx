@@ -1,30 +1,20 @@
 import { useState, useEffect } from 'react';
 import { api } from '../services/api';
-import { bibleBooks } from '../types';
+import { type Question, type Lesson } from '../types';
 import { useAuth } from '../hooks/useAuth';
-import { OrderSequenceEditor } from '../components/OrderSequenceEditor';
 
-export interface QuestionForm {
-    text: string;
-    type: 'multiple_choice' | 'true_false' | 'order_sequence' | 'fill_in_the_blank';
-    options: string[];
-    answer: any;
-    explanation?: string;
-}
-
-interface Lesson {
-    id: number;
-    title: string;
-    book: string;
-    level: number;
-    questions: QuestionForm[];
-}
+// Importação dos novos componentes refatorados
+import { LessonList } from '../components/admin/LessonList';
+import { LessonEditor } from '../components/admin/LessonEditor';
+import { StatusModal } from '../components/admin/modals/StatusModal';
+import { ConfirmDeleteModal } from '../components/admin/modals/ConfirmDeleteModal';
 
 export function Admin() {
+    const { logout } = useAuth();
+
     // Estados de Controle de Tela
     const [view, setView] = useState<'list' | 'editor'>('list');
     const [editingId, setEditingId] = useState<number | null>(null);
-    const { logout } = useAuth()
 
     // Estados da Lista e Filtros
     const [lessons, setLessons] = useState<Lesson[]>([]);
@@ -36,41 +26,16 @@ export function Admin() {
     const [title, setTitle] = useState('');
     const [book, setBook] = useState('Gênesis');
     const [level, setLevel] = useState(1);
-    const [questions, setQuestions] = useState<QuestionForm[]>([
-        { text: '', type: 'multiple_choice', options: ['', '', '', ''], answer: '', explanation: '' }
-    ]);
+    const [questions, setQuestions] = useState<Question[]>([]);
 
-    // Estados Globais
+    // Estados Globais de Feedback
     const [isLoading, setIsLoading] = useState(false);
     const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    const [errorMessage, setErrorMessage] = useState('');
 
     // Estados para o Modal de Exclusão
     const [showDeleteModal, setShowDeleteModal] = useState(false);
     const [idToDelete, setIdToDelete] = useState<number | null>(null);
-
-    const [errorMessage, setErrorMessage] = useState('');
-
-    // Função que abre o modal
-    const confirmDelete = (id: number) => {
-        setIdToDelete(id);
-        setShowDeleteModal(true);
-    };
-
-    // Função que executa a exclusão real
-    const executeDelete = async () => {
-        if (!idToDelete) return;
-        try {
-            await api.delete(`/lessons/${idToDelete}`);
-            fetchLessons();
-            setShowDeleteModal(false);
-            setIdToDelete(null);
-            setStatus('success');
-            setTimeout(() => setStatus('idle'), 2000);
-        } catch (err) {
-            setStatus('error');
-            setTimeout(() => setStatus('idle'), 2000);
-        }
-    };
 
     useEffect(() => {
         if (view === 'list') fetchLessons();
@@ -85,12 +50,23 @@ export function Admin() {
         }
     };
 
-    // Lógica de Filtros no Frontend (ou passar params para o backend)
+    const handleLogout = () => {
+        logout();
+        window.location.href = '/';
+    };
+
+    // Filtro no Frontend
     const filteredLessons = lessons.filter(l =>
         l.title.toLowerCase().includes(filterTitle.toLowerCase()) &&
         (filterBook === '' || l.book === filterBook) &&
         (filterLevel === '' || l.level === filterLevel)
     );
+
+    const triggerError = (msg: string) => {
+        setErrorMessage(msg);
+        setStatus('error');
+        setTimeout(() => { setStatus('idle'); setErrorMessage(''); }, 3000);
+    };
 
     const handleEdit = (lesson: Lesson) => {
         setEditingId(lesson.id);
@@ -110,392 +86,111 @@ export function Admin() {
         setView('list');
     };
 
-    const handleLogout = () => {
-        logout();
-        window.location.href = '/';
-    };
-
     const handleSave = async () => {
-        // Função auxiliar para disparar o modal de erro com mensagem
-        const triggerError = (msg: string) => {
-            setErrorMessage(msg);
-            setStatus('error');
-            setTimeout(() => {
-                setStatus('idle');
-                setErrorMessage('');
-            }, 3000);
-        };
-
-        // --- VALIDAÇÕES DA LIÇÃO ---
-        if (!title.trim()) return triggerError("Dê um título para a lição antes de publicar.");
+        // Validações
+        if (!title.trim()) return triggerError("Dê um título para a lição.");
         if (questions.length === 0) return triggerError("Adicione pelo menos uma questão.");
 
-        // --- VALIDAÇÕES DAS QUESTÕES ---
         for (let i = 0; i < questions.length; i++) {
             const q = questions[i];
-            const qNum = i + 1;
-
-            if (!q.text.trim()) return triggerError(`O enunciado da Questão ${qNum} está vazio.`);
-
-            if (q.type === 'multiple_choice') {
-                if (q.options.some(opt => !opt.trim())) return triggerError(`Preencha todas as opções da Questão ${qNum}.`);
-                if (!q.answer) return triggerError(`Selecione a resposta correta da Questão ${qNum}.`);
-            }
-
-            else if (q.type === 'true_false') {
-                if (!q.answer) return triggerError(`Selecione se a Questão ${qNum} é Verdadeira ou Falsa.`);
-            }
-
-            else if (q.type === 'order_sequence') {
-                if (q.options.length < 2) return triggerError(`A questão de ordenação (${qNum}) precisa de pelo menos 2 itens.`);
-            }
-
-            else if (q.type === 'fill_in_the_blank') {
-                if (!q.answer.trim()) return triggerError(`Digite a resposta da lacuna na Questão ${qNum}.`);
-                if (!q.text.includes('__')) return triggerError(`Insira traços (____) no enunciado da Questão ${qNum}.`);
-            }
-
-            if (!q.explanation?.trim()) return triggerError(`A Questão ${qNum} precisa de uma explicação bíblica.`);
+            if (!q.text.trim()) return triggerError(`Enunciado vazio na Questão ${i + 1}`);
+            if (q.type === 'fill_in_the_blank' && !q.text.includes('__')) return triggerError(`Questão ${i + 1} precisa de traços (____)`);
+            if (!q.explanation?.trim()) return triggerError(`A Questão ${i + 1} precisa de explicação.`);
         }
 
-        // --- ENVIO PARA API ---
-        if (isLoading) return;
         setIsLoading(true);
-
         try {
             const payload = { title, book, level, questions };
-            if (editingId) {
-                await api.put(`/lessons/${editingId}`, payload);
-            } else {
-                await api.post('/lessons', payload);
-            }
+            if (editingId) await api.put(`/lessons/${editingId}`, payload);
+            else await api.post('/lessons', payload);
+
             setStatus('success');
-            setTimeout(() => {
-                setStatus('idle');
-                resetForm();
-            }, 2000);
+            setTimeout(() => { setStatus('idle'); resetForm(); }, 2000);
         } catch (err: any) {
-            // Erro vindo do Servidor (ex: 500 ou 401)
-            triggerError(err.response?.data?.detail || "Erro ao conectar com o servidor.");
+            triggerError(err.response?.data?.detail || "Erro ao salvar lição.");
         } finally {
             setIsLoading(false);
         }
     };
 
-    // Auxiliares do Questionário
+    const executeDelete = async () => {
+        if (!idToDelete) return;
+        try {
+            await api.delete(`/lessons/${idToDelete}`);
+            fetchLessons();
+            setShowDeleteModal(false);
+            setStatus('success');
+            setTimeout(() => setStatus('idle'), 2000);
+        } catch (err) {
+            setStatus('error');
+        }
+    };
+
+    // Auxiliares de Questão
     const addQuestion = () => setQuestions([...questions, { text: '', type: 'multiple_choice', options: ['', '', '', ''], answer: '', explanation: '' }]);
     const removeQuestion = (idx: number) => setQuestions(questions.filter((_, i) => i !== idx));
-    const updateQuestion = (idx: number, field: keyof QuestionForm, val: any) => {
-        setQuestions(prevQs => {
-            const newQs = [...prevQs];
+    const updateQuestion = (idx: number, field: keyof Question, val: any) => {
+        setQuestions(prev => {
+            const newQs = [...prev];
+            newQs[idx] = { ...newQs[idx], [field]: val };
+            // Reset de campos ao mudar o tipo
             if (field === 'type') {
-                newQs[idx].text = '';
-                newQs[idx].answer = '';
-                newQs[idx].explanation = '';
-                if (val === 'fill_in_the_blank') {
-                    newQs[idx].options = []; // Não usa opções
-                    newQs[idx].answer = '';  // String vazia para a lacuna
-                }
-                else if (val === 'true_false') {
-                    newQs[idx].options = ['Verdadeiro', 'Falso'];
-                    newQs[idx].answer = '';
-                }
-                else if (val === 'multiple_choice') {
-                    newQs[idx].options = ['', '', '', ''];
-                    newQs[idx].answer = '';
-                }
-                else if (val === 'order_sequence') {
-                    newQs[idx].options = [];
-                    newQs[idx].answer = [];
-                }
+                newQs[idx].answer = val === 'order_sequence' ? [] : '';
+                newQs[idx].options = val === 'multiple_choice' ? ['', '', '', ''] : [];
             }
-
-            newQs[idx] = {
-                ...newQs[idx],
-                [field]: val
-            };
             return newQs;
         });
     };
 
     return (
         <div className="min-h-screen bg-[#f7f7f7] pb-20">
-            {/* MODAL DE STATUS */}
-            {status !== 'idle' && (
-                <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 backdrop-blur-sm animate-fadeIn">
-                    <div className="bg-white p-8 rounded-3xl shadow-2xl animate-modal text-center border-2 border-gray-100 max-w-sm w-full mx-4">
-                        <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${status === 'success' ? 'bg-biblo-green' : 'bg-red-500'}`}>
-                            <span className="text-white text-3xl font-bold">{status === 'success' ? '✓' : '✕'}</span>
-                        </div>
-                        <h2 className="text-xl font-black uppercase text-gray-800">
-                            {status === 'success' ? 'Sucesso!' : 'Atenção!'}
-                        </h2>
-                        {/* Exibe a mensagem específica de erro ou validação */}
-                        {status === 'error' && (
-                            <p className="mt-2 text-gray-500 font-bold text-sm leading-relaxed">
-                                {errorMessage || 'Ocorreu um erro inesperado.'}
-                            </p>
-                        )}
-                    </div>
-                </div>
-            )}
-            {/* MODAL DE CONFIRMAÇÃO DE EXCLUSÃO */}
-            {showDeleteModal && (
-                <div className="fixed inset-0 z-[110] flex items-center justify-center bg-black/50 backdrop-blur-md animate-fadeIn p-6">
-                    <div className="bg-white p-8 rounded-[32px] shadow-2xl animate-modal w-full max-w-sm text-center border-2 border-gray-100">
-                        {/* Ícone de Alerta */}
-                        <div className="w-20 h-20 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-6">
-                            <span className="text-red-500 mb-1 text-4xl">⚠️</span>
-                        </div>
+            {/* Modais Globais */}
+            <StatusModal status={status} message={errorMessage} />
+            <ConfirmDeleteModal
+                isOpen={showDeleteModal}
+                onConfirm={executeDelete}
+                onCancel={() => setShowDeleteModal(false)}
+            />
 
-                        <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tight">
-                            Excluir Lição?
-                        </h2>
-                        <p className="text-gray-500 font-bold mt-2 text-sm leading-relaxed">
-                            Esta ação não pode ser desfeita. <br />
-                            Deseja mesmo apagar este conteúdo?
-                        </p>
-
-                        <div className="mt-8 flex flex-col gap-3">
-                            <button
-                                onClick={executeDelete}
-                                className="w-full py-4 bg-red-500 text-white font-black rounded-2xl shadow-[0_4px_0_0_#b91c1c] active:translate-y-1 active:shadow-none transition-all uppercase tracking-wider"
-                            >
-                                Sim, excluir
-                            </button>
-                            <button
-                                onClick={() => setShowDeleteModal(false)}
-                                className="w-full py-4 bg-gray-100 text-gray-500 font-black rounded-2xl border-2 border-b-4 border-gray-200 active:translate-y-1 active:shadow-none transition-all uppercase tracking-wider"
-                            >
-                                Cancelar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            )}
-
-            {/* HEADER COM ABAS */}
+            {/* Header com Abas */}
             <header className="bg-white border-b-2 border-gray-200 sticky top-0 z-50">
-                <div className="max-w-4xl mx-auto px-4">
-                    <div className="flex justify-between items-center h-16">
-                        <h1 className="text-xl font-black text-biblo-green tracking-tighter">BIBLO ADMIN</h1>
-                        <div className="flex gap-2">
-                            <button
-                                onClick={() => setView('list')}
-                                className={`px-4 py-2 rounded-xl cursor-pointer font-bold text-sm transition-all ${view === 'list' ? 'bg-biblo-blue text-white shadow-[0_3px_0_0_#1a73e8]' : 'text-gray-400'}`}
-                            >
-                                LISTA
-                            </button>
-                            <button
-                                onClick={() => { resetForm(); setView('editor'); }}
-                                className={`px-4 py-2 rounded-xl cursor-pointer font-bold text-sm transition-all ${view === 'editor' && !editingId ? 'bg-biblo-blue text-white shadow-[0_3px_0_0_#1a73e8]' : 'text-gray-400'}`}
-                            >
-                                + NOVA
-                            </button>
-                        </div>
-                        {/* Botão Sair - No Mobile, podemos usar apenas um ícone ou estilo minimalista */}
-                        <button
-                            onClick={handleLogout}
-                            className="ml-1 hover:bg-gray-200 p-2 bg-gray-50 border-2 cursor-pointer border-gray-200 rounded-xl active:translate-y-0.5 active:border-b-2 transition-all"
-                            aria-label="Sair"
-                        >
-                            <span className="text-xs text-gray-400">SAIR</span>
-                        </button>
+                <div className="max-w-4xl mx-auto px-4 flex justify-between items-center h-16">
+                    <h1 className="text-xl font-black text-biblo-green tracking-tighter">BIBLO ADMIN</h1>
+                    <div className="flex gap-2">
+                        <button onClick={() => setView('list')} className={`px-4 py-2 rounded-xl font-bold text-sm cursor-pointer transition-all ${view === 'list' ? 'bg-biblo-blue text-white shadow-[0_3px_0_0_#1a73e8]' : 'text-gray-400'}`}>LISTA</button>
+                        <button onClick={() => { resetForm(); setView('editor'); }} className={`px-4 py-2 rounded-xl font-bold text-sm cursor-pointer transition-all ${view === 'editor' && !editingId ? 'bg-biblo-blue text-white shadow-[0_3px_0_0_#1a73e8]' : 'text-gray-400'}`}>+ NOVA</button>
                     </div>
+                    <button onClick={handleLogout} className="p-2 bg-gray-50 border-2 border-gray-200 rounded-xl text-xs text-gray-400 cursor-pointer font-bold">SAIR</button>
                 </div>
             </header>
 
             <main className="max-w-4xl mx-auto p-4 mt-4">
-                {/* VIEW: LISTAGEM */}
-                {view === 'list' && (
-                    <div className="space-y-6">
-                        {/* FILTROS */}
-                        <section className="bg-white p-4 rounded-2xl border-2 border-b-4 border-gray-200 grid grid-cols-1 md:grid-cols-3 gap-3">
-                            <input
-                                placeholder="🔍 Buscar título..."
-                                className="p-3 bg-gray-50 rounded-xl border-2 border-gray-100 outline-none focus:border-biblo-blue font-bold text-sm"
-                                value={filterTitle} onChange={e => setFilterTitle(e.target.value)}
-                            />
-                            <select
-                                className="p-3 bg-gray-50 rounded-xl border-2 border-gray-100 font-bold text-sm text-gray-500"
-                                value={filterBook} onChange={e => setFilterBook(e.target.value)}
-                            >
-                                <option value="">Todos os Livros</option>
-                                {bibleBooks.map(b => <option key={b} value={b}>{b}</option>)}
-                            </select>
-                            <select
-                                className="p-3 bg-gray-50 rounded-xl border-2 border-gray-100 font-bold text-sm text-gray-500"
-                                value={filterLevel} onChange={e => setFilterLevel(e.target.value === '' ? '' : parseInt(e.target.value))}
-                            >
-                                <option value="">Todos os Níveis</option>
-                                <option value={1}>Nível 1</option>
-                                <option value={2}>Nível 2</option>
-                                <option value={3}>Nível 3</option>
-                            </select>
-                        </section>
-
-                        {/* TABELA / CARDS */}
-                        <div className="grid gap-3">
-                            {filteredLessons.map(lesson => (
-                                <div key={lesson.id} className="bg-white p-4 rounded-2xl border-2 border-b-4 border-gray-200 flex justify-between items-center animate-fadeIn">
-                                    <div>
-                                        <h3 className="font-black text-gray-800">{lesson.title}</h3>
-                                        <div className="flex gap-2 mt-1">
-                                            <span className="text-[10px] font-black bg-blue-100 text-biblo-blue px-2 py-0.5 rounded-full uppercase">{lesson.book}</span>
-                                            <span className="text-[10px] font-black bg-orange-100 text-orange-600 px-2 py-0.5 rounded-full uppercase">Lvl {lesson.level}</span>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-2">
-                                        <button onClick={() => handleEdit(lesson)} className="p-2 text-biblo-blue hover:bg-blue-50 rounded-lg transition-colors">✏️</button>
-                                        <button onClick={() => confirmDelete(lesson.id)} className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors">🗑️</button>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                )}
-
-                {/* VIEW: EDITOR (CRIAR/EDITAR) */}
-                {view === 'editor' && (
-                    <div className="space-y-6 animate-fadeIn">
-                        <section className="bg-white p-6 rounded-3xl border-2 border-b-4 border-gray-200 space-y-4">
-                            <h2 className="font-black text-gray-400 text-xs uppercase tracking-widest">{editingId ? 'Editando Lição' : 'Nova Lição'}</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <input
-                                    placeholder="Título..."
-                                    className="md:col-span-1 p-4 bg-gray-50 border-2 border-gray-200 rounded-2xl font-bold focus:border-biblo-blue outline-none"
-                                    value={title} onChange={e => setTitle(e.target.value)}
-                                />
-                                <select className="p-4 bg-gray-50 cursor-pointer border-2 border-gray-200 rounded-2xl font-bold" value={book} onChange={e => setBook(e.target.value)}>
-                                    {bibleBooks.map(b => <option key={b} value={b}>{b}</option>)}
-                                </select>
-                                <select className="p-4 bg-gray-50 cursor-pointer border-2 border-gray-200 rounded-2xl font-bold" value={level} onChange={e => setLevel(parseInt(e.target.value))}>
-                                    {[1, 2, 3].map(n => <option key={n} value={n}>Nível {n}</option>)}
-                                </select>
-                            </div>
-                        </section>
-
-                        {/* LISTA DE QUESTÕES (Mesma lógica anterior, mas com o botão de salvar no footer) */}
-                        {questions?.map((q, qIdx) => (
-                            <div key={qIdx} className="bg-white p-6 rounded-3xl border-2 border-b-4 border-gray-200 space-y-4 relative">
-                                <div className="flex justify-between items-center">
-                                    <span className="bg-biblo-blue text-white px-3 py-1 rounded-full font-black text-[12px]">QUESTÃO {qIdx + 1}</span>
-                                    <button onClick={() => removeQuestion(qIdx)} className="text-red-500 cursor-pointer font-bold text-xs uppercase hover:text-red-700">Remover</button>
-                                </div>
-                                <select
-                                    className="w-full p-3 bg-gray-50 cursor-pointer border-2 border-gray-100 rounded-xl font-bold text-gray-600"
-                                    value={q.type} onChange={e => updateQuestion(qIdx, 'type', e.target.value)}
-                                >
-                                    <option value="multiple_choice">Múltipla Escolha</option>
-                                    <option value="true_false">Verdadeiro ou Falso</option>
-                                    <option value="order_sequence">Ordenação</option>
-                                    <option value="fill_in_the_blank">Preencha a Lacuna</option>
-                                </select>
-                                <textarea
-                                    placeholder="Enunciado..."
-                                    className="w-full p-4 bg-gray-50 border-2 border-gray-100 rounded-2xl font-bold outline-none focus:border-biblo-blue resize-none"
-                                    value={q.text} onChange={e => updateQuestion(qIdx, 'text', e.target.value)}
-                                />
-
-                                {/* Verdadeiro ou Falso */}
-                                {q.type === 'true_false' && (
-                                    <div className="flex gap-4">
-                                        {['Verdadeiro', 'Falso'].map((opt, oIdx) => (
-                                            <label key={oIdx} className="flex items-center gap-2">
-                                                <input
-                                                    type="radio"
-                                                    name={`correct-${qIdx}`}
-                                                    checked={q.answer === opt}
-                                                    className="form-radio text-biblo-blue cursor-pointer"
-                                                    onChange={() => updateQuestion(qIdx, 'answer', opt)}
-                                                />
-                                                <span className="font-bold">{opt}</span>
-                                            </label>
-                                        ))}
-                                    </div>
-                                )}
-
-                                {/* Múltipla Escolha */}
-                                {q.type === 'multiple_choice' && (
-                                    <div className="grid gap-2">
-                                        {q.options.map((opt, oIdx) => (
-                                            <div key={oIdx} className="flex gap-2">
-                                                <input
-                                                    type="radio"
-                                                    name={`correct-${qIdx}`}
-                                                    checked={q.answer === opt && opt !== ''}
-                                                    className="form-radio text-biblo-blue cursor-pointer"
-                                                    onChange={() => updateQuestion(qIdx, 'answer', opt)}
-                                                />
-                                                <input
-                                                    placeholder={`Opção ${oIdx + 1}`}
-                                                    className="flex-1 p-2 border-2 border-gray-200 rounded-xl text-sm font-bold"
-                                                    value={opt}
-                                                    onChange={e => {
-                                                        const newOpts = [...q.options];
-                                                        newOpts[oIdx] = e.target.value;
-                                                        updateQuestion(qIdx, 'options', newOpts);
-                                                    }}
-                                                />
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
-
-                                {/* Ordenação */}
-                                {q.type === 'order_sequence' && (
-                                    <OrderSequenceEditor
-                                        question={q}
-                                        index={qIdx}
-                                        updateQuestion={updateQuestion}
-                                    />
-                                )}
-
-                                {/* Preencha a Lacuna */}
-                                {q.type === 'fill_in_the_blank' && (
-                                    <div className="space-y-4 animate-fadeIn">
-                                        <div className="bg-orange-50 border-2 border-orange-100 p-4 rounded-2xl">
-                                            <label className="block text-[10px] font-black text-orange-400 uppercase tracking-widest mb-2">
-                                                Dica de Criação
-                                            </label>
-                                            <p className="text-xs text-orange-600 font-medium">
-                                                Use traços (Ex: ______) no enunciado acima para indicar onde a lacuna deve aparecer para o aluno.
-                                            </p>
-                                        </div>
-
-                                        <div className="relative">
-                                            <input
-                                                placeholder="Resposta correta (Ex: descansou)"
-                                                className="w-full bg-white border-2 border-gray-200 uppercase placeholder:normal-case rounded-2xl font-bold text-biblo-blue outline-none focus:border-biblo-blue transition-all p-3"
-                                                value={q.answer}
-                                                onChange={e => updateQuestion(qIdx, 'answer', e.target.value)}
-                                            />
-                                        </div>
-                                    </div>
-                                )}
-
-                                {/* Explicação */}
-                                <input
-                                    placeholder="Explicação da resposta..."
-                                    className="w-full p-3 bg-gray-50 border-2 border-gray-200 rounded-xl text-sm"
-                                    value={q.explanation}
-                                    onChange={e => updateQuestion(qIdx, 'explanation', e.target.value)}
-                                />
-                            </div>
-                        ))}
-
-                        <button onClick={addQuestion} className="w-full py-6 border-4 border-dashed border-gray-200 rounded-3xl font-black text-gray-300 hover:text-biblo-blue transition-all uppercase tracking-widest">+ Adicionar Questão</button>
-
-                        <div className="flex gap-3">
-                            <button onClick={resetForm} className="flex-1 py-4 bg-gray-200 text-gray-500 font-black rounded-2xl">CANCELAR</button>
-                            <button
-                                onClick={handleSave}
-                                className="flex-[2] py-4 bg-biblo-green text-white font-black rounded-2xl shadow-[0_4px_0_0_#46a302] active:translate-y-1 active:shadow-none transition-all"
-                            >
-                                {editingId ? 'SALVAR ALTERAÇÕES' : 'PUBLICAR LIÇÃO'}
-                            </button>
-                        </div>
-                    </div>
+                {view === 'list' ? (
+                    <LessonList
+                        lessons={filteredLessons}
+                        filters={{ filterTitle, filterBook, filterLevel }}
+                        setFilters={{
+                            setFilterTitle,
+                            setFilterBook,
+                            setFilterLevel: (val) => setFilterLevel(val)
+                        }}
+                        onEdit={handleEdit}
+                        onDelete={(id) => { setIdToDelete(id); setShowDeleteModal(true); }}
+                    />
+                ) : (
+                    <LessonEditor
+                        editingId={editingId}
+                        title={title} setTitle={setTitle}
+                        book={book} setBook={setBook}
+                        level={level} setLevel={setLevel}
+                        questions={questions}
+                        addQuestion={addQuestion}
+                        removeQuestion={removeQuestion}
+                        updateQuestion={updateQuestion}
+                        onSave={handleSave}
+                        onCancel={resetForm}
+                        isLoading={isLoading}
+                    />
                 )}
             </main>
         </div>

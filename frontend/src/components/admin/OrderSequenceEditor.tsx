@@ -1,15 +1,14 @@
 import { DragDropContext, Draggable, Droppable } from "@hello-pangea/dnd";
 import { Plus, GripVertical, Trash2 } from "lucide-react";
 import { useState } from "react";
-import type { QuestionForm } from "../views/Admin";
-
+import { type Question } from "../../types";
 
 export const OrderSequenceEditor = ({
     question,
     index,
     updateQuestion
 }: {
-    question: QuestionForm,
+    question: Question,
     index: number,
     updateQuestion: any
 }) => {
@@ -69,7 +68,7 @@ export const OrderSequenceEditor = ({
                 <Droppable droppableId={`droppable-${index}`}>
                     {(provided) => (
                         <div {...provided.droppableProps} ref={provided.innerRef} className="space-y-2">
-                            {question.options.map((opt, oIdx) => (
+                            {question.options.map((opt: any, oIdx: any) => (
                                 <Draggable key={`${index}-${oIdx}-${opt}`} draggableId={`${index}-${oIdx}`} index={oIdx}>
                                     {(provided, snapshot) => (
                                         <div

@@ -1,19 +1,17 @@
-export interface Question {
-    id: string;
-    type: string;
-    text: string;
-    options?: string[];
-    answer: string | string[] | Record<string, string>;
-    explanation?: string;
-    pairs?: Record<string, string>; // Para perguntas de associação
-}
-
 export interface Lesson {
     id: number;
     title: string;
     book: string;
     level: number;
     questions: Question[];
+}
+
+export interface Question {
+    text: string;
+    type: 'multiple_choice' | 'true_false' | 'order_sequence' | 'fill_in_the_blank';
+    options: string[];
+    answer: any;
+    explanation?: string;
 }
 
 export interface QuizResultResponse {
