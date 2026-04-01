@@ -8,9 +8,6 @@ from fastapi import Depends, HTTPException, status
 from jose import JWTError, jwt
 
 
-router = APIRouter()
-
-
 async def get_current_user(db: Session = Depends(session.get_db), token: str = Depends(oauth2_scheme)):
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
@@ -40,6 +37,9 @@ async def get_current_user(db: Session = Depends(session.get_db), token: str = D
     if user is None:
         raise credentials_exception
     return user
+
+
+router = APIRouter()
 
 
 @router.get("/me", response_model=UserResponse)

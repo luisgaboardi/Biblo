@@ -51,19 +51,21 @@ export default function App() {
 
   // Lógica de finalização do Quiz (Salva no Banco e abre Modal)
   const handleFinishQuiz = async (correct: number, total: number) => {
-    if (total === 0 || correct === 0) {
-      setActiveLesson(null)
-      return
+    setLoading(true)
+
+    // Se usuário acertou mais de 70%, ganha XP e aumenta streak. Senão, perde um coração e zera streak.
+    const isSuccess = correct / total >= 0.7
+    if (isSuccess) {
+      userStats.xp += correct * 10 // 10 XP por acerto
+      userStats.streak += 1
+    } else {
+      userStats.hearts = Math.max(0, userStats.hearts - 1)
+      userStats.streak = 0
     }
 
-    try {
-      const data = await userService.saveProgress(correct, total)
-      setUserStats(prev => ({ ...prev, xp: data.current_total_xp, streak: data.streak }))
-      setActiveLesson(null)
-    } catch (err) {
-      console.error("Erro ao salvar progresso", err)
-      setActiveLesson(null)
-    }
+    setUserStats({ ...userStats }) // Atualiza o estado para refletir as mudanças
+    setLoading(false)
+    setActiveLesson(null) // Fecha o Quiz
   }
 
   // --- ROTEADOR (Renderização Condicional de Views) ---
