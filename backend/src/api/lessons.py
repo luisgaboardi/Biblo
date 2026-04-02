@@ -1,8 +1,11 @@
+from random import shuffle
+
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session, load_only
 from typing import List
-from ..db.models import Lesson
-from src.schemas.lesson import LessonBase, LessonCreate, LessonShort
+from ..api.users import get_current_user
+from ..db.models import Lesson, User, User
+from ..schemas.lesson import LessonBase, LessonCreate, LessonShort
 from ..db.session import get_db
 
 
@@ -24,11 +27,31 @@ def list_lessons(db: Session = Depends(get_db)):
 
 
 @router.get("/{lesson_id}", response_model=LessonBase)
-def get_lesson(lesson_id: int, db: Session = Depends(get_db)):
+def get_lesson(
+    lesson_id: int, 
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
     lesson = db.query(Lesson).filter(Lesson.id == lesson_id).first()
+    
     if not lesson:
         raise HTTPException(status_code=404, detail="Lição não encontrada")
-    return lesson
+
+    if str(current_user.type) == "teacher":
+        return lesson
+
+    lesson_data = LessonBase.model_validate(lesson).model_dump()
+
+    if lesson_data.get("questions"):
+        # 1. Embaralha a ordem das questões
+        shuffle(lesson_data["questions"])
+        
+        # 2. Embaralha as opções dentro de cada questão
+        for q in lesson_data["questions"]:
+            if "options" in q and isinstance(q["options"], list):
+                shuffle(q["options"])
+
+    return lesson_data
 
 
 @router.post("/", response_model=LessonBase)

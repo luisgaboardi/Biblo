@@ -80,12 +80,10 @@ export default function App() {
 
   // 5. Fluxo Principal (Logado - Home)
   return (
-    <></>
-    // <Home
-    //   userData={userData}
-    //   lessons={lessons}
-    //   onLogout={logout}
-    //   onSelectLesson={setActiveLesson} // Passa a função que abre o Quiz
-    // />
+    <Home
+      userData={userData}
+      onLogout={logout}
+      setActiveLesson={setActiveLesson}
+    />
   )
 }

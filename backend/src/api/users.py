@@ -1,11 +1,12 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from src.schemas.user import UserResponse
-from ..db import session, models
+from ..schemas.user import UserResponse
+from ..db import session
 from ..core.auth import oauth2_scheme, SECRET_KEY, ALGORITHM
 from fastapi import Depends, HTTPException, status
 from jose import JWTError, jwt
+from ..db.models import User
 
 
 async def get_current_user(db: Session = Depends(session.get_db), token: str = Depends(oauth2_scheme)):
@@ -24,7 +25,7 @@ async def get_current_user(db: Session = Depends(session.get_db), token: str = D
                 detail="Token inválido: campo 'sub' ausente",
             )
         
-        user = db.query(models.User).filter(models.User.username == username).first()
+        user = db.query(User).filter(User.username == username).first()
 
     except JWTError:
         raise HTTPException(
@@ -33,7 +34,7 @@ async def get_current_user(db: Session = Depends(session.get_db), token: str = D
         )
 
     # Busca no banco
-    user = db.query(models.User).filter(models.User.username == username).first()
+    user = db.query(User).filter(User.username == username).first()
     if user is None:
         raise credentials_exception
     return user
@@ -43,5 +44,5 @@ router = APIRouter()
 
 
 @router.get("/me", response_model=UserResponse)
-def read_users_me(current_user: models.User = Depends(get_current_user)):
+def read_users_me(current_user: User = Depends(get_current_user)):
     return current_user

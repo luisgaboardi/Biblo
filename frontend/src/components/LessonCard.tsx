@@ -1,14 +1,14 @@
-import type { Lesson } from '../types';
+import type { LessonListItem } from '../types';
 
 interface LessonCardProps {
-    lesson: Lesson;
-    onClick: (lesson: Lesson) => void;
+    lesson: LessonListItem;
+    onClick: (lesson_id: number) => void;
 }
 
 export function LessonCard({ lesson, onClick }: LessonCardProps) {
     return (
         <button
-            onClick={() => onClick(lesson)}
+            onClick={() => onClick(lesson.id)}
             className="w-full bg-white cursor-pointer border-2 border-gray-200 border-b-[6px] rounded-2xl p-4 sm:p-5 text-left active:translate-y-1 active:border-b-2 transition-all flex items-center gap-4 group"
         >
             {/* Container de Texto: 'flex-1' garante que o texto ocupe o máximo de espaço sem empurrar o botão para fora */}
