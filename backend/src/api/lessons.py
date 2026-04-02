@@ -14,14 +14,23 @@ router = APIRouter()
 
 @router.get("/", response_model=List[LessonShort])
 def list_lessons(db: Session = Depends(get_db)):
-    lessons = db.query(Lesson).options(
-        load_only(
-            Lesson.id, 
-            Lesson.title, 
-            Lesson.level, 
-            Lesson.book
+    lessons = (
+        db.query(Lesson)
+        .options(
+            load_only(
+                Lesson.id, 
+                Lesson.title, 
+                Lesson.level, 
+                Lesson.book
+            )
         )
-    ).all()
+        .order_by(
+            Lesson.book.asc(),   # 1º: Livro (A-Z)
+            Lesson.title.asc(),  # 2º: Título (A-Z)
+            Lesson.level.asc()   # 3º: Nível (Crescente)
+        )
+        .all()
+    )
     
     return lessons
 

@@ -11,6 +11,7 @@ import { useAuth } from './hooks/useAuth'
 import { userService } from './services/userService'
 import type { Lesson } from './types'
 import { Admin } from './views/Admin'
+import { StartLessonScreen } from './components/StartLessonScreen'
 
 export default function App() {
   // --- ESTADO GLOBAL DA SESSÃO ---
@@ -23,6 +24,7 @@ export default function App() {
 
   // --- ESTADO DE UI (Modais/Overlays) ---
   const [activeLesson, setActiveLesson] = useState<Lesson | null>(null)
+  const [isStarting, setIsStarting] = useState(false)
 
   // Carrega dados quando o token existe
   useEffect(() => {
@@ -70,7 +72,27 @@ export default function App() {
 
   // 3. Fluxo do Quiz (Overlay sobre a Home)
   if (activeLesson) {
-    return <Quiz lesson={activeLesson} onClose={handleFinishQuiz} />
+    // Se a lição está ativa mas o usuário ainda não deu o "Start"
+    if (!isStarting) {
+      return (
+        <StartLessonScreen
+          lesson={activeLesson}
+          onStart={() => setIsStarting(true)}
+          onCancel={() => setActiveLesson(null)}
+        />
+      )
+    }
+
+    // Se ele já clicou em começar, renderiza o Quiz
+    return (
+      <Quiz
+        lesson={activeLesson}
+        onClose={(correct, total) => {
+          handleFinishQuiz(correct, total);
+          setIsStarting(false); // Reseta para a próxima vez
+        }}
+      />
+    )
   }
 
   // 4. Fluxo de Administração (Logado - Admin)

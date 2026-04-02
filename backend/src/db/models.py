@@ -1,4 +1,4 @@
-from sqlalchemy import JSON, Column, Integer, String, DateTime
+from sqlalchemy import JSON, Column, Index, Integer, String, DateTime
 from sqlalchemy.orm import Mapped, mapped_column
 from datetime import datetime
 from typing import Any, Dict, List
@@ -10,16 +10,18 @@ from sqlalchemy.ext.mutable import MutableList
 class Lesson(Base):
     __tablename__ = "lessons"
     
-    id: Mapped[int] = mapped_column(primary_key=True, index=True)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True) 
     title: Mapped[str] = mapped_column(String, nullable=False)
     level: Mapped[int] = mapped_column(Integer, default=1)
-    
-    # Armazena o livro: "Gênesis"
     book: Mapped[str] = mapped_column(String, nullable=False)
     
     questions: Mapped[List[Dict[str, Any]]] = mapped_column(
         MutableList.as_mutable(JSON), 
         nullable=False
+    )
+
+    __table_args__ = (
+        Index('ix_lessons_book_title_level', 'book', 'title', 'level'),
     )
 
 

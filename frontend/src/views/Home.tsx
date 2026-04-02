@@ -22,35 +22,25 @@ export function Home({ userData, onLogout, setActiveLesson }: HomeProps) {
 
     const fetchLessons = async () => {
         try {
+            setIsLoading(true);
             const res = await lessonService.getLessons();
             setLessons(res.data);
         } catch (err) {
             console.error("Erro ao carregar lições");
+        } finally {
+            setIsLoading(false);
         }
     };
 
     const handleOpenLesson = async (lessonId: number) => {
         try {
-            setIsLoading(true);
             const res = await lessonService.getLessonById(lessonId);
             setActiveLesson(res.data);
 
         } catch (err) {
             console.error("Erro ao carregar lição");
         }
-        finally {
-            setIsLoading(false);
-        }
     }
-
-    if (isLoading) return (
-        <div className="min-h-screen flex items-center justify-center bg-white z-50 fixed inset-0">
-            <div className="text-center">
-                <div className="text-5xl font-black text-biblo-green animate-pulse tracking-tighter">BIBLO</div>
-                <div className="text-gray-400 font-bold mt-2 uppercase text-xs tracking-widest">Carregando lição...</div>
-            </div>
-        </div>
-    )
 
     return (
         <div className="min-h-screen bg-[#f7f7f7] pb-20 animate-fadeIn">
@@ -67,6 +57,15 @@ export function Home({ userData, onLogout, setActiveLesson }: HomeProps) {
                     Suas Lições
                 </h2>
 
+                {isLoading ? (
+                    <div className="text-center py-16 bg-white rounded-3xl border-2 border-gray-100 shadow-sm">
+                        <div className="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mx-auto mb-4"></div>
+                        <p className="text-gray-400 font-bold mt-6 text-lg">
+                            Carregando suas lições...
+                        </p>
+                    </div>
+                ) : null}
+
                 <div className="grid gap-4">
                     {lessons.map(lesson => (
                         <LessonCard
@@ -76,7 +75,7 @@ export function Home({ userData, onLogout, setActiveLesson }: HomeProps) {
                         />
                     ))}
 
-                    {lessons.length === 0 && (
+                    {!isLoading && lessons.length === 0 && (
                         <div className="text-center py-16 bg-white rounded-3xl border-2 border-gray-100 shadow-sm">
                             <span className="text-6xl">📖</span>
                             <p className="text-gray-400 font-bold mt-6 text-lg">
