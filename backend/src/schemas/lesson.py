@@ -10,6 +10,15 @@ class LessonBase(BaseModel):
 
     model_config = ConfigDict(from_attributes=True)
 
+class LessonShort(BaseModel):
+    id: int
+    title: str
+    level: int
+    book: str
+
+    class Config:
+        from_attributes = True
+
 # Schema para criação via Admin (API POST)
 class LessonCreate(BaseModel):
     title: str

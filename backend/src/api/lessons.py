@@ -1,55 +1,40 @@
 from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, load_only
 from typing import List
-from ..db import models
-from src.schemas.lesson import LessonBase, LessonCreate
+from ..db.models import Lesson
+from src.schemas.lesson import LessonBase, LessonCreate, LessonShort
 from ..db.session import get_db
-import random
-from ..core.auth import oauth2_scheme
 
 
 router = APIRouter()
 
 
-@router.get("/", response_model=List[LessonBase])
-def list_lessons(db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
-    db_lessons = db.query(models.Lesson).all()
-    processed_lessons = []
+@router.get("/", response_model=List[LessonShort])
+def list_lessons(db: Session = Depends(get_db)):
+    lessons = db.query(Lesson).options(
+        load_only(
+            Lesson.id, 
+            Lesson.title, 
+            Lesson.level, 
+            Lesson.book
+        )
+    ).all()
     
-    for db_lesson in db_lessons:
-        lesson_api = LessonBase.model_validate(db_lesson)
-        
-        if lesson_api.questions:
-            random.shuffle(lesson_api.questions)
-            
-            for q in lesson_api.questions:
-                if q.get("type") == "multiple_choice" and "options" in q:
-                    random.shuffle(q["options"])
-                if q.get("type") == "order_sequence" and "options" in q:
-                    random.shuffle(q["options"])
-
-        processed_lessons.append(lesson_api)
-        
-    return processed_lessons
-
-@router.get("/no-shuffle", response_model=List[LessonBase])
-def list_lessons_no_shuffle(db: Session = Depends(get_db)):
-    db_lessons = db.query(models.Lesson).all()
-    return [LessonBase.model_validate(db_lesson) for db_lesson in db_lessons]
+    return lessons
 
 
-# @router.get("/{lesson_id}", response_model=LessonBase)
-# def get_lesson(lesson_id: int, db: Session = Depends(session.get_db)):
-#     lesson = db.query(models.Lesson).filter(models.Lesson.id == lesson_id).first()
-#     if not lesson:
-#         raise HTTPException(status_code=404, detail="Lição não encontrada")
-#     return lesson
+@router.get("/{lesson_id}", response_model=LessonBase)
+def get_lesson(lesson_id: int, db: Session = Depends(get_db)):
+    lesson = db.query(Lesson).filter(Lesson.id == lesson_id).first()
+    if not lesson:
+        raise HTTPException(status_code=404, detail="Lição não encontrada")
+    return lesson
 
 
 @router.post("/", response_model=LessonBase)
 def create_lesson(lesson_in: LessonCreate, db: Session = Depends(get_db)):
 
-    lesson = models.Lesson(
+    lesson = Lesson(
         title=lesson_in.title,
         book=lesson_in.book,
         level=lesson_in.level,
@@ -63,7 +48,7 @@ def create_lesson(lesson_in: LessonCreate, db: Session = Depends(get_db)):
 
 @router.delete("/{lesson_id}", status_code=204)
 def delete_lesson(lesson_id: int, db: Session = Depends(get_db)):
-    lesson = db.query(models.Lesson).filter(models.Lesson.id == lesson_id).first()
+    lesson = db.query(Lesson).filter(Lesson.id == lesson_id).first()
     if not lesson:
         raise HTTPException(status_code=404, detail="Lição não encontrada")
     db.delete(lesson)
@@ -73,7 +58,7 @@ def delete_lesson(lesson_id: int, db: Session = Depends(get_db)):
 
 @router.put("/{lesson_id}", response_model=LessonBase) # Use LessonBase para o retorno
 def update_lesson(lesson_id: int, lesson_data: LessonCreate, db: Session = Depends(get_db)):
-    lesson = db.query(models.Lesson).filter(models.Lesson.id == lesson_id).first()
+    lesson = db.query(Lesson).filter(Lesson.id == lesson_id).first()
     
     if not lesson:
         raise HTTPException(status_code=404, detail="Lição não encontrada")
