@@ -18,8 +18,7 @@ export default function App() {
   const [authView, setAuthView] = useState<'login' | 'signup'>('login')
 
   // --- ESTADO DE DADOS DA APP ---
-  const [lessons, setLessons] = useState<Lesson[]>([])
-  const [userStats, setUserStats] = useState({ xp: 0, streak: 0, hearts: 5, type: 'student' })
+  const [userData, setUserData] = useState(null as any)
   const [loading, setLoading] = useState(false)
 
   // --- ESTADO DE UI (Modais/Overlays) ---
@@ -28,22 +27,18 @@ export default function App() {
   // Carrega dados quando o token existe
   useEffect(() => {
     if (token) {
-      fetchData()
+      fetchUserData()
     }
   }, [token])
 
-  const fetchData = async () => {
+  const fetchUserData = async () => {
     setLoading(true)
     try {
-      const [lessonsData, userData] = await Promise.all([
-        userService.getLessons(),
-        userService.getProfile()
-      ])
-      setLessons(lessonsData)
-      setUserStats({ xp: userData.xp, streak: userData.streak, hearts: userData.hearts, type: userData.type })
+      const userData = await userService.getProfile();
+      setUserData(userData)
     } catch (err) {
-      console.error("Erro na App", err)
-      logout() // Desloga se a API falhar
+      console.error("Erro ao buscar dados do usuário", err)
+      logout()
     } finally {
       setLoading(false)
     }
@@ -51,20 +46,6 @@ export default function App() {
 
   // Lógica de finalização do Quiz (Salva no Banco e abre Modal)
   const handleFinishQuiz = async (correct: number, total: number) => {
-    setLoading(true)
-
-    // Se usuário acertou mais de 70%, ganha XP e aumenta streak. Senão, perde um coração e zera streak.
-    const isSuccess = correct / total >= 0.7
-    if (isSuccess) {
-      userStats.xp += correct * 10 // 10 XP por acerto
-      userStats.streak += 1
-    } else {
-      userStats.hearts = Math.max(0, userStats.hearts - 1)
-      userStats.streak = 0
-    }
-
-    setUserStats({ ...userStats }) // Atualiza o estado para refletir as mudanças
-    setLoading(false)
     setActiveLesson(null) // Fecha o Quiz
   }
 
@@ -93,17 +74,18 @@ export default function App() {
   }
 
   // 4. Fluxo de Administração (Logado - Admin)
-  if (userStats.type === 'teacher') {
+  if (userData?.type === 'teacher') {
     return <Admin />
   }
 
   // 5. Fluxo Principal (Logado - Home)
   return (
-    <Home
-      userStats={userStats}
-      lessons={lessons}
-      onLogout={logout}
-      onSelectLesson={setActiveLesson} // Passa a função que abre o Quiz
-    />
+    <></>
+    // <Home
+    //   userData={userData}
+    //   lessons={lessons}
+    //   onLogout={logout}
+    //   onSelectLesson={setActiveLesson} // Passa a função que abre o Quiz
+    // />
   )
 }

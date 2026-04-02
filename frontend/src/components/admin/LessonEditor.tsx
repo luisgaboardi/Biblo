@@ -1,16 +1,10 @@
 import { bibleBooks } from '../../types';
-import type { Question } from '../../types';
+import type { Lesson, Question } from '../../types';
 import { QuestionEditorItem } from './QuestionEditorItem';
 
 interface LessonEditorProps {
-    editingId: number | null;
-    title: string;
-    setTitle: (val: string) => void;
-    book: string;
-    setBook: (val: string) => void;
-    level: number;
-    setLevel: (val: number) => void;
-    questions: Question[];
+    lesson: Lesson;
+    setLesson: (lesson: Lesson) => void;
     addQuestion: () => void;
     removeQuestion: (idx: number) => void;
     updateQuestion: (idx: number, field: keyof Question, val: any) => void;
@@ -20,14 +14,8 @@ interface LessonEditorProps {
 }
 
 export function LessonEditor({
-    editingId,
-    title,
-    setTitle,
-    book,
-    setBook,
-    level,
-    setLevel,
-    questions,
+    lesson,
+    setLesson,
     addQuestion,
     removeQuestion,
     updateQuestion,
@@ -40,26 +28,26 @@ export function LessonEditor({
             {/* CABEÇALHO DA LIÇÃO */}
             <section className="bg-white p-6 rounded-3xl border-2 border-b-4 border-gray-200 space-y-4 shadow-sm">
                 <h2 className="font-black text-gray-400 text-xs uppercase tracking-widest">
-                    {editingId ? '🛠️ Editando Lição' : '✨ Nova Lição'}
+                    {lesson.id ? '🛠️ Editando Lição' : '✨ Nova Lição'}
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <input
                         placeholder="Título da lição..."
                         className="md:col-span-1 p-4 bg-gray-50 border-2 border-gray-200 rounded-2xl font-bold focus:border-biblo-blue outline-none transition-all"
-                        value={title}
-                        onChange={e => setTitle(e.target.value)}
+                        value={lesson.title}
+                        onChange={e => setLesson({ ...lesson, title: e.target.value })}
                     />
                     <select
                         className="p-4 bg-gray-50 border-2 border-gray-200 rounded-2xl font-bold cursor-pointer text-gray-700"
-                        value={book}
-                        onChange={e => setBook(e.target.value)}
+                        value={lesson.book}
+                        onChange={e => setLesson({ ...lesson, book: e.target.value })}
                     >
                         {bibleBooks.map(b => <option key={b} value={b}>{b}</option>)}
                     </select>
                     <select
                         className="p-4 bg-gray-50 border-2 border-gray-200 rounded-2xl font-bold cursor-pointer text-gray-700"
-                        value={level}
-                        onChange={e => setLevel(parseInt(e.target.value))}
+                        value={lesson.level}
+                        onChange={e => setLesson({ ...lesson, level: parseInt(e.target.value) })}
                     >
                         {[1, 2, 3].map(n => <option key={n} value={n}>Nível {n}</option>)}
                     </select>
@@ -68,7 +56,7 @@ export function LessonEditor({
 
             {/* LISTA DE QUESTÕES */}
             <div className="space-y-6">
-                {questions.map((q, idx) => (
+                {lesson?.questions?.map((q, idx) => (
                     <QuestionEditorItem
                         key={idx}
                         q={q}
@@ -104,7 +92,7 @@ export function LessonEditor({
                             : 'bg-biblo-green shadow-[0_4px_0_0_#46a302] active:translate-y-1 active:shadow-none cursor-pointer'
                         }`}
                 >
-                    {isLoading ? 'Salvando...' : editingId ? 'Salvar Alterações' : 'Publicar Lição'}
+                    {isLoading ? 'Salvando...' : lesson.id ? 'Salvar Alterações' : 'Publicar Lição'}
                 </button>
             </div>
         </div>

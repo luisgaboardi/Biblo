@@ -1,3 +1,10 @@
+export interface LessonListItem {
+    id: number;
+    title: string;
+    book: string;
+    level: number;
+}
+
 export interface Lesson {
     id: number;
     title: string;

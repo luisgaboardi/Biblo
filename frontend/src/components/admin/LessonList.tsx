@@ -1,19 +1,19 @@
-import { bibleBooks, type Lesson } from '../../types';
+import { bibleBooks, type LessonListItem } from '../../types';
 
 
 interface LessonListProps {
-    lessons: Lesson[];
+    lessons: LessonListItem[];
     filters: {
         filterTitle: string;
         filterBook: string;
-        filterLevel: number | '';
+        filterLevel: number;
     };
     setFilters: {
         setFilterTitle: (val: string) => void;
         setFilterBook: (val: string) => void;
-        setFilterLevel: (val: number | '') => void;
+        setFilterLevel: (val: number) => void;
     };
-    onEdit: (lesson: any) => void;
+    onEdit: (id: number) => void;
     onDelete: (id: number) => void;
 }
 
@@ -39,7 +39,7 @@ export function LessonList({ lessons, filters, setFilters, onEdit, onDelete }: L
                 <select
                     className="p-3 bg-gray-50 rounded-xl border-2 border-gray-100 font-bold text-sm text-gray-500 cursor-pointer"
                     value={filters.filterLevel}
-                    onChange={e => setFilters.setFilterLevel(e.target.value === '' ? '' : parseInt(e.target.value))}
+                    onChange={e => setFilters.setFilterLevel(e.target.value ? parseInt(e.target.value) : '' as any)}
                 >
                     <option value="">Todos os Níveis</option>
                     <option value={1}>Nível 1</option>
@@ -50,7 +50,15 @@ export function LessonList({ lessons, filters, setFilters, onEdit, onDelete }: L
 
             {/* TABELA / CARDS */}
             <div className="grid gap-3">
-                {lessons.map(lesson => (
+
+                {/* Se não houver lições, exibir mensagem */}
+                {lessons?.length === 0 && (
+                    <div className="bg-white p-4 rounded-2xl border-2 border-b-4 border-gray-200 text-center">
+                        <p className="text-gray-500">Nenhuma lição encontrada.</p>
+                    </div>
+                )}
+
+                {lessons?.map(lesson => (
                     <div key={lesson.id} className="bg-white p-4 rounded-2xl border-2 border-b-4 border-gray-200 flex justify-between items-center hover:border-gray-300 transition-all">
                         <div>
                             <h3 className="font-black text-gray-800">{lesson.title}</h3>
@@ -60,7 +68,7 @@ export function LessonList({ lessons, filters, setFilters, onEdit, onDelete }: L
                             </div>
                         </div>
                         <div className="flex gap-2">
-                            <button onClick={() => onEdit(lesson)} className="p-2 text-biblo-blue hover:bg-blue-50 rounded-lg transition-colors cursor-pointer">✏️</button>
+                            <button onClick={() => onEdit(lesson.id)} className="p-2 text-biblo-blue hover:bg-blue-50 rounded-lg transition-colors cursor-pointer">✏️</button>
                             <button onClick={() => onDelete(lesson.id)} className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors cursor-pointer">🗑️</button>
                         </div>
                     </div>
