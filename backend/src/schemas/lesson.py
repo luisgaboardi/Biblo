@@ -6,7 +6,7 @@ class LessonBase(BaseModel):
     title: str
     level: int
     book: str
-    questions: List[Dict[str, Any]] # Retornamos as questões soltas para o frontend
+    questions: List[Dict[str, Any]]
 
     model_config = ConfigDict(from_attributes=True)
 
@@ -19,9 +19,8 @@ class LessonShort(BaseModel):
     class Config:
         from_attributes = True
 
-# Schema para criação via Admin (API POST)
 class LessonCreate(BaseModel):
     title: str
     level: int
     book: str
-    questions: List[Dict[str, Any]] # O Admin envia as questões soltas
+    questions: List[Dict[str, Any]]

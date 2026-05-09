@@ -1,16 +1,9 @@
-import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
 from typing import Generator
+from src.core.settings import settings
 
-# 1. Recupera a URL do banco das variáveis de ambiente (definidas no .env/docker-compose)
-DATABASE_URL = os.getenv("DATABASE_URL")
-
-if not DATABASE_URL:
-    raise ValueError("A variável de ambiente DATABASE_URL não foi definida.")
-
-# 2. O Engine é o componente que realmente "fala" com o driver do Postgres
-engine = create_engine(DATABASE_URL)
+engine = create_engine(settings.database_url, pool_pre_ping=True)
 
 # 3. O SessionLocal é uma fábrica de sessões. 
 # autocommit=False: Garante que nada é salvo sem um db.commit() explícito (segurança).

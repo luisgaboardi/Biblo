@@ -17,7 +17,7 @@ export interface Question {
     text: string;
     type: 'multiple_choice' | 'true_false' | 'order_sequence' | 'fill_in_the_blank';
     options: string[];
-    answer: any;
+    answer: unknown;
     explanation?: string;
 }
 

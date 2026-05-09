@@ -1,10 +1,10 @@
 from random import shuffle
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session, load_only
 from typing import List
 from ..api.users import get_current_user
-from ..db.models import Lesson, User, User
+from ..db.models import Lesson, User
 from ..schemas.lesson import LessonBase, LessonCreate, LessonShort
 from ..db.session import get_db
 
@@ -13,8 +13,15 @@ router = APIRouter()
 
 
 @router.get("/", response_model=List[LessonShort])
-def list_lessons(db: Session = Depends(get_db)):
-    lessons = (
+def list_lessons(
+    db: Session = Depends(get_db),
+    search: str | None = Query(default=None),
+    book: str | None = Query(default=None),
+    level: int | None = Query(default=None),
+    limit: int = Query(default=50, ge=1, le=200),
+    offset: int = Query(default=0, ge=0),
+):
+    query = (
         db.query(Lesson)
         .options(
             load_only(
@@ -24,15 +31,21 @@ def list_lessons(db: Session = Depends(get_db)):
                 Lesson.book
             )
         )
-        .order_by(
-            Lesson.book.asc(),   # 1º: Livro (A-Z)
-            Lesson.title.asc(),  # 2º: Título (A-Z)
-            Lesson.level.asc()   # 3º: Nível (Crescente)
-        )
+    )
+
+    if search:
+        query = query.filter(Lesson.title.ilike(f"%{search}%"))
+    if book:
+        query = query.filter(Lesson.book == book)
+    if level:
+        query = query.filter(Lesson.level == level)
+
+    return (
+        query.order_by(Lesson.book.asc(), Lesson.title.asc(), Lesson.level.asc())
+        .offset(offset)
+        .limit(limit)
         .all()
     )
-    
-    return lessons
 
 
 @router.get("/{lesson_id}", response_model=LessonBase)
@@ -46,7 +59,7 @@ def get_lesson(
     if not lesson:
         raise HTTPException(status_code=404, detail="Lição não encontrada")
 
-    if str(current_user.type) == "teacher":
+    if str(current_user.type) in ["teacher", "admin"]:
         return lesson
 
     lesson_data = LessonBase.model_validate(lesson).model_dump()
@@ -64,7 +77,13 @@ def get_lesson(
 
 
 @router.post("/", response_model=LessonBase)
-def create_lesson(lesson_in: LessonCreate, db: Session = Depends(get_db)):
+def create_lesson(
+    lesson_in: LessonCreate,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    if str(current_user.type) not in ["teacher", "admin"]:
+        raise HTTPException(status_code=403, detail="Apenas professores e administradores podem criar lições")
 
     lesson = Lesson(
         title=lesson_in.title,
@@ -79,7 +98,13 @@ def create_lesson(lesson_in: LessonCreate, db: Session = Depends(get_db)):
 
 
 @router.delete("/{lesson_id}", status_code=204)
-def delete_lesson(lesson_id: int, db: Session = Depends(get_db)):
+def delete_lesson(
+    lesson_id: int,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    if str(current_user.type) not in ["teacher", "admin"]:
+        raise HTTPException(status_code=403, detail="Apenas professores e administradores podem excluir lições")
     lesson = db.query(Lesson).filter(Lesson.id == lesson_id).first()
     if not lesson:
         raise HTTPException(status_code=404, detail="Lição não encontrada")
@@ -88,8 +113,15 @@ def delete_lesson(lesson_id: int, db: Session = Depends(get_db)):
     return None
 
 
-@router.put("/{lesson_id}", response_model=LessonBase) # Use LessonBase para o retorno
-def update_lesson(lesson_id: int, lesson_data: LessonCreate, db: Session = Depends(get_db)):
+@router.put("/{lesson_id}", response_model=LessonBase)
+def update_lesson(
+    lesson_id: int,
+    lesson_data: LessonCreate,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    if str(current_user.type) not in ["teacher", "admin"]:
+        raise HTTPException(status_code=403, detail="Apenas professores e administradores podem editar lições")
     lesson = db.query(Lesson).filter(Lesson.id == lesson_id).first()
     
     if not lesson:

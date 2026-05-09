@@ -24,7 +24,7 @@ body {
 
 /* Animação suave para entrada de telas */
 .animate-fadeIn {
-  animation: fadeIn 0.3s ease-out;
+  animation: fadeIn 0.6s ease-out;
 }
 
 @keyframes fadeIn {
